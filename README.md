@@ -27,7 +27,8 @@ $ vagrant up
 $ vagrant ssh
 ```
 O Comando vagrant up vai iniciar a maquina e instalar todas dependências do projeto, o comando vagrant ssh vai logar na maquina virtual via ssh.
-Na primeira vez que for utilizar o projeto, precisa rodar a tarefa de sprite do gulp:
+
+**OBS:** Na primeira vez que for utilizar o projeto, precisa rodar a tarefa de sprite do gulp:
 
 ```bash
 $ gulp sprite
