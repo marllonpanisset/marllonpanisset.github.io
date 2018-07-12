@@ -1,35 +1,38 @@
-header {
-    background: url("../images/pedra-da-gavea.jpg") top center no-repeat;
+#header {
+    background: url("../images/pedra-da-gavea.jpg") left top no-repeat;
     background-attachment: fixed;
     background-size: cover;
     position: relative;
     text-align: center;
     width: 100%;
-    height: 768px;
+    height: 100vh;
 
     .wrap {
         position: absolute;
         width: 100%;
         top: 50%;
         transform: translateY(-50%);
-        
-        h2 {
-            font-size: 3rem;
-            text-align: center;
-            margin-bottom: 25px;
-        }
-    
-        span {
-            font-size: 1.5rem;
-            text-align: center;
-        }
 
-        .btn {
-            margin: {
-                top: 50px;
-                left: auto;
-                right: auto;
+        .site-description {
+            color: $branco;
+
+            h2 {
+                font-size: 3rem;
+                text-align: center;
+                margin-bottom: 25px;
+            }
+
+            span {
+                font-size: 1.5rem;
+                text-align: center;
             }
         }
+    }
+
+    .btn {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        margin-left: -50px;
     }
 }

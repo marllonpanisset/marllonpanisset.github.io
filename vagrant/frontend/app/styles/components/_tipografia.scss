@@ -1,5 +1,5 @@
-$padraoTexto: #cecece;
-$padraoTextoLink: pink;
+$padraoTexto: $preto2;
+$padraoTextoLink: $azul;
 $base-font-size: 16px;
 
 @function em($px, $base: $base-font-size) {
@@ -17,7 +17,7 @@ p {
     line-height: em(30px, 16px);
     margin-bottom: 40px;
     font-size: em(16px);
-    color: #222;
+    color: $padraoTexto;
 
     a {
         font-weight: bold;
@@ -36,6 +36,5 @@ a {
 h3 {
     font-size: em(36px);
     font-weight: bold;
-    color: #222;
     margin-bottom: 40px;
 }

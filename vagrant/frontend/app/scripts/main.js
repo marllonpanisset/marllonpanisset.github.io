@@ -1,7 +1,7 @@
 (function (document, window) {
 'use strict';
 
-  var navbar = document.getElementsByTagName("navbar")[0];
+  var navbar = document.getElementById("navbar");
 
   window.onscroll = function() {
     if (window.scrollY > 150) {
