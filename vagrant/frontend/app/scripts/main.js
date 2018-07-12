@@ -1,9 +1,7 @@
 (function (document, window) {
 'use strict';
 
-  var navbar = document.getElementsByClassName("navbar")[0];
-  var body = document.body;
-  var stickyHeaderTop = body.offsetTop;
+  var navbar = document.getElementsByTagName("navbar")[0];
 
   window.onscroll = function() {
     if (window.scrollY > 150) {
