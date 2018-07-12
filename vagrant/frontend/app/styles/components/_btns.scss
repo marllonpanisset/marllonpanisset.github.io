@@ -1,0 +1,15 @@
+.btn {
+    background-color: $azul2;
+    color: $branco;
+    padding: 15px 30px;
+    display: inline-block;
+    min-width: 100px;
+    border-radius: 5px;
+    transition: all .4s;
+    
+    &:hover {
+        background-color: $azul;
+        text-decoration: none;
+        transition: all .4s;
+    }
+}

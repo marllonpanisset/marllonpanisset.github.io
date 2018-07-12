@@ -1,0 +1,6 @@
+.vagrant/
+vagrant/frontend/.tmp/
+vagrant/frontend/dist/
+vagrant/frontend/.sass-cache/
+vagrant/frontend/node_modules/
+vagrant/frontend/app/styles/components/_sprite.scss

@@ -1,0 +1,41 @@
+$padraoTexto: #cecece;
+$padraoTextoLink: pink;
+$base-font-size: 16px;
+
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+
+body {
+    font-family: 'Open Sans', Arial, Sans-serif;
+    font-size: $base-font-size;
+    color: $padraoTexto;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    line-height: em(30px, 16px);
+    margin-bottom: 40px;
+    font-size: em(16px);
+    color: #222;
+
+    a {
+        font-weight: bold;
+        color: $padraoTextoLink;
+        text-decoration: underline;
+    }
+}
+
+
+a {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+h3 {
+    font-size: em(36px);
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 40px;
+}

@@ -1,0 +1,49 @@
+$susy: (
+columns: 12,
+container: 1170px,
+gutters: 30px/67px,
+gutter-position: 'split',
+debug: (image: hide),
+);
+
+.container {
+    max-width: 1170px;
+    margin: {
+        left: auto;
+        right: auto;
+    }
+
+    @media (max-width: 1170px) {
+        padding: {
+            left: 20px;
+            right: 20px;
+        }
+    }
+}
+
+#services,
+#portfolio,
+#about,
+#contact {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-top: 60px;
+    min-height: 768px;
+}
+
+#services {
+
+}
+
+#portfolio {
+    background:skyblue;
+}
+
+#about {
+    background-color: aquamarine
+}
+
+#contact {
+    background-color: cornflowerblue
+}

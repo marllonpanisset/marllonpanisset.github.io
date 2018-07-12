@@ -1,0 +1,26 @@
+// variaveis e mixins
+@import "color";
+@import 'breakpoints';
+@import "mixins";
+
+// resets normalize e frameworks
+@import "reset";
+@import "normalize";
+@import "node_modules/susy/sass/susy";
+@import "node_modules/animatewithsass/animate.scss";
+@import "sprite";
+
+// componentes de tipografia
+@import "tipografia";
+
+// componentes de botoes e formularios
+@import "btns";
+@import "form";
+
+// componentes de estrutura
+@import "estrutura";
+@import "header";
+@import "footer";
+@import "menu";
+@import "webdoor";
+@import "componentes";
