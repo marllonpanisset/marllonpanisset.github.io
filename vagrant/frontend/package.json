@@ -12,8 +12,6 @@
     "escodegen": "*",
     "esprima": "*",
     "gulp": "^3.9.0",
-    "gulp-path": "^3.0.3",
-    "gulp-pug": "^3.3.0",
     "gulp-autoprefixer": "^3.0.1",
     "gulp-babel": "^6.1.1",
     "gulp-cache": "^0.4.2",
@@ -25,8 +23,10 @@
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.2.0",
     "gulp-load-plugins": "^1.2.4",
+    "gulp-path": "^3.0.3",
     "gulp-plumber": "^1.0.1",
     "gulp-postcss": "^7.0.0",
+    "gulp-pug": "^3.3.0",
     "gulp-pug2": "0.0.2",
     "gulp-sass": "^2.0.0",
     "gulp-size": "^2.1.0",
@@ -56,8 +56,5 @@
     }
   },
   "dependencies": {
-    "animatewithsass": "https://github.com/geoffgraham/animate.scss.git",
-    "jquery": "~2.1.4",
-    "susy": "2"
   }
 }
