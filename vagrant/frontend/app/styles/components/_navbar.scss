@@ -8,7 +8,24 @@
     
     &.scrolled {
         transition: all .3s;
-        background-color: $preto2;
+        background-color: $preto;
+
+        .main-menu {
+            li {
+                a {
+                    color: $branco2;
+                    transition: all .3s;
+
+                    &:hover,
+                    &.active {
+                        background-color: $preto2;
+                        text-decoration: none;
+                        color: $branco2;
+                        transition: all .3s;
+                    }
+                }
+            }
+        }
     }
 
     .main-menu {
@@ -17,14 +34,20 @@
 
         li {
             float: left;
-            margin-right: 25px;
-
-            &:last-child {
-                margin-right: 0;
-            }
+            height: 60px;
 
             a {
-                color: $branco;
+                padding: 0 15px;
+                display: block;
+                color: $branco2;
+                transition: all .3s;
+
+                &:hover {
+                    background: transparent;
+                    text-decoration: underline;
+                    color: $branco2;
+                    transition: all .3s;
+                }
             }
         }
     }
@@ -34,7 +57,13 @@
         float: left;
         font-size: 1.2rem;
         text-transform: uppercase;
-        color: $branco;
+        color: $branco2;
+        transition: all .3s;
+
+        &:hover {
+            transition: all .3s;
+            color: $branco;
+        }
 
         a {
             text-decoration: none
