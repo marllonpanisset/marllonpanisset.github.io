@@ -4,6 +4,9 @@
 
 Stack de Desenvolvimento Front-end com Vagrant que utilizo para meu site pessoal.
 
+## Dependências
+Para usar a stack, você precisa ter o Vagrant e o Virtualbox instalado, as depêndencias do projeto são instaladas automaticamente quando iniciar a maquina pela primeira vez.
+
 ## Oque tem na maquina vagrant?
 - Git
 - Nodejs
@@ -11,9 +14,6 @@ Stack de Desenvolvimento Front-end com Vagrant que utilizo para meu site pessoal
 - Gulp
 - Pug
 - Sass (Node-sass)
-
-## Dependências
-Para usar a stack, você precisa ter o Vagrant e o Virtualbox instalado, as depêndencias do projeto são instaladas automaticamente quando iniciar a maquina pela primeira vez.
 
 ## Como Usar?
 Abra o terminal e navegue até a pasta do projeto onde tem o arquivo Vagrantfile e digite os comandos abaixo:
