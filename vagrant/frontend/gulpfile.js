@@ -22,10 +22,10 @@ gulp.task('sprite', () => {
 		data.css.pipe(gulp.dest('.tmp/styles/components'));
 		data.img.pipe(gulp.dest('.tmp/images'));
 	}
-	else {
-		data.css.pipe(gulp.dest('dist/styles'));
-		data.img.pipe(gulp.dest('dist/images'));
-	}
+	// else {
+	// 	data.css.pipe(gulp.dest('dist/styles'));
+	// 	data.img.pipe(gulp.dest('dist/images'));
+	// }
 });
 
 gulp.task('views', () => {
@@ -44,7 +44,7 @@ gulp.task('styles', () => {
 	.pipe($.plumber())
 	.pipe($.if(dev, $.sourcemaps.init()))
 	.pipe($.sass.sync({
-	  outputStyle: 'expanded',
+	  outputStyle: 'compressed',
 	  precision: 10,
 	  includePaths: ['.']
 	}).on('error', $.sass.logError))
@@ -56,7 +56,6 @@ gulp.task('styles', () => {
 
 gulp.task('scripts', () => {
   return gulp.src('app/scripts/main.js')
-	.pipe($.concat('main.min.js'))
 	.pipe($.plumber())
 	// .pipe($.uglify())
 	.pipe($.babel())
@@ -64,15 +63,21 @@ gulp.task('scripts', () => {
 	.pipe(reload({stream: true}));
 });
 
-gulp.task('scripts:jquery', () => {
-  return gulp.src([
-		'node_modules/jquery/dist/jquery.js'
-	])
-	.pipe($.concat('jquery.min.js'))
+gulp.task('scripts:slideNav', () => {
+  return gulp.src('app/scripts/slideNav.min.js')
 	.pipe($.plumber())
-	// .pipe($.uglify())
-	// .pipe($.babel())
+	.pipe($.babel())
 	.pipe($.if(dev, gulp.dest('.tmp/scripts'), gulp.dest('dist/scripts')))
+	.pipe(reload({stream: true}));
+});
+
+gulp.task('styles:vendor', () => {
+  return gulp.src([
+		'node_modules/susy/sass/_susy.scss'
+	])
+	.pipe($.concat('vendor.min.css'))
+	.pipe($.plumber())
+	.pipe($.if(dev, gulp.dest('.tmp/styles'), gulp.dest('dist/styles')))
 	.pipe(reload({stream: true}));
 });
 
@@ -107,28 +112,38 @@ gulp.task('lint:test', () => {
 	.pipe(gulp.dest('test/spec'));
 });
 
-gulp.task('html', ['styles', 'scripts', 'scripts:jquery', 'views'], () => {
+gulp.task('html', ['styles', 'styles:vendor', 'scripts', 'views'], () => {
   return gulp.src('.tmp/*.html')
 	.pipe($.useref({searchPath: ['.tmp', '.']}))
-	// .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
-	// .pipe($.if(/\.css$/, $.cssnano({safe: true, autoprefixer: false})))
-	// .pipe($.if(/\.html$/, $.htmlmin({
-	//   collapseWhitespace: false,
-	//   minifyCSS: false,
-	//   minifyJS: {compress: {drop_console: false}},
-	//   processConditionalComments: false,
-	//   removeComments: false,
-	//   removeEmptyAttributes: false,
-	//   removeScriptTypeAttributes: false,
-	//   removeStyleLinkTypeAttributes: false
-	// })))
+	.pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
+	.pipe($.if(/\.css$/, $.cssnano({safe: true, autoprefixer: false})))
+	.pipe($.if(/\.html$/, $.htmlmin({
+	  collapseWhitespace: false,
+	  minifyCSS: true,
+	  minifyJS: {compress: {drop_console: false}},
+	  processConditionalComments: false,
+	  removeComments: true,
+	  removeEmptyAttributes: true,
+	  removeScriptTypeAttributes: false,
+	  removeStyleLinkTypeAttributes: false
+	})))
 	.pipe(gulp.dest('dist'));
 });
 
 gulp.task('images', () => {
   return gulp.src('app/images/*')
-	// .pipe($.cache($.imagemin()))
-	.pipe($.if(dev, gulp.dest('.tmp/images'), gulp.dest('dist/images')))
+	.pipe($.cache($.imagemin()))
+	.pipe($.if(dev, gulp.dest('.tmp/images')))
+});
+
+gulp.task('svg', () => {
+  return gulp.src('app/favico.ico')
+	.pipe($.if(dev, gulp.dest('.tmp/images/svg'), gulp.dest('dist/images/svg')))
+});
+
+gulp.task('favico', () => {
+  return gulp.src('app/images/svg/*.svg')
+	.pipe($.if(dev, gulp.dest('.tmp/images/svg'), gulp.dest('dist/images/svg')))
 });
 
 gulp.task('extras', () => {
@@ -143,7 +158,7 @@ gulp.task('extras', () => {
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', () => {
-	runSequence(['clean'], ['views'], ['sprite'], ['styles', 'scripts', 'scripts:jquery'], () => {
+	runSequence(['clean'], ['views'], ['sprite'], ['styles', 'styles:vendor', 'scripts'], () => {
 		browserSync.init({
 			notify: false,
 			port: 9000,
@@ -195,7 +210,7 @@ gulp.task('serve:test', ['scripts'], () => {
   gulp.watch('test/spec/**/*.js', ['lint:test']);
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'scripts:slideNav', 'images', 'extras', 'svg'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: false}));
 });
 

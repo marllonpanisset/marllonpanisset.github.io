@@ -4,46 +4,90 @@
     height: 60px;
     line-height: 60px;
     z-index: 100;
+    background-color: $preto3;
     transition: all .3s;
     
     &.scrolled {
         transition: all .3s;
-        background-color: $preto;
 
-        .main-menu {
-            li {
-                a {
-                    position: relative;
-                    color: $branco2;
-                    transition: all .3s;
+        .main-menu li a {
+            position: relative;
+            color: $branco2;
 
-                    &:hover,
-                    &.active {
-                        background-color: $preto2;
-                        text-decoration: none;
-                        color: $branco2;
-                        transition: all .3s;
-                        
-                        &:before {
-                            content:'';
-                            display: block;
-                            position: absolute;
-                            width: 100%;
-                            height: 3px;
-                            background-color: $branco2;
-                            transition: all .3s;
-                            top: 0;
-                            left: 0;
-                        }
-                    }
+            &:hover,
+            &.active {
+                text-decoration: none;
+                color: $branco;
+
+                &:before {
+                    content:'';
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 3px;
+                    background: $branco;
+                    left: 0;
+                    bottom: 0;
                 }
             }
+        }
+    }
+
+    #menu-bar {
+        position: relative;
+        float: right;
+        display: block;
+        width: 30px;
+        padding: 0;
+        margin-top: 13px;
+        outline: none;
+
+        svg {
+            color: $branco;            
+        }
+
+        @media (min-width: 769px) {
+            display: none;
+
         }
     }
 
     .main-menu {
         position: relative;
         float: right;
+
+        &.open {
+            display: block;
+            margin-top: 60px;
+            position: absolute;
+            left: 0;
+            width: 100%;
+
+            li {
+                float: left;
+                height: 60px;
+                width: 100%;
+                background: $preto3;
+                text-align: center;
+
+                a {
+                    display: initial;
+                    padding: 0;
+
+                    &:hover,
+                    &.active {
+                        &:before {
+                            bottom: -5px;
+                            height: 2px;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            display: none;
+        }
 
         li {
             float: left;
@@ -53,13 +97,15 @@
                 padding: 0 15px;
                 display: block;
                 color: $branco2;
+                font-size: .9rem;
+                text-transform: uppercase;
                 outline: none;
                 transition: all .3s;
-
+                
                 &:hover {
+                    color: $branco;
                     background: transparent;
-                    text-decoration: underline;
-                    color: $branco2;
+                    text-decoration: none;
                     transition: all .3s;
                 }
             }
@@ -69,10 +115,16 @@
     .site-name {
         position: relative;
         float: left;
-        font-size: 1.2rem;
+        font-family: 'roboto condensed';
         text-transform: uppercase;
+        letter-spacing: .02rem;
+        font-size: 1.4rem;
         color: $branco2;
         transition: all .3s;
+
+        @media (max-width: 359px) {
+            font-size: 1.3rem;
+        }
 
         &:hover {
             transition: all .3s;
@@ -82,6 +134,13 @@
         a {
             text-decoration: none;
             outline: none
+        }
+        
+        svg {
+            float: left;
+            width: 30px;
+            margin-top: 18px;
+            margin-right: 10px;
         }
     }
 }

@@ -1,3 +1,11 @@
+$susy: (
+columns: 12,
+container: 1170px,
+gutters: 30px/67px,
+gutter-position: 'split',
+debug: (image: hide),
+);
+
 .wrapper {
     max-width: 1170px;
     margin: {
@@ -13,6 +21,10 @@
     }
 }
 
+.align-center  {
+    text-align: center;
+}
+
 #services,
 #portfolio,
 #about,
@@ -20,22 +32,142 @@
     position: relative;
     float: left;
     width: 100%;
-    padding-top: 120px;
-    min-height: 768px;
-}
-
-#services {
-
-}
-
-#portfolio {
-    background:skyblue;
+    padding-top: 60px;
+    min-height: 100vh;
 }
 
 #about {
-    background-color: aquamarine
+    padding-top: 80px;
+
+    .parallax {
+        margin-bottom: 100px;
+    }
+    .profile-thumb {
+        @include span(2);
+
+        @media (max-width: 959px) {
+            @include span(4);
+        }
+
+        @media (max-width: 767px) {
+            @include span(12);
+
+            img {
+                margin: {
+                    left: auto;
+                    right: auto;
+                    bottom: 40px;
+                }
+            }
+        }
+        
+        img {
+            border-radius: 50%;
+        }
+    }
+    
+    .biography {
+        @include span(10);
+
+        @media (max-width: 959px) {
+            @include span(8);
+        }
+
+        @media (max-width: 767px) {
+            @include span(12);
+        }
+    }
 }
 
-#contact {
-    background-color: cornflowerblue
+.card-services {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 100px;
+
+    .item {
+        @include span(4);
+
+        img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 200px;
+            margin-bottom: 30px;
+        }
+
+        h4 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        
+        @media (max-width: 959px) {
+            @include span(6);
+        }
+
+        @media (max-width: 768px) {
+            @include span(12);
+        }
+    }
+}
+
+.card-portfolio {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+
+    .item {
+        @include span(4);
+        margin-bottom: 30px;
+
+        @media (max-width: 959px) {
+            @include span(6);
+        }
+
+        @media (max-width: 767px) {
+            @include span(12);
+        }
+
+        a {
+            position: relative;
+            display: block;
+            width: 250px;
+            height: 200px;
+            line-height: 200px;
+            margin: 0 auto;
+            text-align: center;
+            text-indent: -999999em;
+            background: url('http://placeimg.com/250/200/animals') no-repeat;
+
+            &:hover {
+                &:before {
+                    content:'';
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    background: $preto2;
+                    opacity: 0.5;
+                    transition: all .4s;
+                }
+
+                &:after {
+                    content:'+';
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    font-size: 48px;
+                    font-weight: bold;
+                    text-indent: initial;
+                    color: $branco;
+                    transition: all .4s;
+                }
+            }
+        }
+    }
 }

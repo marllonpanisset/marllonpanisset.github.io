@@ -1,5 +1,6 @@
 $padraoTexto: $preto2;
-$padraoTextoLink: $azul;
+$padraoTextoLink: $azul2;
+$padraoTextoLinkHover: $azul;
 $base-font-size: 16px;
 
 @function em($px, $base: $base-font-size) {
@@ -15,26 +16,39 @@ body {
 p {
     font-family: 'Open Sans', sans-serif;
     line-height: em(30px, 16px);
-    margin-bottom: 40px;
+    margin-bottom: em(20px);
     font-size: em(16px);
     color: $padraoTexto;
 
     a {
-        font-weight: bold;
         color: $padraoTextoLink;
-        text-decoration: underline;
-    }
-}
 
-
-a {
-    &:hover {
-        text-decoration: underline;
+        &:hover {
+            color: $padraoTextoLinkHover;
+        }
     }
 }
 
 h3 {
+    text-transform: uppercase;
+    font-family: 'roboto';
     font-size: em(36px);
-    font-weight: bold;
     margin-bottom: 40px;
+    font-weight: bold;
+    color: $preto2;
+
+    svg {
+        float: left;
+        width: 30px;
+        margin-right: 10px;
+    }
+}
+
+h4 {
+    text-transform: uppercase;
+    font-family: 'roboto';
+    font-size: em(28px);
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: $preto2;
 }

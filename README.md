@@ -12,9 +12,6 @@ Stack de Desenvolvimento Front-end com Vagrant que utilizo para meu site pessoal
 - Gulp
 - Pug
 - Sass (Node-sass)
-- AnimateWithSass
-- jQuery
-- Susy (Grid)
 
 ## Dependências
 Para usar a stack, você precisa ter o Vagrant e o Virtualbox instalado, as depêndencias do projeto são instaladas automaticamente quando iniciar a maquina pela primeira vez.

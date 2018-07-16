@@ -22,8 +22,12 @@ button {
     border: 0;
 }
 
+html, body {
+    -webkit-font-smoothing: antialiased;
+}
+
 body {
-    
+
     a {
         text-decoration: inherit;
         font-family: inherit;

@@ -1,31 +1,86 @@
+$predra-da-gavea: 'https://i.imgur.com/N8dgPGc.jpg';
+$office: 'https://i.imgur.com/QtXh9Ms.jpg';
+$notebook-coffe: 'https://i.imgur.com/U0U3Qo4.jpg';
+
+
 .social-network {
-    display: table;
-    margin: {
-        left: auto;
-        right: auto;
-    }
+    float: left;
 
     li {
-        float: left;
         margin-right: 30px;
-        background: $branco;
-        width: 50px;
-        height: 50px;
-        padding: 10px;
-        border-radius: 30px;
+        float: left;
+        width: 30px;
+        height: 30px;
 
         &:last-child {
-            margin-right: 0;
-        }
-        
-        a {
-            text-decoration: none;
+            margin-right: 15px;
 
-            img {
-                box-sizing: content-box;
-                width: 30px;
-                height: 30px;
+            a {
+                margin-top: -6px;
             }
         }
+        
+        a { 
+            text-decoration: none;
+            display: block;
+            
+            svg {
+                color: $branco;
+            }
+        }
+    }
+}
+
+.parallax {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    
+    .wrapper {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        h3 {
+            text-align: center;
+            color: $branco;
+            display: inline-block;
+            margin-top: 20px;
+            text-shadow: 2px 3px 10px $preto;
+        
+        }
+
+        p {
+            color: $branco;
+        }
+    }
+    
+    &.portfolio {
+        background: url($notebook-coffe);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    &.services {
+        background: url($office);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 50px;
+    }
+
+    &.contact {
+        background: url($predra-da-gavea);
+        background-attachment: fixed;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 30px;
     }
 }

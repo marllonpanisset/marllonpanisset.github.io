@@ -6,6 +6,7 @@
 // resets normalize e frameworks
 @import "reset";
 @import "normalize";
+@import "node_modules/susy/sass/susy";
 @import "sprite";
 
 // componentes de tipografia
@@ -13,7 +14,6 @@
 
 // componentes de botoes e formularios
 @import "btns";
-@import "form";
 
 // componentes de estrutura
 @import "estrutura";

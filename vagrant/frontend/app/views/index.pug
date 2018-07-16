@@ -6,19 +6,59 @@ html(class="no-js")
 		include ./includes/navbar.pug
 		include ./includes/header.pug
 		main#main
-			section#services
-				.wrapper
-					h3 Serviços
-					p Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
-			section#portfolio
-				.wrapper
-					h3 Porfólio
-					p Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
 			section#about
 				.wrapper
-					h3 Sobre mim
-					p Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
-			section#contact
+					.profile-thumb
+						img(src="https://i.imgur.com/SyrkXbw.png")
+					.biography
+						h3 Sobre mim
+						p Olá, meu nome é Marllon Panisset, sou carioca, tenho 25 anos, sou casado, pai de 2 gatos e um cachorro.
+						p Você deve está pensando, oque eu tenho com isso? Bom, eu sempre amei informática, trabalhei 5 anos na area de suporte e manutenção, mas minha paixão sempre foi desenvolvimento web. Atualmente sou Front-end na <a href="http://www.sirius.com.br" target="_blank" rel="noopener" title="Sirius Interativa">Sirius Interativa</a>, mas tambem sou freelancer nas horas vagas.
+						p Vou ser sincero, minha especialidade não é Design, embora eu me aventure um pouco. No meu dia a dia de agência, sigo cada detalhe do PSD, cada pixel, tamanho de fonte e cor para manter o mais aproxímado possivel do layout criado pelo Design.
+						//- p Cada trabalho possui sua singularidade, então é preciso sempre analisar as possibilidades antes de estipular custos e prazos. Cada projeto precisa de cuidados diferentes, trabalhando com um código customizado e adequado a cada necessidade. Sempre com o uso de novas tecnologias em HTML5 e CSS3.
+						//- p Em relação a compatibilidade, é sempre bom lembrar que navegadores atualizados resultam em melhor performance e que seu site vai funcionar em todos eles. Então não funcionará em navegadores antigos? (ex: IE9). Tudo é possível, desde que haja um bom motivo pra isso!
+
+			section#services
+				.parallax.services
+					.wrapper
+						h3 Serviços
+						p Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI. Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI.
 				.wrapper
-					h3 Contato
+					p Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI. Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI.
+					.card-services
+						.item
+							img(src="http://placeimg.com/150/150/animals", alt="")
+							h4 Titulo
+							p Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI.
+						.item
+							img(src="http://placeimg.com/150/150/animals", alt="")
+							h4 Titulo
+							p Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI.
+						.item
+							img(src="http://placeimg.com/150/150/animals", alt="")
+							h4 Titulo
+							p Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI.
+			section#portfolio
+				.parallax.portfolio
+					.wrapper
+						h3 Porfólio
+						p Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI. Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI.
+				.card-portfolio
+					each item in ['item1','item2','item3','item4','item5','item6']
+						.item
+							a(href="") #{item}
+			section#contact
+				.parallax.contact
+					.wrapper
+						h3 Contato
+						p Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI. Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI.
+				.wrapper
 		include ./includes/footer.pug
+
+//- Ok, mas e se eu quiser falar com você pelo telefone? Onde está o número?
+//- Veja bem: eu trabalho sozinho, com uma fila de trabalhos bastante otimizada e recebo centenas de orçamentos todos os meses.
+//- Infelizmente eu não conseguiria manter meu padrão de qualidade e agilidade se atendesse a orçamentos o tempo inteiro.
+//- Isso quer dizer que meus clientes não falam comigo pelo telefone? Pelo contrário!
+//-	Meu telefone está a disposição de todos os meus clientes.
+//-	Mas se você está conhecendo o meu trabalho agora, mande um email explicando o seu projeto com detalhes,
+//-	que eu ficarei feliz em responder com uma estimativa de valores e prazo.
