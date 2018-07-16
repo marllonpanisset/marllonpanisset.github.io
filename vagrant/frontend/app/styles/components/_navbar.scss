@@ -4,10 +4,10 @@
     height: 60px;
     line-height: 60px;
     z-index: 100;
-    background-color: $preto3;
     transition: all .3s;
     
     &.scrolled {
+        background-color: $preto3;
         transition: all .3s;
 
         .main-menu li a {
