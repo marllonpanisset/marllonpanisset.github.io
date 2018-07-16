@@ -39,7 +39,7 @@
   };
 
   [].forEach.call(document.querySelectorAll('ul.main-menu li a'), function (el) {
-    el.addEventListener("click", function () {
+    el.addEventListener('click', function () {
       if (mainMenu.classList.contains('open')) {
         mainMenu.classList.remove('open');
       }
