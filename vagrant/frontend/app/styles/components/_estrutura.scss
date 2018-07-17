@@ -21,10 +21,6 @@ debug: (image: hide),
     }
 }
 
-.align-center  {
-    text-align: center;
-}
-
 #services,
 #portfolio,
 #about,
@@ -42,6 +38,7 @@ debug: (image: hide),
     .parallax {
         margin-bottom: 100px;
     }
+
     .profile-thumb {
         @include span(2);
 
@@ -60,12 +57,12 @@ debug: (image: hide),
                 }
             }
         }
-        
+
         img {
             border-radius: 50%;
         }
     }
-    
+
     .biography {
         @include span(10);
 

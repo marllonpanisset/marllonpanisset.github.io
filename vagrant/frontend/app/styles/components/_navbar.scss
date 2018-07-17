@@ -5,7 +5,7 @@
     line-height: 60px;
     z-index: 100;
     transition: all .3s;
-    
+
     &.scrolled {
         background-color: $preto3;
         transition: all .3s;
@@ -43,7 +43,7 @@
         outline: none;
 
         svg {
-            color: $branco;            
+            color: $branco;
         }
 
         @media (min-width: 769px) {
@@ -101,7 +101,7 @@
                 text-transform: uppercase;
                 outline: none;
                 transition: all .3s;
-                
+
                 &:hover {
                     color: $branco;
                     background: transparent;
@@ -135,7 +135,7 @@
             text-decoration: none;
             outline: none
         }
-        
+
         svg {
             float: left;
             width: 30px;

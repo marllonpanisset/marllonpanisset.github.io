@@ -1,7 +1,6 @@
-$predra-da-gavea: 'https://i.imgur.com/N8dgPGc.jpg';
-$office: 'https://i.imgur.com/QtXh9Ms.jpg';
-$notebook-coffe: 'https://i.imgur.com/U0U3Qo4.jpg';
-
+$predra-da-gavea: 'https://i.imgur.com/kfv36iG.jpg';
+$office: 'https://i.imgur.com/wJWwOlq.jpg';
+$notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
 
 .social-network {
     float: left;
@@ -19,7 +18,7 @@ $notebook-coffe: 'https://i.imgur.com/U0U3Qo4.jpg';
                 margin-top: -6px;
             }
         }
-        
+
         a { 
             text-decoration: none;
             display: block;
@@ -37,26 +36,25 @@ $notebook-coffe: 'https://i.imgur.com/U0U3Qo4.jpg';
     width: 100%;
     height: 300px;
     text-align: center;
-    
+
     .wrapper {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        
+
         h3 {
             text-align: center;
             color: $branco;
             display: inline-block;
             margin-top: 20px;
             text-shadow: 2px 3px 10px $preto;
-        
         }
 
         p {
             color: $branco;
         }
     }
-    
+
     &.portfolio {
         background: url($notebook-coffe);
         background-attachment: fixed;

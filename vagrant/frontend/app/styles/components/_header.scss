@@ -1,4 +1,4 @@
-$notebook: 'https://i.imgur.com/xEbsgIf.jpg';
+$notebook: 'https://i.imgur.com/q5xABdU.jpg';
 
 #header {
     background: url($notebook) left top no-repeat;
@@ -24,7 +24,7 @@ $notebook: 'https://i.imgur.com/xEbsgIf.jpg';
             h2 {
                 font-size: 4rem;
                 margin-bottom: 20px;
-                
+
                 @media (min-width: 587px) and (max-width: 768px) {
                     padding: 0 100px;
                 }
