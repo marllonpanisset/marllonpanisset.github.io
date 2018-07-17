@@ -34,6 +34,10 @@ gulp.task('views', () => {
 	  pretty: true
 	}))
 	.pipe($.plumber())
+	.pipe($.htmlmin({
+	  collapseWhitespace: true,
+	  removeComments: true
+	}))
 	.pipe($.if(dev, gulp.dest('.tmp/'), gulp.dest('dist/')))
 	.pipe($.size({title: 'pug'}))
 	.pipe(reload({stream: true}));
@@ -57,7 +61,7 @@ gulp.task('styles', () => {
 gulp.task('scripts', () => {
   return gulp.src('app/scripts/main.js')
 	.pipe($.plumber())
-	// .pipe($.uglify())
+	.pipe($.uglify())
 	.pipe($.babel())
 	.pipe($.if(dev, gulp.dest('.tmp/scripts'), gulp.dest('dist/scripts')))
 	.pipe(reload({stream: true}));
@@ -70,29 +74,6 @@ gulp.task('scripts:slideNav', () => {
 	.pipe($.if(dev, gulp.dest('.tmp/scripts'), gulp.dest('dist/scripts')))
 	.pipe(reload({stream: true}));
 });
-
-gulp.task('styles:vendor', () => {
-  return gulp.src([
-		'node_modules/susy/sass/_susy.scss'
-	])
-	.pipe($.concat('vendor.min.css'))
-	.pipe($.plumber())
-	.pipe($.if(dev, gulp.dest('.tmp/styles'), gulp.dest('dist/styles')))
-	.pipe(reload({stream: true}));
-});
-
-// gulp.task('scripts:vendor', () => {
-// 	return gulp.src([
-		
-// 	])
-// 		.pipe($.concat('vendor.min.js'))
-// 		.pipe($.plumber())
-// 		// .pipe($.uglify())
-// 		// .pipe($.babel())
-// 		.pipe($.if(dev, gulp.dest('.tmp/scripts'), gulp.dest('dist/scripts')))
-// 		.pipe(reload({ stream: true }));
-// });
-
 
 function lint(files) {
   return gulp.src(files)
@@ -112,21 +93,11 @@ gulp.task('lint:test', () => {
 	.pipe(gulp.dest('test/spec'));
 });
 
-gulp.task('html', ['styles', 'styles:vendor', 'scripts', 'views'], () => {
+gulp.task('html', ['styles', 'scripts', 'views'], () => {
   return gulp.src('.tmp/*.html')
 	.pipe($.useref({searchPath: ['.tmp', '.']}))
 	.pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
 	.pipe($.if(/\.css$/, $.cssnano({safe: true, autoprefixer: false})))
-	.pipe($.if(/\.html$/, $.htmlmin({
-	  collapseWhitespace: true,
-	  minifyCSS: true,
-	  minifyJS: {compress: {drop_console: false}},
-	  processConditionalComments: false,
-	  removeComments: true,
-	  removeEmptyAttributes: true,
-	  removeScriptTypeAttributes: false,
-	  removeStyleLinkTypeAttributes: false
-	})))
 	.pipe(gulp.dest('dist'));
 });
 
@@ -158,7 +129,7 @@ gulp.task('extras', () => {
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', () => {
-	runSequence(['clean'], ['views'], ['sprite'], ['styles', 'styles:vendor', 'scripts'], () => {
+	runSequence(['clean'], ['views'], ['sprite'], ['styles', 'scripts'], () => {
 		browserSync.init({
 			notify: false,
 			port: 9000,

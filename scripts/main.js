@@ -1,46 +1,16 @@
-'use strict';
+"use strict";
 
-(function (document, window) {
-  'use strict';
-
-  var navbar = document.getElementById('navbar'),
-      menuBar = document.getElementById('menu-bar'),
-      mainMenu = document.getElementsByClassName('main-menu')[0];
-
-  window.slide = new SlideNav();
-
-  var nav = new SlideNav({
-    activeClass: 'active',
-    toggleButtonSelector: false,
-    toggleBoxSelector: false,
-    hideAfterSelect: true,
-    speed: 700000,
-    changeHash: false,
-    navBoxToggleClass: false
-  });
-
-  window.onscroll = function () {
-    if (window.scrollY > 150) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  };
-
-  menuBar.onclick = function (e) {
-
-    if (mainMenu.classList.contains('open')) {
-      mainMenu.classList.remove('open');
-    } else {
-      mainMenu.classList.add('open');
-    }
-  };
-
-  [].forEach.call(document.querySelectorAll('ul.main-menu li a, h1.site-name a'), function (el) {
-    el.addEventListener('click', function () {
-      if (mainMenu.classList.contains('open')) {
-        mainMenu.classList.remove('open');
-      }
+!function (e, s) {
+  "use strict";
+  var n = e.getElementById("navbar"),
+      l = e.getElementById("menu-bar"),
+      t = e.getElementsByClassName("main-menu")[0];s.slide = new SlideNav();new SlideNav({ activeClass: "active", toggleButtonSelector: !1, toggleBoxSelector: !1, hideAfterSelect: !0, speed: 7e5, changeHash: !1, navBoxToggleClass: !1 });s.onscroll = function () {
+    s.scrollY > 150 ? n.classList.add("scrolled") : n.classList.remove("scrolled");
+  }, l.onclick = function (e) {
+    t.classList.contains("open") ? t.classList.remove("open") : t.classList.add("open");
+  }, [].forEach.call(e.querySelectorAll("ul.main-menu li a, h1.site-name a"), function (e) {
+    e.addEventListener("click", function () {
+      t.classList.contains("open") && t.classList.remove("open");
     });
   });
-})(document, window);
+}(document, window);
