@@ -19,8 +19,8 @@
                 display: block;
                 height: 2px;
                 width: 0;
+                bottom: 0px;
                 position: absolute;
-                bottom: 0;
                 left: 50%;
                 background-color: $branco;
                 transition: all .25s cubic-bezier(.4,0,.2,1);
@@ -67,6 +67,7 @@
             position: absolute;
             left: 0;
             width: 100%;
+            box-shadow: 0px 2px 5px 0px $preto;
 
             li {
                 float: left;
@@ -79,10 +80,38 @@
                     display: initial;
                     padding: 0;
 
+                    @media (max-width: 768px) {
+                        position: relative;
+                        display: inline-block;
+                        width: 80%;
+                        transition: all .5s cubic-bezier(.4,0,.2,1);
+
+                        &:before {
+                            content: "";
+                            display: block;
+                            height: 2px;
+                            width: 0;
+                            bottom: 0px;
+                            position: absolute;
+                            left: 50%;
+                            background-color: $branco;
+                            transition: all .25s cubic-bezier(.4,0,.2,1);
+                        }
+
+                        &:hover,
+                        &.active {
+                            text-decoration: none;
+
+                            &:before {
+                                width: 100%;
+                                left: 0;
+                            }
+                        }
+                    }
+
                     &:hover,
                     &.active {
                         &:before {
-                            bottom: -5px;
                             height: 2px;
                         }
                     }
