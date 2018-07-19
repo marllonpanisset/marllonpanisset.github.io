@@ -12,22 +12,27 @@
 
         .main-menu li a {
             position: relative;
-            color: $branco2;
+            transition: all .5s cubic-bezier(.4,0,.2,1);
+
+            &:before {
+                content: "";
+                display: block;
+                height: 2px;
+                width: 0;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                background-color: $branco;
+                transition: all .25s cubic-bezier(.4,0,.2,1);
+            }
 
             &:hover,
             &.active {
                 text-decoration: none;
-                color: $branco;
 
                 &:before {
-                    content:'';
-                    display: block;
-                    position: absolute;
                     width: 100%;
-                    height: 3px;
-                    background: $branco;
                     left: 0;
-                    bottom: 0;
                 }
             }
         }
@@ -92,18 +97,27 @@
         li {
             float: left;
             height: 60px;
+            margin-right: 3px;
+
+            &:last-child {
+                margin-right: 0;
+            }
 
             a {
+                font-family: 'roboto';
                 padding: 0 15px;
                 display: block;
-                color: $branco2;
+                color: $branco;
                 font-size: .9rem;
+                font-weight: 300;
                 text-transform: uppercase;
                 outline: none;
+                box-sizing: border-box;
                 transition: all .3s;
 
                 &:hover {
-                    color: $branco;
+                    box-sizing: border-box;
+                    font-weight: 400;
                     background: transparent;
                     text-decoration: none;
                     transition: all .3s;
@@ -115,10 +129,10 @@
     .site-name {
         position: relative;
         float: left;
-        font-family: 'roboto condensed';
+        font-family: 'Oswald';
         font-weight: 400;
         text-transform: uppercase;
-        letter-spacing: .02rem;
+        letter-spacing: 2px;
         font-size: 1.4rem;
         color: $branco2;
         transition: all .3s;
