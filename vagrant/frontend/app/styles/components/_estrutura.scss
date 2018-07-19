@@ -40,16 +40,18 @@ debug: (image: hide),
     }
 
     .profile-thumb {
-        @include span(2);
+        @include span(4);
+        margin-left: 0;
+        margin-right: 0;
+        transition: all .3s;
 
-        @media (max-width: 959px) {
-            @include span(4);
-        }
-
-        @media (max-width: 767px) {
+        @media (max-width: 768px) {
             @include span(12);
+            transition: all .3s;
 
             img {
+                max-width: 250px;
+                transition: all .3s;
                 margin: {
                     left: auto;
                     right: auto;
@@ -60,18 +62,24 @@ debug: (image: hide),
 
         img {
             border-radius: 50%;
+
+            @media (max-width: 480px) {
+                max-width: 200px;
+                transition: all .3s;
+            }
         }
     }
 
     .biography {
-        @include span(10);
+        @include span(8);
+        margin-left: 0;
+        margin-right: 0;
+        float: right;
+        transition: all .3s;
 
-        @media (max-width: 959px) {
-            @include span(8);
-        }
-
-        @media (max-width: 767px) {
+        @media (max-width: 768px) {
             @include span(12);
+            transition: all .3s;
         }
     }
 }
@@ -84,6 +92,7 @@ debug: (image: hide),
 
     .item {
         @include span(4);
+        transition: all .3s;
 
         img {
             display: block;
@@ -100,11 +109,13 @@ debug: (image: hide),
         
         @media (max-width: 959px) {
             @include span(6);
+            transition: all .3s;
         }
 
         @media (max-width: 768px) {
             @include span(12);
             margin-bottom: 50px;
+            transition: all .3s;
         }
     }
 }
@@ -118,13 +129,16 @@ debug: (image: hide),
     .item {
         @include span(4);
         margin-bottom: 30px;
+        transition: all .3s;
 
         @media (max-width: 959px) {
             @include span(6);
+            transition: all .3s;
         }
 
         @media (max-width: 767px) {
             @include span(12);
+            transition: all .3s;
         }
 
         a {
