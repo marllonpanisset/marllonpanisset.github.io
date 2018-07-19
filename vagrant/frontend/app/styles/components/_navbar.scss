@@ -104,23 +104,21 @@
             }
 
             a {
-                font-family: 'roboto';
+                font-family: core,helvetica neue,Helvetica,Arial,sans-serif;
                 padding: 0 15px;
                 display: block;
-                color: $branco;
-                font-size: em(16px);
-                font-weight: 300;
+                color: $cinza2;
+                font-size: em(14px);
                 text-transform: uppercase;
                 outline: none;
-                box-sizing: border-box;
-                transition: all .3s;
-
+                transition: all .3s linear;
+                
                 &:hover {
-                    box-sizing: border-box;
-                    font-weight: 400;
+                    color: $branco;
+                    font-weight: 700;
                     background: transparent;
                     text-decoration: none;
-                    transition: all .3s;
+                    transition: all .3s linear;
                 }
             }
         }
@@ -134,7 +132,7 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         font-size: 1.4rem;
-        color: $branco2;
+        color: $cinza2;
         transition: all .3s;
 
         @media (max-width: 359px) {
@@ -142,7 +140,7 @@
         }
 
         &:hover {
-            transition: all .3s;
+            transition: all .6s ease-in-out;
             color: $branco;
         }
 
