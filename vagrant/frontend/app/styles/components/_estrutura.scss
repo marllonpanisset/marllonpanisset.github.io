@@ -104,6 +104,7 @@ debug: (image: hide),
 
         @media (max-width: 768px) {
             @include span(12);
+            margin-bottom: 50px;
         }
     }
 }
