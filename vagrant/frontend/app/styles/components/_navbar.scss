@@ -6,6 +6,10 @@
     z-index: 100;
     transition: all .3s;
 
+    @media (max-width: 800px) {
+        background-color: $preto3;
+    }
+
     &.scrolled {
         background-color: $preto3;
         transition: all .3s;
@@ -23,7 +27,7 @@
                 position: absolute;
                 left: 50%;
                 background-color: $branco;
-                transition: all .25s cubic-bezier(.4,0,.2,1);
+                transition: all .30s cubic-bezier(.4,0,.2,1);
             }
 
             &:hover,
@@ -51,9 +55,13 @@
             color: $branco;
         }
 
-        @media (min-width: 769px) {
+        @media (min-width: 801px) {
             display: none;
+        }
 
+        @media (max-width: 360px) {
+            width: 26px;
+            margin-top: 15px;
         }
     }
 
@@ -80,7 +88,7 @@
                     display: initial;
                     padding: 0;
 
-                    @media (max-width: 768px) {
+                    @media (max-width: 800px) {
                         position: relative;
                         display: inline-block;
                         width: 80%;
@@ -95,7 +103,7 @@
                             position: absolute;
                             left: 50%;
                             background-color: $branco;
-                            transition: all .25s cubic-bezier(.4,0,.2,1);
+                            transition: all .30s cubic-bezier(.4,0,.2,1);
                         }
 
                         &:hover,
@@ -119,7 +127,7 @@
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 800px) {
             display: none;
         }
 
@@ -133,21 +141,21 @@
             }
 
             a {
-                font-family: core,helvetica neue,Helvetica,Arial,sans-serif;
+                font-family: 'Open Sans', Arial, Sans-Serif;
+                text-transform: uppercase;
+                letter-spacing: .1em;
+                font-size: em(15px);
                 padding: 0 15px;
                 display: block;
-                color: $cinza2;
-                font-size: em(14px);
-                text-transform: uppercase;
+                color: $branco;
                 outline: none;
-                transition: all .3s linear;
+                transition: all .1s ease-in-out;
                 
                 &:hover {
-                    color: $branco;
-                    font-weight: 700;
+                    font-weight: 600;
                     background: transparent;
                     text-decoration: none;
-                    transition: all .3s linear;
+                    transition: all .1s ease-in-out;
                 }
             }
         }
@@ -159,17 +167,21 @@
         font-family: 'Oswald';
         font-weight: 400;
         text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 1.4rem;
-        color: $cinza2;
-        transition: all .3s;
+        letter-spacing: .1em;
+        font-size: 1.65rem;
+        color: $branco;
+        transition: all .1s ease-in-out;
 
-        @media (max-width: 359px) {
-            font-size: 1.3rem;
+        @media (max-width: 480px) {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 360px) {
+            font-size: 1.35rem;
         }
 
         &:hover {
-            transition: all .6s ease-in-out;
+            transition: all .1s ease-in-out;
             color: $branco;
         }
 
@@ -180,8 +192,8 @@
 
         svg {
             float: left;
-            width: 30px;
-            margin-top: 18px;
+            width: 27px;
+            margin-top: 20px;
             margin-right: 10px;
         }
     }

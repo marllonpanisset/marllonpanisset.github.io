@@ -12,7 +12,7 @@
     toggleButtonSelector: false,
     toggleBoxSelector: false,
     hideAfterSelect: true,
-    speed: 700000,
+    speed: 50,
     changeHash: false,
     navBoxToggleClass: false
   });

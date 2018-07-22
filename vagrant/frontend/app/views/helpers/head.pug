@@ -1,21 +1,25 @@
 head
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-122703349-1")
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-122703349-1');
     meta(charset="utf-8")
+    title Marllon Panisset: Desenvolvedor Front-end
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(http-equiv="content-language" content="pt-br")
     meta(name="viewport" content="width=device-width,initial-scale=1")
-    title Marllon Panisset: Desenvolvedor Front-end
     meta(name="description" content="Desenvolvedor Front-end. Portfolio com trabalhos nos quais atuei como desenvolvedor front-end em agências e como freelancer.")
     meta(name="author" content="Marllon Panisset")
     meta(property="article:author" content="https://marllonpanisset.github.io/")
     meta(name="keywords" content="Marllon, Panisset, Marllon Panisset, Desenvolvedor Front-end, Desenvolvedor, Developer, Dev, Front, Front-end, Frontend, Web, Webdesign, Web Design Rio de Janeiro, Rj, HTML, CSS, JAVASCRIPT, JS, Programação, Programador, criação de sites, websites, sites, blog, criação de blogs, ux, teste de usabilidade, ")
-    
     meta(itemprop="name" content="Marllon Panisset: Desenvolvedor Front-end")
     meta(itemprop="description" content="Desenvolvedor Front-end. Portfolio com trabalhos nos quais atuei como desenvolvedor front-end em agências e como freelancer.")
     meta(itemprop="image" content="https://i.imgur.com/MKit3oU.jpg")
-
     link(rel="author" href="https://plus.google.com/+MarllonPanisset/")
     link(rel="publisher" href="https://plus.google.com/+MarllonPanisset/")
-
     meta(name="twitter:card" content="summary")
     meta(name="twitter:url" content="https://marllonpanisset.github.io/")
     meta(name="twitter:title" content="Marllon Panisset: Desenvolvedor Front-end")
@@ -24,7 +28,6 @@ head
     meta(name="twitter:site" content="@marllonpanisset")
     meta(name="twitter:creator" content="@marllonpanisset")
     meta(name="twitter:domain" content="https://marllonpanisset.github.io/")
-
     meta(property="og:title" content="Marllon Panisset: Desenvolvedor Front-end")
     meta(property="og:description" content="Desenvolvedor Front-end. Portfolio com trabalhos nos quais atuei como desenvolvedor front-end em agências e como freelancer.")
     meta(property="og:image" content="https://i.imgur.com/MKit3oU.jpg")
@@ -32,10 +35,8 @@ head
     meta(property="og:site_name" content="Marllon Panisset: Desenvolvedor Front-end")
     meta(property="og:type" content="website")
     meta(property="og:locale" content="pt_BR")
-
     link(rel="shortcut icon" href="favicon.ico")
     meta(name="theme-color" content="#2196F3")
-
     style.
         @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Roboto:300,400,700|Oswald:400');
     link(rel="stylesheet" href="styles/main.css")

@@ -53,11 +53,23 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
     position: relative;
     float: left;
     width: 100%;
-    height: 300px;
+    height: 320px;
     padding: 67px 0px;
     text-align: center;
     -webkit-backface-visibility: hidden;
     transition: all .3s;
+
+    @media (min-width: 360px) {
+        height: 360px;
+    }
+
+    @media (min-width: 375px) {
+        height: 375px;
+    }
+
+    @media (min-width: 414px) {
+        height: 414px;
+    }
 
     @media (max-width: 640px) {
         transition: all .3s;
@@ -112,6 +124,22 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        z-index: 0;
+
+        &:before {
+            content:'';
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            background: linear-gradient(
+                to bottom,
+                #101010,
+                rgba(#000, 0)
+            );
+        }
     }
 
     &.services {
@@ -121,14 +149,44 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
         background-repeat: no-repeat;
         background-size: cover;
         margin-bottom: 50px;
+        z-index: 0;
+
+        &:before {
+            content:'';
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            background: linear-gradient(
+                to bottom,
+                #101010,
+                rgba(#000, 0)
+            );
+        }
     }
 
     &.contact {
         background: url($predra-da-gavea);
         background-attachment: fixed;
-        background-position: center center;
+        background-position: left;
         background-repeat: no-repeat;
         background-size: cover;
         margin-bottom: 30px;
+        height: 480px;
+        padding-top: 280px;
+
+        h3 {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 360px) {
+            transition: all .3s;
+            padding: {
+                top: 120px;
+                bottom: 25px;
+            }
+        }
     }
 }
