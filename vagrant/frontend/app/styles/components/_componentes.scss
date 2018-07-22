@@ -54,7 +54,7 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
     float: left;
     width: 100%;
     height: 320px;
-    padding: 67px 0px;
+    padding: 67px;
     text-align: center;
     -webkit-backface-visibility: hidden;
     transition: all .3s;
@@ -91,7 +91,7 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
         text-align: center;
         color: $branco;
         display: inline-block;
-        margin-top: 20px;
+        margin-bottom: 20px;
         text-shadow: 2px 3px 10px $preto;
         transition: all .3s;
 
@@ -124,19 +124,20 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        padding-top: 240px;
         z-index: 0;
 
         &:before {
             content:'';
             position: absolute;
             width: 100%;
-            height: 100vh;
+            height: 100%;
             left: 0;
             top: 0;
             z-index: -1;
             background: linear-gradient(
-                to bottom,
-                #101010,
+                to top,
+                #000,
                 rgba(#000, 0)
             );
         }
@@ -149,19 +150,20 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
         background-repeat: no-repeat;
         background-size: cover;
         margin-bottom: 50px;
+        padding-top: 230px;
         z-index: 0;
 
         &:before {
             content:'';
             position: absolute;
             width: 100%;
-            height: 100vh;
+            height: 100%;
             left: 0;
             top: 0;
             z-index: -1;
             background: linear-gradient(
-                to bottom,
-                #101010,
+                to top,
+                #000,
                 rgba(#000, 0)
             );
         }
@@ -175,7 +177,7 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
         background-size: cover;
         margin-bottom: 30px;
         height: 480px;
-        padding-top: 280px;
+        padding-top: 320px;
 
         h3 {
             margin-bottom: 20px;
