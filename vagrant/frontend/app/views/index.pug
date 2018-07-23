@@ -6,7 +6,7 @@ html(lang="pt-br" class="no-js")
 		include ./includes/navbar.pug
 		include ./includes/header.pug
 		main(id="main" role="main")
-			section#about
+			section#about.page-section
 				.wrapper
 					.profile-thumb
 						img(src="https://i.imgur.com/MKit3oU.jpg" alt="Foto de Perfil")
@@ -18,7 +18,7 @@ html(lang="pt-br" class="no-js")
 						//- p Cada trabalho possui sua singularidade, então é preciso sempre analisar as possibilidades antes de estipular custos e prazos. Cada projeto precisa de cuidados diferentes, trabalhando com um código customizado e adequado a cada necessidade. Sempre com o uso de novas tecnologias em HTML5 e CSS3.
 						//- p Em relação a compatibilidade, é sempre bom lembrar que navegadores atualizados resultam em melhor performance e que seu site vai funcionar em todos eles. Então não funcionará em navegadores antigos? (ex: IE9). Tudo é possível, desde que haja um bom motivo pra isso!
 
-			section#services
+			section#services.page-section
 				.parallax.services
 					.wrapper
 						h3 Serviços
@@ -38,7 +38,7 @@ html(lang="pt-br" class="no-js")
 							img(src="https://placeimg.com/150/150/animals" alt="Serviço")
 							h4 Titulo
 							p Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI.
-			section#portfolio
+			section#portfolio.page-section
 				.parallax.portfolio
 					.wrapper
 						h3 Portfólio
@@ -47,7 +47,7 @@ html(lang="pt-br" class="no-js")
 					each item in ['item1','item2','item3','item4','item5','item6']
 						.item
 							a(href="") #{item}
-			section#contact
+			section#contact.page-section
 				.parallax.contact
 					.wrapper
 						h3 Contato
