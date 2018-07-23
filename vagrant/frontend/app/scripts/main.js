@@ -35,10 +35,10 @@
     });
   });
   
-  $("[data-scroll]").click(function (event) {
+  $('[data-scroll]').click(function (event) {
     event.preventDefault();
     var $this = $(this),
-      scroll = $this.data("scroll");
+      scroll = $this.data('scroll');
     if ($(scroll).length > 0) {
       var top = $(scroll).offset().top;
       $('html,body').animate({
