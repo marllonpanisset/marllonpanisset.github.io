@@ -21,18 +21,23 @@
             &:before {
                 content: "";
                 display: block;
-                height: 2px;
+                height: 3px;
                 width: 0;
                 bottom: 0px;
                 position: absolute;
                 left: 50%;
-                background-color: $branco;
+                background-color: $azul;
                 transition: all .30s cubic-bezier(.4,0,.2,1);
             }
 
             &:hover,
             &.active {
+                background-color: $cinza2;
                 text-decoration: none;
+
+                @media (max-width: 800px) {
+                    background-color: transparent;
+                }
 
                 &:before {
                     width: 100%;
@@ -102,7 +107,7 @@
                             bottom: 0px;
                             position: absolute;
                             left: 50%;
-                            background-color: $branco;
+                            background-color: $azul;
                             transition: all .30s cubic-bezier(.4,0,.2,1);
                         }
 
@@ -147,15 +152,15 @@
                 font-size: em(15px);
                 padding: 0 15px;
                 display: block;
-                color: $branco;
+                color: $cinza3;
                 outline: none;
-                transition: all .1s ease-in-out;
-                
+                transition: all .40s;
+
                 &:hover {
-                    font-weight: 600;
+                    color: $branco;
                     background: transparent;
                     text-decoration: none;
-                    transition: all .1s ease-in-out;
+                    transition: all .40s;
                 }
             }
         }
@@ -170,7 +175,6 @@
         letter-spacing: .1em;
         font-size: 1.65rem;
         color: $branco;
-        transition: all .1s ease-in-out;
 
         @media (max-width: 480px) {
             font-size: 1.5rem;
@@ -178,11 +182,6 @@
 
         @media (max-width: 360px) {
             font-size: 1.35rem;
-        }
-
-        &:hover {
-            transition: all .1s ease-in-out;
-            color: $branco;
         }
 
         a {

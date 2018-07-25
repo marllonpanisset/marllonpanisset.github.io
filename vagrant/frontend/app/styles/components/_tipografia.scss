@@ -1,5 +1,5 @@
 $padraoTexto: $preto2;
-$padraoTextoLink: $azul2;
+$padraoTextoLink: $cinza2;
 $padraoTextoLinkHover: $azul;
 $base-font-size: 16px;
 
@@ -22,11 +22,13 @@ p {
     color: $padraoTexto;
 
     a {
+        text-decoration: underline;
         color: $padraoTextoLink;
-
+        transition: all .3s;
+        
         &:hover {
             color: $padraoTextoLinkHover;
-            text-decoration: underline;
+            transition: all .3s;
         }
     }
 }
