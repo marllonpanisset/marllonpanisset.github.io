@@ -106,7 +106,6 @@ debug: (image: hide),
             text-align: center;
         }
 
-        
         @media (max-width: 959px) {
             @include span(6);
             transition: all .3s;

@@ -7,7 +7,7 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
 
     li {
         float: left;
-        
+
         &:not(:last-child) {
             margin-right: 30px;
         }
@@ -16,60 +16,51 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
             margin-right: 15px;
         }
 
-        &.github {
-            a {
-                &:hover {
-                    &:before {
-                        bottom: -8px;
-                    }
+        &.github a {
+            width: 25px;
+            height: 25px;
+
+            &:hover {
+                &:before {
+                    bottom: -8px;
                 }
             }
         }
 
-        &.twitter {
-            a {
-                width: 26px;
-                height: 26px;
+        &.twitter a {
+            width: 26px;
+            height: 26px;
 
-                &:hover {
-                    &:before {
-                        bottom: -6px;
-                    }
+            &:hover {
+                &:before {
+                    bottom: -6px;
                 }
             }
         }
 
-        &.medium {
-            a {
-                width: 26px;
-                height: 25px;
+        &.medium a {
+            width: 26px;
+            height: 25px;
+        }
+
+        &.linkedin a {
+            width: 22px;
+            height: 24px;
+
+            svg {
+                margin-top: -1px;
             }
         }
 
-        &.linkedin {
-            a {
-                width: 22px;
-                height: 24px;
-
-                svg {
-                    margin-top: -1px;
-                }
-            }
-        }
-
-        &.instagram {
-            a {
-                width: 22px;
-                height: 25px;
-            }
+        &.instagram a {
+            width: 22px;
+            height: 25px;
         }
 
         a { 
             position: relative;
             text-decoration: none;
             display: block;
-            width: 25px;
-            height: 25px;
             transition: all .5s cubic-bezier(.4,0,.2,1);
 
             &:before {
@@ -85,7 +76,6 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
             }
 
             &:hover {
-
                 &:before {
                     width: 100%;
                     left: 0;
