@@ -139,10 +139,9 @@
         li {
             float: left;
             height: 60px;
-            margin-right: 3px;
-
-            &:last-child {
-                margin-right: 0;
+            
+            &:not(:last-child) {
+                margin-right: 3px;
             }
 
             a {

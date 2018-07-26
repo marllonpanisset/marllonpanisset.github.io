@@ -3,7 +3,10 @@
     float: left;
     width: 100%;
     height: 100px;
-    padding: 30px 0;
     background-color: $preto3;
     color: $branco;
+    padding: {
+        top: 40px;
+        bottom: 30px;
+    }
 }
