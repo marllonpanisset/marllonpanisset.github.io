@@ -33,7 +33,7 @@ debug: (image: hide),
 }
 
 #about {
-    padding-top: 80px;
+    padding-top: 120px;
 
     .parallax {
         margin-bottom: 100px;
@@ -84,101 +84,29 @@ debug: (image: hide),
     }
 }
 
-.card-services {
+.skills {
     position: relative;
     float: left;
     width: 100%;
     margin-top: 100px;
 
-    .item {
-        @include span(4);
-        transition: all .3s;
+    .col-left {
+        position: relative;
+        float: left;
+        @include span(6);
 
-        img {
-            display: block;
-            margin: 0 auto;
-            border-radius: 200px;
-            margin-bottom: 30px;
-        }
-
-        h4 {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        @media (max-width: 959px) {
-            @include span(6);
-            transition: all .3s;
-        }
-
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             @include span(12);
-            margin-bottom: 50px;
-            transition: all .3s;
         }
     }
-}
 
-.card-portfolio {
-    position: relative;
-    float: left;
-    width: 100%;
-    margin-top: 50px;
+    .col-right {
+        position: relative;
+        float: left;
+        @include span(6);
 
-    .item {
-        @include span(4);
-        margin-bottom: 30px;
-        transition: all .3s;
-
-        @media (max-width: 959px) {
-            @include span(6);
-            transition: all .3s;
-        }
-
-        @media (max-width: 767px) {
+        @media (max-width: 1024px) {
             @include span(12);
-            transition: all .3s;
-        }
-
-        a {
-            position: relative;
-            display: block;
-            width: 250px;
-            height: 200px;
-            line-height: 200px;
-            margin: 0 auto;
-            text-align: center;
-            text-indent: -999999em;
-            background: url('https://placeimg.com/250/200/animals') no-repeat;
-
-            &:hover {
-                &:before {
-                    content:'';
-                    position: absolute;
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    left: 0;
-                    background: $preto2;
-                    opacity: 0.5;
-                    transition: all .4s;
-                }
-
-                &:after {
-                    content:'+';
-                    position: absolute;
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    left: 0;
-                    top: 0;
-                    font-size: 48px;
-                    font-weight: bold;
-                    text-indent: initial;
-                    color: $branco;
-                    transition: all .4s;
-                }
-            }
         }
     }
 }

@@ -232,3 +232,176 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
         }
     }
 }
+
+.card-services {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 100px;
+
+    .item {
+        margin-bottom: 50px;
+        @include span(4);
+        transition: all .3s;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 200px;
+            margin-bottom: 30px;
+        }
+
+        h4 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 959px) {
+            @include span(6);
+            transition: all .3s;
+        }
+
+        @media (max-width: 768px) {
+            @include span(12);
+            margin-bottom: 50px;
+            transition: all .3s;
+        }
+    }
+}
+
+.card-portfolio {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+
+    .item {
+        @include span(4);
+        margin-bottom: 30px;
+        transition: all .3s;
+
+        @media (max-width: 959px) {
+            @include span(6);
+            transition: all .3s;
+        }
+
+        @media (max-width: 767px) {
+            @include span(12);
+            transition: all .3s;
+        }
+
+        a {
+            position: relative;
+            display: block;
+            width: 250px;
+            height: 200px;
+            line-height: 200px;
+            margin: 0 auto;
+            text-align: center;
+            text-indent: -999999em;
+            background: url('https://placeimg.com/250/200/animals') no-repeat;
+
+            &:hover {
+                &:before {
+                    content:'';
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    background: $preto2;
+                    opacity: 0.5;
+                    transition: all .4s;
+                }
+
+                &:after {
+                    content:'+';
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    font-size: 48px;
+                    font-weight: bold;
+                    text-indent: initial;
+                    color: $branco;
+                    transition: all .4s;
+                }
+            }
+        }
+    }
+}
+
+.skillbar {
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    background: #eee;
+    height: 35px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -webkit-transition: 0.4s linear;
+    -moz-transition: 0.4s linear;
+    -ms-transition: 0.4s linear;
+    -o-transition: 0.4s linear;
+    transition: 0.4s linear;
+    -webkit-transition-property: width, background-color;
+    -moz-transition-property: width, background-color;
+    -ms-transition-property: width, background-color;
+    -o-transition-property: width, background-color;
+    transition-property: width, background-color;
+}
+  
+.skillbar-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 110px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #ffffff;
+    background: #6adcfa;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+    span {
+      display: block;
+      background: rgba(0, 0, 0, 0.1);
+      padding: 0 20px;
+      height: 35px;
+      line-height: 35px;
+      -webkit-border-top-left-radius: 3px;
+      -webkit-border-bottom-left-radius: 3px;
+      -moz-border-radius-topleft: 3px;
+      -moz-border-radius-bottomleft: 3px;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+}
+  
+.skillbar-bar {
+    height: 35px;
+    width: 0px;
+    background: #6adcfa;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+  
+.skill-bar-percent {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 11px;
+    height: 35px;
+    line-height: 35px;
+    color: #ffffff;
+    color: rgba(0, 0, 0, 0.4);
+}
