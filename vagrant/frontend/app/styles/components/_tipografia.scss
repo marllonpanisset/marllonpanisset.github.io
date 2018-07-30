@@ -1,5 +1,5 @@
 $padraoTexto: $preto2;
-$padraoTextoLink: $cinza2;
+$padraoTextoLink: $preto;
 $padraoTextoLinkHover: $azul;
 $base-font-size: 16px;
 
@@ -16,9 +16,9 @@ body {
 }
 
 p {
-    line-height: em(25px, 16px);
+    line-height: em(25px, 18px);
     margin-bottom: em(20px);
-    font-size: em(16px);
+    font-size: em(18px);
     color: $padraoTexto;
 
     a {
@@ -36,7 +36,7 @@ p {
 h3 {
     text-transform: uppercase;
     font-family: 'roboto';
-    font-size: em(36px);
+    font-size: em(48px);
     margin-bottom: 40px;
     font-weight: 700;
     color: $preto2;

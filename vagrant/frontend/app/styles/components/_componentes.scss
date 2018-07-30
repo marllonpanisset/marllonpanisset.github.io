@@ -95,6 +95,7 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
     width: 100%;
     height: 320px;
     padding: 67px 0;
+    margin-bottom: 40px;
     text-align: center;
     -webkit-backface-visibility: hidden;
     transition: all .3s;
@@ -243,6 +244,11 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
         margin-bottom: 50px;
         @include span(4);
         transition: all .3s;
+        text-align: center;
+
+        h4 {
+            font-size: em(20px);
+        }
 
         img {
             display: block;
@@ -256,7 +262,7 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
             text-align: center;
         }
 
-        @media (max-width: 959px) {
+        @media (max-width: 1024px) {
             @include span(6);
             transition: all .3s;
         }
@@ -359,7 +365,7 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
     position: absolute;
     top: 0;
     left: 0;
-    min-width: 110px;
+    min-width: 60px;
     font-weight: bold;
     font-size: 13px;
     color: #ffffff;

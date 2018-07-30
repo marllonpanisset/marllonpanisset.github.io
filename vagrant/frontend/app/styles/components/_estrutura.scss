@@ -88,25 +88,26 @@ debug: (image: hide),
     position: relative;
     float: left;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 70px;
 
     .col-left {
         position: relative;
         float: left;
-        @include span(6);
+        width: 46%;
+        margin-right: 8%;
 
-        @media (max-width: 1024px) {
-            @include span(12);
+        @media (max-width: 767px) {
+            width: 100%;
         }
     }
 
     .col-right {
         position: relative;
         float: left;
-        @include span(6);
+        width: 46%;
 
-        @media (max-width: 1024px) {
-            @include span(12);
+        @media (max-width: 767px) {
+            width: 100%;
         }
     }
 }
