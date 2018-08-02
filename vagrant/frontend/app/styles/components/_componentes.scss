@@ -241,34 +241,50 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
     margin-top: 100px;
 
     .item {
+        position: relative;
+        float: left;
+        width: percentage(370px/1170px);
         margin-bottom: 50px;
-        @include span(4);
         transition: all .3s;
         text-align: center;
 
+        
         h4 {
             font-size: em(20px);
         }
-
+        
         img {
             display: block;
             margin: 0 auto;
             border-radius: 200px;
             margin-bottom: 30px;
         }
-
+        
         h4 {
             margin-bottom: 20px;
             text-align: center;
         }
+        
+        @media (min-width: 1025px) {
 
-        @media (max-width: 1024px) {
-            @include span(6);
+            &:not(:nth-child(3n)) {
+                margin-right: percentage(30px/1170px);
+                transition: all .3s;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            width: percentage(497px/1024px);
             transition: all .3s;
+            
+            &:not(:nth-child(2n)) {
+                margin-right: percentage(30px/1024px);
+                transition: all .3s;
+            }
         }
 
         @media (max-width: 768px) {
-            @include span(12);
+            width: 100%;
             margin-bottom: 50px;
             transition: all .3s;
         }
@@ -283,7 +299,7 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
 
     .item {
         @include span(4);
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         transition: all .3s;
 
         @media (max-width: 959px) {

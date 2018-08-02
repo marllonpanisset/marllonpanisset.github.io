@@ -31,5 +31,13 @@
     jQuery(".skillbar").each(function () {
       jQuery(this).find(".skillbar-bar").animate({ width: jQuery(this).attr("data-percent") }, 6e3);
     });
-  });
+  }), function () {
+    for (var e = t.getElementsByClassName("match-height"), a = e.length, n = [], s = 0; s < a; s++) {
+      n.push(e[s].offsetHeight);
+    }for (var i = function () {
+      return Math.max(n);
+    }(), s = 0; s < e.length; s++) {
+      e[s].style.height = i + "px";
+    }
+  }();
 }(document, window);
