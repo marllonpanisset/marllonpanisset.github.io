@@ -16,10 +16,28 @@ body {
 }
 
 p {
-    line-height: em(25px, 18px);
     margin-bottom: em(20px);
-    font-size: em(18px);
     color: $padraoTexto;
+    
+    @media (min-width: 1025px) {
+        line-height: em(25px, 18px);
+        font-size: em(18px);
+    }
+
+    @media (max-width: 1024px) {
+        line-height: em(25px, 16px);
+        font-size: em(16px);
+    }
+
+    @media (max-width: 360px) {
+        line-height: em(25px, 15px);
+        font-size: em(15px);
+    }
+
+    @media (max-width: 320px) {
+        line-height: em(25px, 14px);
+        font-size: em(14px);
+    }
 
     a {
         text-decoration: underline;
@@ -40,6 +58,16 @@ h3 {
     margin-bottom: 40px;
     font-weight: 700;
     color: $preto2;
+
+    @media (max-width: 1024px) {
+        font-size: em(36px);
+        margin-bottom: 30px;
+    }
+    
+    @media (max-width: 480px) {
+        font-size: em(32px);
+        margin-bottom: 20px;
+    }
 }
 
 h4 {
