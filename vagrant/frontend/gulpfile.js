@@ -100,13 +100,18 @@ gulp.task('images', () => {
 });
 
 gulp.task('svg', () => {
-  return gulp.src('app/favico.ico')
+	return gulp.src('app/images/svg/*.svg')
 	.pipe($.if(dev, gulp.dest('.tmp/images/svg'), gulp.dest('dist/images/svg')))
 });
 
 gulp.task('favico', () => {
-  return gulp.src('app/images/svg/*.svg')
-	.pipe($.if(dev, gulp.dest('.tmp/images/svg'), gulp.dest('dist/images/svg')))
+	return gulp.src('app/favico.ico')
+	.pipe($.if(dev, gulp.dest('.tmp/'), gulp.dest('dist/')))
+});
+
+gulp.task('manifest.json', () => {
+	return gulp.src('app/manifest.json')
+	.pipe($.if(dev, gulp.dest('.tmp/'), gulp.dest('dist/')))
 });
 
 gulp.task('extras', () => {
@@ -121,7 +126,7 @@ gulp.task('extras', () => {
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', () => {
-	runSequence(['clean'], ['views'], ['sprite'], ['styles', 'scripts'], () => {
+	runSequence(['clean'], ['views'], ['sprite'], ['styles', 'scripts','manifest.json'], () => {
 		browserSync.init({
 			notify: false,
 			port: 9000,
@@ -173,7 +178,7 @@ gulp.task('serve:test', ['scripts'], () => {
   gulp.watch('test/spec/**/*.js', ['lint:test']);
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'extras', 'svg'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'extras', 'manifest.json'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: false}));
 });
 
