@@ -1,11 +1,13 @@
 {
+    "short_name": "Marllon",
+    "name": "Marllon Panisset",
     "description": "Portfólio Desenvolvedor Front-end",
     "lang": "pt-BR",
-    "name": "Marllon Panisset - Desenvolvedor Front-end",
-    "short_name": "Marllon",
-    "start_url": ".",
+    "start_url": "/?utm_source=homescreen",
+    "background_color": "#00a8ff",
     "theme_color": "#00a8ff",
     "main.css": "styles/main.css",
     "main.js": "scripts/main.js",
-    "manifest.js": "manifest.json"
+    "manifest.js": "manifest.json",
+    "icon": "manifest-icon.png"
 }
