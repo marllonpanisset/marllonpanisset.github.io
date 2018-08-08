@@ -33,7 +33,7 @@ $notebook: 'https://i.imgur.com/nrVdVaW.jpg';
             color: $branco;
             font-family: 'roboto';
             text-align: center;
-            
+
             h2 {
                 font-weight: 100;
                 font-size: 4rem;
@@ -42,12 +42,12 @@ $notebook: 'https://i.imgur.com/nrVdVaW.jpg';
                 @media (min-width: 587px) and (max-width: 768px) {
                     padding: 0 100px;
                 }
-                
+
                 @media (max-width: 667px) and (max-height: 384px) {
                     padding: 0 120px;
                     font-size: 3rem;
                 }
-                
+
                 @media (max-width: 480px) and (max-height: 320px) {
                     padding: 0 100px;
                     font-size: 2.3rem;

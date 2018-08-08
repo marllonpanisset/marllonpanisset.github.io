@@ -43,7 +43,7 @@ p {
         text-decoration: underline;
         color: $padraoTextoLink;
         transition: all .3s;
-        
+
         &:hover {
             color: $padraoTextoLinkHover;
             transition: all .3s;
@@ -63,7 +63,7 @@ h3 {
         font-size: em(36px);
         margin-bottom: 30px;
     }
-    
+
     @media (max-width: 480px) {
         font-size: em(32px);
         margin-bottom: 20px;

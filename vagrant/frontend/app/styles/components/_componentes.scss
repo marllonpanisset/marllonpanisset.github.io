@@ -238,14 +238,13 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
     position: relative;
     float: left;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 30px;
 
     .item {
         position: relative;
         float: left;
         width: percentage(370px/1170px);
-        margin-bottom: 50px;
-        transition: all .3s;
+        margin-bottom: 20px;
         text-align: center;
 
         
@@ -254,7 +253,7 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
         }
         
         .vetor{
-            background: $cinza3;
+            background: $branco2;
             width: 200px;
             height: 200px;
             border-radius: 200px;
@@ -267,11 +266,21 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
                 right: auto;
             }
 
+            @media (max-width: 1024px) {
+                width: 150px;
+                height: 150px;
+                padding-top: 30px;
+            }
+
             img {
                 position: relative;
                 width: 100px;
                 display: block;
                 margin: 0 auto;
+
+                @media (max-width: 1024px) {
+                    width: 80px;
+                }
             }
         }
 
@@ -280,28 +289,27 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
             text-align: center;
         }
 
+        p {
+            margin-bottom: 0;
+        }
+
         @media (min-width: 1025px) {
 
             &:not(:nth-child(3n)) {
                 margin-right: percentage(30px/1170px);
-                transition: all .3s;
             }
         }
 
         @media (min-width: 769px) and (max-width: 1024px) {
             width: percentage(497px/1024px);
-            transition: all .3s;
             
             &:not(:nth-child(2n)) {
                 margin-right: percentage(30px/1024px);
-                transition: all .3s;
             }
         }
 
         @media (max-width: 768px) {
             width: 100%;
-            margin-bottom: 50px;
-            transition: all .3s;
         }
     }
 }
