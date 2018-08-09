@@ -17,7 +17,7 @@
     ],
     "start_url": "/?utm_source=homescreen",
     "display": "standalone",
-    "background_color": "#00a8ff",
+    "background_color": "#fff",
     "theme_color": "#00a8ff",
     "main.css": "styles/main.css",
     "main.js": "scripts/main.js",
