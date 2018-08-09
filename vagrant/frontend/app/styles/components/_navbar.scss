@@ -172,12 +172,8 @@
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: .04em;
-        font-size: 1.65rem;
+        font-size: 1.5rem;
         color: $branco;
-
-        @media (max-width: 480px) {
-            font-size: 1.5rem;
-        }
 
         @media (max-width: 360px) {
             font-size: 1.35rem;
@@ -188,10 +184,10 @@
             outline: none
         }
 
-        svg {
+        img {
             float: left;
             width: 27px;
-            margin-top: 20px;
+            margin-top: 18px;
             margin-right: 10px;
         }
     }
