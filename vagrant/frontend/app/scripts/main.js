@@ -19,10 +19,12 @@
   menuBar.onclick = function (e) {
 
     if(mainMenu.classList.contains('open')) {
+      menuBar.classList.remove('is-active');
       mainMenu.classList.remove('open');
     }
 
     else {
+      menuBar.classList.add('is-active');
       mainMenu.classList.add('open');
     }
   };

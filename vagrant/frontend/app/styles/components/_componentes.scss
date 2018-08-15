@@ -247,11 +247,10 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
         margin-bottom: 20px;
         text-align: center;
 
-        
         h4 {
             font-size: em(20px);
         }
-        
+
         .vetor{
             background: $branco2;
             width: 200px;
@@ -399,7 +398,7 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
     -o-transition-property: width, background-color;
     transition-property: width, background-color;
 }
-  
+
 .skillbar-title {
     position: absolute;
     top: 0;
@@ -430,7 +429,7 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
       border-bottom-left-radius: 3px;
     }
 }
-  
+
 .skillbar-bar {
     height: 35px;
     width: 0px;
@@ -439,7 +438,7 @@ $notebook-coffe: 'https://i.imgur.com/mXUXjyM.jpg';
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
 }
-  
+
 .skill-bar-percent {
     position: absolute;
     right: 10px;
