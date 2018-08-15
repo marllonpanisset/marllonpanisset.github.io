@@ -36,6 +36,9 @@
       if (mainMenu.classList.contains('open')) {
         mainMenu.classList.remove('open');
       }
+      if (menuBar.classList.contains('is-active')) {
+        menuBar.classList.remove('is-active');
+      }
     });
   });
 
