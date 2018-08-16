@@ -32,7 +32,7 @@
 
             &:hover,
             &.active {
-                background-color: $cinza2;
+                background-color: $preto4;
                 text-decoration: none;
 
                 @media (max-width: 800px) {
@@ -137,7 +137,6 @@
 
             a {
                 font-family: 'Open Sans', Arial, Sans-Serif;
-                text-transform: uppercase;
                 letter-spacing: .1em;
                 font-size: em(15px);
                 padding: 0 15px;
@@ -145,6 +144,10 @@
                 color: $cinza3;
                 outline: none;
                 transition: all .40s;
+
+                @media (min-width: 801px) {
+                    font-size: em(16px);
+                }
 
                 &:hover {
                     color: $branco;
@@ -166,40 +169,22 @@
             outline: none;
             display: block;
 
-            &:after {
-                content: 'Marllon Panisset';
+            &:before {
+                content: '</> Marllon Panisset';
                 display: inline-block;
-                font-family: 'Oswald';
-                font-weight: 400;
-                text-transform: uppercase;
+                font-family: 'Ubuntu';
+                font-weight: 500;
                 letter-spacing: .04em;
                 font-size: 1.5rem;
-                margin-left: 5px;
 
                 @media (max-width: 360px) {
                     font-size: 1.35rem;
                 }
-            }
-
-            &:before {
-                content: '</>';
-                display: inline-block;
-                font-family: Arial;
-                font-size: 1.7em;
-                letter-spacing: .15em;
-                font-weight: 600;
 
                 @media (max-width: 360px) {
-                    font-size: 1.5em;
+                    font-size: 1.30rem;
                 }
             }
-        }
-
-        img {
-            float: left;
-            width: 27px;
-            margin-top: 18px;
-            margin-right: 10px;
         }
     }
 }
