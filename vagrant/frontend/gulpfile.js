@@ -114,6 +114,11 @@ gulp.task('manifest.json', () => {
 	.pipe($.if(dev, gulp.dest('.tmp/'), gulp.dest('dist/')))
 });
 
+gulp.task('service-workers.js', () => {
+	return gulp.src('app/service-workers.js')
+	.pipe($.if(dev, gulp.dest('.tmp/'), gulp.dest('dist/')))
+});
+
 gulp.task('extras', () => {
   return gulp.src([
 	'app/*',
@@ -126,7 +131,7 @@ gulp.task('extras', () => {
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', () => {
-	runSequence(['clean'], ['views'], ['sprite'], ['styles', 'scripts','manifest.json'], () => {
+	runSequence(['clean'], ['views'], ['sprite'], ['styles', 'scripts','manifest.json','service-workers.js'], () => {
 		browserSync.init({
 			notify: false,
 			port: 9000,
@@ -178,7 +183,7 @@ gulp.task('serve:test', ['scripts'], () => {
   gulp.watch('test/spec/**/*.js', ['lint:test']);
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'extras', 'manifest.json'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'extras', 'manifest.json','service-workers.js'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: false}));
 });
 

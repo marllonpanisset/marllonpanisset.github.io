@@ -13,10 +13,17 @@ debug: (image: hide),
         right: auto;
     }
 
-    @media (max-width: 1170px) {
+    @media (min-width: 1px) {
         padding: {
             left: 20px;
             right: 20px;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        padding: {
+            left: 30px;
+            right: 30px;
         }
     }
 }
@@ -158,33 +165,43 @@ debug: (image: hide),
     }
 
     .profile-thumb {
-        @include span(4);
         margin-left: 0;
         margin-right: 0;
         transition: all .3s;
-
-        @media (max-width: 1024px) {
-            @include span(12);
+        
+        @media (min-width: 1px) and (max-width: 479px) {
+            border-radius: 192px;
+            width: 192px;
+            height: 192px;
+            background: url($profile-mobile) no-repeat;            
             transition: all .3s;
-
-            img {
-                max-width: 250px;
-                transition: all .3s;
-                margin: {
-                    left: auto;
-                    right: auto;
-                    bottom: 40px;
-                }
-            }
         }
 
-        img {
-            border-radius: 50%;
+        @media (min-width:480px) and (max-width: 1179px) {
+            border-radius: 256px;
+            width: 256px;
+            height: 256px;
+            background: url($profile-tablet) no-repeat;
+            transition: all .3s;
+        }
 
-            @media (max-width: 480px) {
-                max-width: 200px;
-                transition: all .3s;
-            }
+        @media (min-width: 1180px) {
+            float: left;
+            border-radius: 360px;
+            width: 360px;
+            height: 360px;
+            background: url($profile-desktop) no-repeat;
+            transition: all .3s;
+        }
+
+        @media (max-width: 1179px) {
+            transition: all .3s;
+            margin: {
+                left: auto;
+                right: auto;
+                bottom: 40px;
+            }            
+            
         }
     }
 
@@ -195,7 +212,7 @@ debug: (image: hide),
         float: right;
         transition: all .3s;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1179px) {
             @include span(12);
             transition: all .3s;
         }
