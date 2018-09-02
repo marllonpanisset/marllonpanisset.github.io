@@ -136,12 +136,13 @@
             }
 
             a {
+                position: relative;
                 font-family: 'Open Sans', Arial, Sans-Serif;
                 letter-spacing: .1em;
                 font-size: em(15px);
                 padding: 0 15px;
                 display: block;
-                color: $cinza3;
+                color: $branco2;
                 outline: none;
                 transition: all .40s;
 
@@ -154,6 +155,32 @@
                     background: transparent;
                     text-decoration: none;
                     transition: all .40s;
+                }
+
+                &:before {
+                    content: "";
+                    display: block;
+                    height: 3px;
+                    width: 0;
+                    bottom: 0px;
+                    position: absolute;
+                    left: 50%;
+                    background-color: $azul;
+                    transition: all .30s cubic-bezier(.4,0,.2,1);
+                }
+    
+                &:hover {
+                    background-color: transparent;
+                    text-decoration: none;
+    
+                    @media (max-width: 800px) {
+                        background-color: transparent;
+                    }
+    
+                    &:before {
+                        width: 100%;
+                        left: 0;
+                    }
                 }
             }
         }
