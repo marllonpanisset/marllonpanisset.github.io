@@ -26,11 +26,11 @@ self.addEventListener('install', function (event) {
 self.addEventListener('fetch', function (event) {
     var updateCache = function (request) {
         return caches.open('pwa-offline').then(function (cache) {
-            return fetch(request).then(function (response) {
-                return cache.put(request, response);
-            });
+            return cache.put(request, response);
         });
+            
     };
+
     event.waitUntil(updateCache(event.request));
 
     event.respondWith(

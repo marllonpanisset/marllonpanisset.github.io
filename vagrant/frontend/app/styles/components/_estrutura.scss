@@ -13,18 +13,41 @@ debug: (image: hide),
         right: auto;
     }
 
-    @media (min-width: 1px) {
+    @media (min-width: 1px) and (max-width: 359px) {
         padding: {
-            left: 20px;
-            right: 20px;
+            left: 25px;
+            right: 25px;
+        }
+    }
+
+    @media (min-width: 360px) and (max-width: 767px) {
+        padding: {
+            left: 30px;
+            right: 30px;
         }
     }
     
     @media (min-width: 768px) {
         padding: {
-            left: 30px;
-            right: 30px;
+            left: 40px;
+            right: 40px;
         }
+    }
+
+    @media (min-width: 1366px) {
+        max-width: 1280px;
+    }
+
+    @media (min-width: 1600px) {
+        max-width: 1480px;
+    }
+    
+    @media (min-width: 1800px) {
+        max-width: 1600px;
+    }
+
+    @media (min-width: 1920px) {
+        max-width: 1800px;
     }
 }
 
@@ -187,9 +210,17 @@ debug: (image: hide),
 
         @media (min-width: 1180px) {
             float: left;
-            border-radius: 360px;
+            border-radius: 256px;
+            width: 256px;
+            height: 256px;
+            background: url($profile-tablet) no-repeat;
+            transition: all .3s;
+        }
+
+        @media (min-width: 1600px) {
             width: 360px;
             height: 360px;
+            border-radius: 360px;
             background: url($profile-desktop) no-repeat;
             transition: all .3s;
         }
@@ -206,32 +237,66 @@ debug: (image: hide),
     }
 
     .biography {
-        @include span(8);
+        width: 71%;
         margin-left: 0;
         margin-right: 0;
         float: right;
         transition: all .3s;
 
+        p {
+            text-align: justify;
+            letter-spacing: .035em;
+        }
+
         @media (max-width: 1179px) {
-            @include span(12);
+            width: 100%;
             transition: all .3s;
         }
     }
 }
 
-.skills {
+#about .skills {
+    position: relative;
+    float: left;
+    width: 100%;
+    
+    @media (min-width:1170px) {
+        h4 {
+            float: right; 
+            margin-bottom: 0;
+            margin-top: 20px;
+        }
+    }
+
+    @media (max-width:1169px) {
+        h4 {
+            float: left;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.skills-bar {   
     position: relative;
     float: left;
     width: 100%;
     margin-top: 70px;
+
+    @media (max-width:1169px) {
+        margin-top: 50px;
+        transition: all .3s;
+    }
 
     .col-left {
         position: relative;
         float: left;
         width: 46%;
         margin-right: 8%;
+        transition: all .3s;
 
         @media (max-width: 767px) {
+            transition: all .3s;
             width: 100%;
         }
     }
@@ -240,6 +305,7 @@ debug: (image: hide),
         position: relative;
         float: left;
         width: 46%;
+        transition: all .3s;
 
         @media (max-width: 767px) {
             width: 100%;
