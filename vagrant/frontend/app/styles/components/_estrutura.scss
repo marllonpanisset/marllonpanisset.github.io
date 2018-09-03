@@ -96,26 +96,28 @@ debug: (image: hide),
                 margin-bottom: 15px;
                 clear: both;
                 margin-right: 0;
+                height: 30px;
+                line-height: 30px;
 
                 &.github {
-                    margin-bottom: 0;
+                    margin-bottom: 10px;
+                    line-height: 30px;
+                    height: 30px;
 
                     a {
-                        margin-left: -8px;
+                        margin-left: 1px;
 
                         img {
-                            margin-top: -9px;
-                            margin-right: 10px;
+                            margin-top: 0px;
+                            margin-right: 17px;
                         }
                     }
                 }
 
                 &.medium {
-                    line-height: 33px;
-                    margin-bottom: 8px;
 
                     a {
-                        margin-left: -4px;
+                        margin-left: 1px;
                     }
                 }
 
@@ -132,8 +134,12 @@ debug: (image: hide),
                     position: relative;
                     float: left;
 
-                    @media (max-width: 359px) {
+                    @media (max-width: 370px) {
                         font-size: em(14px);
+                    }
+                    
+                    @media (max-width: 3590px) {
+                        font-size: em(13px);
                     }
 
                     img {

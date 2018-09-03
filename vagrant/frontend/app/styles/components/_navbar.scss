@@ -7,7 +7,7 @@
     transition: all .3s;
     
     @media (max-width: 800px) {
-        background-color: $preto3;
+        background-color: $branco;
     }
     
     &.scrolled {
@@ -19,10 +19,6 @@
             color: $preto;
             position: relative;
             transition: all .5s cubic-bezier(.4,0,.2,1);
-
-            &:hover {
-                // color: $branco;
-            }
 
             &:before {
                 content: "";
@@ -38,8 +34,6 @@
 
             &:hover,
             &.active {
-                // background-color: $preto4;
-                // text-decoration: none;
 
                 @media (max-width: 800px) {
                     background-color: transparent;
@@ -188,6 +182,10 @@
             outline: none;
             display: block;
 
+            @media (max-width: 800px) {
+                color: $verde;
+            }
+
             &:before {
                 content: '</> Marllon Panisset';
                 display: inline-block;
@@ -208,10 +206,6 @@
                 }
 
                 @media (max-width: 360px) {
-                    font-size: 1.35rem;
-                }
-
-                @media (max-width: 320px) {
                     font-size: 1.30rem;
                     content: '</> MP';
                 }

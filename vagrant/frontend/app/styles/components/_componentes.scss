@@ -13,18 +13,48 @@
         }
 
         &.github a {
-            // width: 25px;
-            // height: 25px;
+            margin-top: 1px;
 
-            &:hover {
-                &:before {
-                    bottom: -8px;
-                }
+            img {
+                width: 30px;
+                height: 30px;
             }
         }
 
         &.medium a {
-            margin-top: -2px;
+            margin-top: 1px;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &.facebook a {
+            margin-top: 1px;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &.google-plus a {
+            margin-top: 1px;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &.email a {
+            margin-top: 1px;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
         }
 
         a { 

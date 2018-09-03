@@ -64,8 +64,8 @@
                 right: auto;
             }
 
-            li.github {
-                margin-top: -7px;
+            @media (max-width: 639px) {
+                display: none;
             }
         }
     }
