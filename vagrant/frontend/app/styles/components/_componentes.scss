@@ -13,8 +13,8 @@
         }
 
         &.github a {
-            width: 25px;
-            height: 25px;
+            // width: 25px;
+            // height: 25px;
 
             &:hover {
                 &:before {
@@ -23,63 +23,19 @@
             }
         }
 
-        &.twitter a {
-            width: 26px;
-            height: 26px;
-
-            &:hover {
-                &:before {
-                    bottom: -6px;
-                }
-            }
-        }
-
         &.medium a {
-            width: 26px;
-            height: 25px;
-        }
-
-        &.linkedin a {
-            width: 22px;
-            height: 24px;
-
-            svg {
-                margin-top: -1px;
-            }
-        }
-
-        &.instagram a {
-            width: 22px;
-            height: 25px;
+            margin-top: -2px;
         }
 
         a { 
             position: relative;
             text-decoration: none;
             display: block;
-            transition: all .5s cubic-bezier(.4,0,.2,1);
-
-            &:before {
-                content: "";
-                display: block;
-                height: 2px;
-                width: 0;
-                bottom: -7px;
-                position: absolute;
-                left: 50%;
-                background-color: $azul;
-                transition: all .30s cubic-bezier(.4,0,.2,1);
-            }
-
-            &:hover {
-                &:before {
-                    width: 100%;
-                    left: 0;
-                }
-            }
 
             svg {
                 color: $branco;
+                width: 25px;
+                height: 25px;
             }
         }
     }

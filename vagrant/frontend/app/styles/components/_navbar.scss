@@ -5,18 +5,24 @@
     line-height: 60px;
     z-index: 100;
     transition: all .3s;
-
+    
     @media (max-width: 800px) {
         background-color: $preto3;
     }
-
+    
     &.scrolled {
-        background-color: $preto3;
+        box-shadow: 0 -3px 9px $preto;
+        background-color: $branco;
         transition: all .3s;
 
         .main-menu li a {
+            color: $preto;
             position: relative;
             transition: all .5s cubic-bezier(.4,0,.2,1);
+
+            &:hover {
+                // color: $branco;
+            }
 
             &:before {
                 content: "";
@@ -26,14 +32,14 @@
                 bottom: 0px;
                 position: absolute;
                 left: 50%;
-                background-color: $azul;
+                background-color: $verde;
                 transition: all .30s cubic-bezier(.4,0,.2,1);
             }
 
             &:hover,
             &.active {
-                background-color: $preto4;
-                text-decoration: none;
+                // background-color: $preto4;
+                // text-decoration: none;
 
                 @media (max-width: 800px) {
                     background-color: transparent;
@@ -44,6 +50,10 @@
                     left: 0;
                 }
             }
+        }
+
+        .site-name a {
+            color: $verde;
         }
     }
 
@@ -71,13 +81,12 @@
             left: 0;
             width: 100%;
             z-index: -1;
-            box-shadow: 0px 2px 5px 0px $preto;
 
             li {
                 float: left;
                 height: 60px;
                 width: 100%;
-                background: $preto3;
+                background: $verde;
                 text-align: center;
 
                 a {
@@ -87,36 +96,20 @@
                     @media (max-width: 800px) {
                         position: relative;
                         display: inline-block;
-                        width: 80%;
-                        transition: all .5s cubic-bezier(.4,0,.2,1);
-
-                        &:before {
-                            content: "";
-                            display: block;
-                            height: 2px;
-                            width: 0;
-                            bottom: 0px;
-                            position: absolute;
-                            left: 50%;
-                            background-color: $azul;
-                            transition: all .30s cubic-bezier(.4,0,.2,1);
-                        }
+                        width: 100%;
+                        text-decoration: none;
+                        color: $branco;
+                        border-top: 1px solid $branco;
+                        border-bottom: 1px solid $branco;
 
                         &:hover,
                         &.active {
-                            text-decoration: none;
+                            color: $verde;
+                            background: $branco;
 
                             &:before {
-                                width: 100%;
-                                left: 0;
+                                display: none;
                             }
-                        }
-                    }
-
-                    &:hover,
-                    &.active {
-                        &:before {
-                            height: 2px;
                         }
                     }
                 }
@@ -142,7 +135,7 @@
                 font-size: em(15px);
                 padding: 0 15px;
                 display: block;
-                color: $branco2;
+                color: $branco;
                 outline: none;
                 transition: all .40s;
 
@@ -151,7 +144,6 @@
                 }
 
                 &:hover {
-                    color: $branco;
                     background: transparent;
                     text-decoration: none;
                     transition: all .40s;
@@ -165,7 +157,7 @@
                     bottom: 0px;
                     position: absolute;
                     left: 50%;
-                    background-color: $azul;
+                    background-color: $branco;
                     transition: all .30s cubic-bezier(.4,0,.2,1);
                 }
     
@@ -200,9 +192,20 @@
                 content: '</> Marllon Panisset';
                 display: inline-block;
                 font-family: 'Ubuntu';
-                font-weight: 500;
-                letter-spacing: .04em;
-                font-size: 1.5rem;
+                font-weight: 600;
+                letter-spacing: .05em;
+
+                @media (min-width: 960px) {
+                    font-size: 1.6rem;
+                }
+                
+                @media (min-width: 801px) and (max-width:959px) {
+                    font-size: 1.5rem;
+                }
+                
+                @media (max-width: 800px) {
+                    font-size: 1.4rem;
+                }
 
                 @media (max-width: 360px) {
                     font-size: 1.35rem;
@@ -210,6 +213,7 @@
 
                 @media (max-width: 320px) {
                     font-size: 1.30rem;
+                    content: '</> MP';
                 }
             }
         }
@@ -249,7 +253,7 @@
     margin-top: -2px;
     width: 40px;
     height: 4px;
-    background-color: #fff;
+    background-color: $verde;
     border-radius: 4px;
     position: absolute;
     transition-property: transform;
@@ -260,7 +264,7 @@
     &::after {
         width: 40px;
         height: 4px;
-        background-color: #fff;
+        background-color: $verde;
         border-radius: 4px;
         position: absolute;
         transition-property: transform;

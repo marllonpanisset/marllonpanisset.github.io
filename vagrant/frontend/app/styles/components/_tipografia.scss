@@ -1,6 +1,6 @@
 $padraoTexto: $preto2;
 $padraoTextoLink: $preto;
-$padraoTextoLinkHover: $azul;
+$padraoTextoLinkHover: $verde;
 $base-font-size: 16px;
 
 @function em($px, $base: $base-font-size) {
@@ -18,6 +18,27 @@ body {
 p {
     margin-bottom: em(20px);
     color: $padraoTexto;
+    transition: all .3s;
+
+    &:hover {
+        a {
+            text-decoration: underline;
+            transition: all .3s;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $padraoTextoLink;
+        transition: all .3s;
+        
+        &:hover {
+            text-decoration: underline;
+            color: $padraoTextoLinkHover;
+            transition: all .3s;
+        }
+    }
+
     
     @media (min-width: 1025px) {
         line-height: em(25px, 18px);
@@ -37,17 +58,6 @@ p {
     @media (max-width: 320px) {
         line-height: em(25px, 14px);
         font-size: em(14px);
-    }
-
-    a {
-        text-decoration: underline;
-        color: $padraoTextoLink;
-        transition: all .3s;
-
-        &:hover {
-            color: $padraoTextoLinkHover;
-            transition: all .3s;
-        }
     }
 }
 
