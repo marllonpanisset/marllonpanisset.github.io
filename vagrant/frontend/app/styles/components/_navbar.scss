@@ -4,19 +4,19 @@
     height: 60px;
     line-height: 60px;
     z-index: 100;
-    transition: all .3s;
-    
-    @media (max-width: 800px) {
-        background-color: $branco;
+    background-color: $verde;
+
+    .wrapper {
+        @media (max-width:767px){
+            padding-left: 15px;
+            padding-right: 15px;
+        }
     }
     
     &.scrolled {
-        box-shadow: 0 -3px 9px $preto;
-        background-color: $branco;
-        transition: all .3s;
 
         .main-menu li a {
-            color: $preto;
+            color: $branco;
             position: relative;
             transition: all .5s cubic-bezier(.4,0,.2,1);
 
@@ -47,7 +47,7 @@
         }
 
         .site-name a {
-            color: $verde;
+            color: $branco;
         }
     }
 
@@ -55,9 +55,10 @@
         position: relative;
         float: right;
         display: block;
-        padding: 6px 0 0 0;
+        padding: 0px 4px 0 8px;
         box-sizing: border-box;
-        height: 60px;
+        height: 45px;
+        margin-top: 7px;
 
         @media (min-width: 801px) {
             display: none;
@@ -72,8 +73,8 @@
             display: block;
             margin-top: 60px;
             position: absolute;
-            left: 0;
-            width: 100%;
+            right: 0;
+            width: 380px;
             z-index: -1;
 
             li {
@@ -83,21 +84,29 @@
                 background: $verde;
                 text-align: center;
 
+                @media (max-width: 800px) {
+                    border-top: 1px solid $branco;
+                    
+                    &:first-child{
+                        border: none;
+                    }
+                }
+
                 a {
                     display: initial;
                     padding: 0;
 
                     @media (max-width: 800px) {
                         position: relative;
-                        display: inline-block;
+                        display: block;
                         width: 100%;
                         text-decoration: none;
                         color: $branco;
-                        border-top: 1px solid $branco;
-                        border-bottom: 1px solid $branco;
+                        transition: .2s ease;
 
                         &:hover,
                         &.active {
+                            transition: .2s ease;
                             color: $verde;
                             background: $branco;
 
@@ -182,10 +191,6 @@
             outline: none;
             display: block;
 
-            @media (max-width: 800px) {
-                color: $verde;
-            }
-
             &:before {
                 content: '</> Marllon Panisset';
                 display: inline-block;
@@ -235,19 +240,20 @@
 }
 
 .hamburger-box {
-    width: 40px;
-    height: 24px;
+    width: 39px;
+    height: 25px;
     display: inline-block;
     position: relative;
+    top: -2px;
 }
 
 .hamburger-inner {
     display: block;
     top: 50%;
     margin-top: -2px;
-    width: 40px;
+    width: 35px;
     height: 4px;
-    background-color: $verde;
+    background-color: $branco;
     border-radius: 4px;
     position: absolute;
     transition-property: transform;
@@ -256,9 +262,9 @@
 
     &::before,
     &::after {
-        width: 40px;
+        width: 35px;
         height: 4px;
-        background-color: $verde;
+        background-color: $branco;
         border-radius: 4px;
         position: absolute;
         transition-property: transform;

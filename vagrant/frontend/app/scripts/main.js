@@ -18,15 +18,17 @@
 
   menuBar.onclick = function (e) {
 
+    if(!mainMenu.classList.contains('open')) {
+      setTimeout(function(){
+        mainMenu.classList.add('open');
+      }, 100);
+    }
     if(mainMenu.classList.contains('open')) {
-      menuBar.classList.remove('is-active');
-      mainMenu.classList.remove('open');
+      setTimeout(function(){
+        mainMenu.classList.remove('open');
+      }, 200);
     }
-
-    else {
-      menuBar.classList.add('is-active');
-      mainMenu.classList.add('open');
-    }
+    
   };
   
   [].forEach.call(document.querySelectorAll('ul.main-menu li a, h1.site-name a'), function (el) {

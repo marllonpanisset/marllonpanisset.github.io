@@ -216,8 +216,7 @@ debug: (image: hide),
         transition: all .3s;
 
         p {
-            text-align: justify;
-            letter-spacing: .035em;
+            letter-spacing: .015em;
         }
 
         @media (max-width: 1179px) {
@@ -232,20 +231,10 @@ debug: (image: hide),
     float: left;
     width: 100%;
     
-    @media (min-width:1170px) {
-        h4 {
-            float: right; 
-            margin-bottom: 0;
-            margin-top: 20px;
-        }
-    }
-
-    @media (max-width:1169px) {
-        h4 {
-            float: left;
-            margin-top: 20px;
-            margin-bottom: 0;
-        }
+    h4 {
+        float: left;
+        margin-top: 20px;
+        margin-bottom: 0;
     }
 }
 
