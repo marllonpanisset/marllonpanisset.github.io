@@ -4,7 +4,7 @@
   var navbar = document.getElementById('navbar');
   var menuBar = document.getElementById('menu-bar');
   var mainMenu = document.getElementsByClassName('main-menu')[0];
-      
+
   window.onscroll = function() {
 
     if (window.scrollY > 150) {
@@ -17,20 +17,30 @@
   };
 
   menuBar.onclick = function (e) {
+    e.preventDefault();
+    
+    setTimeout(function(){
+      mainMenu.classList.add('is-active');
+      mainMenu.classList.add('open');
+      mainMenu.classList.add('animated');
+      mainMenu.classList.add('fadeInDown');
+    }, 100);
 
-    if(!mainMenu.classList.contains('open')) {
-      setTimeout(function(){
-        mainMenu.classList.add('open');
-      }, 100);
-    }
     if(mainMenu.classList.contains('open')) {
       setTimeout(function(){
+        mainMenu.classList.add('fadeOutUp');
+      }, 100);
+
+      setTimeout(function(){
         mainMenu.classList.remove('open');
-      }, 200);
+        mainMenu.classList.remove('is-active');
+        mainMenu.classList.remove('fadeInDown');
+        mainMenu.classList.remove('fadeOutUp');
+        mainMenu.classList.remove('animated');
+      }, 800);
     }
-    
   };
-  
+
   [].forEach.call(document.querySelectorAll('ul.main-menu li a, h1.site-name a'), function (el) {
 
     el.addEventListener('click', function () {
@@ -101,29 +111,22 @@
   (function matchHeight() {
     //Grab divs with the class name 'match-height'
     var getDivs = document.getElementsByClassName('match-height');
-
     //Find out how my divs there are with the class 'match-height' 
     var arrayLength = getDivs.length;
     var heights = [];
-
     //Create a loop that iterates through the getDivs variable and pushes the heights of the divs into an empty array
     for (var i = 0; i < arrayLength; i++) {
       heights.push(getDivs[i].offsetHeight);
     }
-
     //Find the largest of the divs
     function getHighest() {
       return Math.max(heights);
     }
-
     //Set a variable equal to the tallest div
     var tallest = getHighest();
-
     //Iterate through getDivs and set all their height style equal to the tallest variable
     for (var i = 0; i < getDivs.length; i++) {
       getDivs[i].style.height = tallest + 'px';
     }
   })();
-
-
 })(document, window);
