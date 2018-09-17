@@ -77,19 +77,46 @@ debug: (image: hide),
     .description {
         position: relative;
         float: left;
-        width: 100%;
+        width: 50%;
+        margin-top: 20px;
+        padding-right: 30px;
+        box-sizing: border-box;
+
+        @media (max-width: 1169px) {
+            width: 100%;
+            padding-right: 0;
+            margin-top: 0;
+        }
     }
 
     address {
         position: relative;
         float: left;
-        width: 100%;
-        margin-top: 50px;
+        width: 50%;
+        margin-top: 20px;
+
+        @media (max-width: 1169px) {
+            width: 100%;
+        }
+        
+        h4 {
+            font-size: em(25px);
+            margin-bottom: 20px;
+        }
         
         ul {
+            columns: 2;
+            -webkit-columns: 2;
+            -moz-columns: 2;
             list-style: none;
             padding-left: 0px;
             float: left;
+
+            @media (max-width:599px) {
+                columns: 1;
+                -webkit-columns: 1;
+                -moz-columns: 1;
+            }
 
             li {
                 float: left;
@@ -123,11 +150,6 @@ debug: (image: hide),
 
                 &.instagram {
                     margin-bottom: 10px;
-                }
-
-                h4 {
-                    font-size: em(25px);
-                    margin-bottom: 20px;
                 }
 
                 a {

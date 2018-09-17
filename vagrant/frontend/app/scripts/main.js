@@ -4,6 +4,7 @@
   var navbar = document.getElementById('navbar');
   var menuBar = document.getElementById('menu-bar');
   var mainMenu = document.getElementsByClassName('main-menu')[0];
+  var hamburguer = document.getElementsByClassName('hamburger')[0];
 
   window.onscroll = function() {
 
@@ -20,7 +21,7 @@
     e.preventDefault();
     
     setTimeout(function(){
-      mainMenu.classList.add('is-active');
+      hamburguer.classList.add('is-active');
       mainMenu.classList.add('open');
       mainMenu.classList.add('animated');
       mainMenu.classList.add('fadeInDown');
@@ -29,15 +30,15 @@
     if(mainMenu.classList.contains('open')) {
       setTimeout(function(){
         mainMenu.classList.add('fadeOutUp');
+        hamburguer.classList.remove('is-active');
       }, 100);
 
       setTimeout(function(){
         mainMenu.classList.remove('open');
-        mainMenu.classList.remove('is-active');
         mainMenu.classList.remove('fadeInDown');
         mainMenu.classList.remove('fadeOutUp');
         mainMenu.classList.remove('animated');
-      }, 800);
+      }, 500);
     }
   };
 
