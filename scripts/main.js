@@ -4,16 +4,17 @@
   "use strict";
   var s = t.getElementById("navbar"),
       a = t.getElementById("menu-bar"),
-      i = t.getElementsByClassName("main-menu")[0];e.onscroll = function () {
+      i = t.getElementsByClassName("main-menu")[0],
+      n = t.getElementsByClassName("hamburger")[0];e.onscroll = function () {
     e.scrollY > 150 ? s.classList.add("scrolled") : s.classList.remove("scrolled");
   }, a.onclick = function (t) {
     t.preventDefault(), setTimeout(function () {
-      i.classList.add("is-active"), i.classList.add("open"), i.classList.add("animated"), i.classList.add("fadeInDown");
+      n.classList.add("is-active"), i.classList.add("open"), i.classList.add("animated"), i.classList.add("fadeInDown");
     }, 100), i.classList.contains("open") && (setTimeout(function () {
-      i.classList.add("fadeOutUp");
+      i.classList.add("fadeOutUp"), n.classList.remove("is-active");
     }, 100), setTimeout(function () {
-      i.classList.remove("open"), i.classList.remove("is-active"), i.classList.remove("fadeInDown"), i.classList.remove("fadeOutUp"), i.classList.remove("animated");
-    }, 800));
+      i.classList.remove("open"), i.classList.remove("fadeInDown"), i.classList.remove("fadeOutUp"), i.classList.remove("animated");
+    }, 500));
   }, [].forEach.call(t.querySelectorAll("ul.main-menu li a, h1.site-name a"), function (t) {
     t.addEventListener("click", function () {
       i.classList.contains("open") && i.classList.remove("open"), a.classList.contains("is-active") && a.classList.remove("is-active");
@@ -23,14 +24,14 @@
         s = e.data("scroll");if ($(s).length > 0) {
       var a = $(s).offset().top;$("html,body").animate({ scrollTop: a }, 1e3);
     }
-  });var n = $(".page-section"),
-      o = $("#navbar .main-menu"),
-      c = o.outerHeight();$(e).on("scroll", function () {
-    var t = $(this).scrollTop();n.each(function () {
-      var e = $(this).offset().top - c,
-          s = e + $(this).outerHeight();t >= e && t <= s && (o.find("a").removeClass("active"), n.removeClass("active"), $(this).addClass("active"), o.find('a[href="#' + $(this).attr("id") + '"]').addClass("active"));
+  });var o = $(".page-section"),
+      c = $("#navbar .main-menu"),
+      l = c.outerHeight();$(e).on("scroll", function () {
+    var t = $(this).scrollTop();o.each(function () {
+      var e = $(this).offset().top - l,
+          s = e + $(this).outerHeight();t >= e && t <= s && (c.find("a").removeClass("active"), o.removeClass("active"), $(this).addClass("active"), c.find('a[href="#' + $(this).attr("id") + '"]').addClass("active"));
     });
-  }), o.find("a").on("click", function () {
+  }), c.find("a").on("click", function () {
     var t = $(this),
         e = t.attr("href");return $("html, body").animate({ scrollTop: $(e).offset().top }, 1e3), !1;
   }), jQuery(t).ready(function () {

@@ -57,17 +57,119 @@
         }
 
         .social-network {
-            float: none;
             display: table;
+            width: 100%;
+            list-style: none;
+            text-align: center;
+            padding-left: 0px;
             margin: {
                 top: 50px;
                 left: auto;
                 right: auto;
             }
 
-            @media (max-width: 639px) {
-                display: none;
+            a {
+                text-indent: -999999em;
+                display: inline-block;
+                
+                &:hover {
+                    &:before {
+                        border-radius: 50px;
+                        transition: ease-in 1s;
+                    }
+                }
+
+                &:before {
+                    content:'';
+                    display: block;
+                    position: absolute;
+                    width: 60px;
+                    height: 60px;
+                    border: 1px solid $branco;
+                    margin: {
+                        top: -12px;
+                        left: -14px;
+                    }
+                    transition: ease-out 1s;
+
+                    @media (max-width: 768px) {
+                        width: 48px;
+                        height: 48px;
+                        margin-left: -8px;
+                        margin-top: -8px;
+                    }
+                    
+                }
+
+                &:not(:last-child) {
+                    margin-right: 60px;
+
+                    @media (max-width: 768px) {
+                        margin-right: 40px;
+                    }
+                }
+
+                &.github {
+                    @include sprite($github-branco);
+
+                    @media (max-width: 640px) {
+                        // @include sprite($github-small-plus-branco);
+                    }
+                }
+
+                &.facebook {
+                    @include sprite($facebook-branco);
+
+                    @media (max-width: 640px) {
+                        // @include sprite($facebook-small-plus-branco);
+                    }
+                }
+
+                &.twitter {
+                    @include sprite($twitter-branco);
+
+                    @media (max-width: 640px) {
+                        // @include sprite($twitter-small-plus-branco);
+                    }
+                }
+
+                &.instagram {
+                    @include sprite($instagram-branco);
+                    
+                    @media (max-width: 640px) {
+                        // @include sprite($instagram-small-plus-branco);
+                    }
+                }
+
+                &.medium {
+                    @include sprite($medium-branco);
+
+                    @media (max-width: 640px) {
+                        // @include sprite($medium-small-plus-branco);
+                    }
+                }
+
+                &.google-plus {
+                    @include sprite($google-plus-branco);
+
+                    @media (max-width: 640px) {
+                        // @include sprite($google-small-plus-branco);
+                    }
+                }
+                
+                &.linkedin {
+                    @include sprite($linkedin-branco);
+
+                    @media (max-width: 640px) {
+                        // @include sprite($linkedin-small-branco);
+                    }
+                }
+                
+                &.email {
+                    @include sprite($email-branco);
+                }
             }
+            
         }
     }
 
@@ -77,8 +179,8 @@
         left: 50%;
         margin-left: -40px;
         display: block;
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         text-decoration: none;
         text-indent: -999999em;
         animation-name: pulse_animation;
@@ -108,8 +210,8 @@
         }
 
         svg {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             display: block;
             color: $branco;
         }

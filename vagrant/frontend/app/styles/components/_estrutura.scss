@@ -77,99 +77,112 @@ debug: (image: hide),
     .description {
         position: relative;
         float: left;
-        width: 50%;
+        width: 100%;
         margin-top: 20px;
         padding-right: 30px;
         box-sizing: border-box;
-
-        @media (max-width: 1169px) {
-            width: 100%;
-            padding-right: 0;
-            margin-top: 0;
-        }
     }
 
     address {
         position: relative;
         float: left;
-        width: 50%;
         margin-top: 20px;
-
-        @media (max-width: 1169px) {
-            width: 100%;
-        }
+        width: 100%;
+        text-align: center;
+    
         
         h4 {
             font-size: em(25px);
             margin-bottom: 20px;
-        }
-        
-        ul {
-            columns: 2;
-            -webkit-columns: 2;
-            -moz-columns: 2;
-            list-style: none;
-            padding-left: 0px;
             float: left;
+            margin-top: 20px;
+        }
 
-            @media (max-width:599px) {
-                columns: 1;
-                -webkit-columns: 1;
-                -moz-columns: 1;
+        .social-network {
+            display: table;
+            width: 100%;
+            list-style: none;
+            text-align: center;
+            padding-left: 0px;
+            margin: {
+                top: 50px;
+                left: auto;
+                right: auto;
             }
 
-            li {
-                float: left;
-                margin-bottom: 15px;
-                clear: both;
-                margin-right: 0;
-                height: 30px;
-                line-height: 30px;
-
-                &.github {
-                    margin-bottom: 10px;
-                    line-height: 30px;
-                    height: 30px;
-
-                    a {
-                        margin-left: 1px;
-
-                        img {
-                            margin-top: 0px;
-                            margin-right: 17px;
-                        }
+            a {
+                text-indent: -999999em;
+                display: inline-block;
+                
+                &:hover {
+                    &:before {
+                        border-radius: 50px;
+                        transition: ease-in 1s;
                     }
                 }
 
-                &.medium {
-
-                    a {
-                        margin-left: 1px;
+                &:before {
+                    content:'';
+                    display: block;
+                    position: absolute;
+                    width: 60px;
+                    height: 60px;
+                    border: 1px solid $preto;
+                    margin: {
+                        top: -12px;
+                        left: -14px;
                     }
+                    transition: ease-out 1s;
+
+                    @media (max-width: 768px) {
+                        width: 48px;
+                        height: 48px;
+                        margin-left: -8px;
+                        margin-top: -8px;
+                    }
+                    
+                }
+
+                &:not(:last-child) {
+                    margin-right: 60px;
+
+                    @media (max-width: 768px) {
+                        margin-right: 40px;
+                    }
+                }
+
+                &.github {
+                    @include sprite($github-preto);
+                }
+
+                &.facebook {
+                    @include sprite($facebook-preto);
+                }
+
+                &.twitter {
+                    @include sprite($twitter-preto);
                 }
 
                 &.instagram {
-                    margin-bottom: 10px;
+                    @include sprite($instagram-preto);
                 }
 
-                a {
-                    position: relative;
-                    float: left;
-
-                    @media (max-width: 370px) {
-                        font-size: em(14px);
-                    }
-                    
-                    @media (max-width: 3590px) {
-                        font-size: em(13px);
-                    }
-
-                    img {
-                        float: left;
-                        margin-right: 15px;
-                    }
+                &.medium {
+                    @include sprite($medium-preto);
                 }
-            }
+
+                &.google-plus {
+                    @include sprite($google-plus-preto);
+                }
+                
+                &.linkedin {
+                    @include sprite($linkedin-preto);
+                }
+                
+                &.email {
+                    @include sprite($email-preto);
+                }
+            }   
         }
     }
 }
