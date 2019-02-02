@@ -38,10 +38,16 @@
 
             &:hover,
             &.active {
+                @media (min-width: 960px) {
+                    color: $laranja;
+                }
 
                 &:before {
                     width: 100%;
                     left: 0;
+                    @media (min-width: 960px) {
+                        background-color: $laranja;
+                    }
                 }
             }
         }
@@ -148,11 +154,10 @@
 
             a {
                 position: relative;
-                font-family: 'Open Sans', Arial, Sans-Serif;
                 text-transform: uppercase;
-                letter-spacing: .1em;
+                letter-spacing: 0.5px;
                 font-size: em(16px);
-                font-weight: 600;
+                font-weight: 400;
                 padding: 0 15px;
                 display: block;
                 color: $branco;
@@ -203,11 +208,16 @@
             display: block;
 
             &:before {
-                content: '</> Marllon Panisset';
+                content: '< > Marllon Panisset';
                 display: inline-block;
                 font-family: 'Ubuntu';
-                font-weight: 600;
-                letter-spacing: .05em;
+                font-weight: 500;
+                letter-spacing: 0;
+                transition: all .3s ease-out;
+
+                @media (max-width: 1024px) {
+                    letter-spacing: .05em;
+                }
 
                 @media (min-width: 961px) {
                     font-size: 1.6rem;
@@ -226,7 +236,65 @@
                 }
 
                 @media (max-width: 359px) {
-                    content: '</> MP';
+                    content: '< > MP';
+                }
+            }
+
+            &:after {
+                content: '/';
+                position: absolute;
+                top: -6px;
+                left: 14px;
+                display: inline-block;
+                font-family: 'Ubuntu';
+                font-weight: 100;
+                font-size: 1.6rem;
+                letter-spacing: .05em;
+                opacity: 0;
+                transition: all .4s ease-out;
+
+                @media (max-width: 1024px) {
+                    opacity: 1;
+                    top: 0;
+                    transition: all .3s ease-in;
+                    left: 14px;
+                }
+            }
+            
+            &:hover {
+
+                &:before {
+                    content: '< > Marllon Panisset';
+                    letter-spacing: .05em;
+                    transition: all .4s ease-in;
+
+                    @media (max-width: 359px) {
+                        content: '< > MP';
+                        transition: all .4s ease-in;
+                    }
+                }
+
+                &:after {
+                    top: 0;
+                    opacity: 1;
+                    font-weight: 500;
+                    transition: all .3s ease-in;
+
+                    @media (max-width: 1024px) {
+                        font-size: 1.6rem;
+                    }
+                    
+                    @media (min-width: 801px) and (max-width:960px) {
+                        font-size: 1.3rem;
+                        left: 13px;
+                        font-weight: 500;
+                    }
+                    
+                    @media (max-width: 800px) {
+                        font-size: 1.3rem;
+                        left: 11px;
+                        font-weight: 500;
+                    }
                 }
             }
         }

@@ -1,6 +1,6 @@
 $padraoTexto: $preto2;
 $padraoTextoLink: $preto;
-$padraoTextoLinkHover: $verde;
+$padraoTextoLinkHover: $laranja;
 $base-font-size: 16px;
 
 @function em($px, $base: $base-font-size) {
@@ -8,7 +8,7 @@ $base-font-size: 16px;
 }
 
 body {
-    font-family: 'Open Sans', helvetica neue, Helvetica, Arial, Sans-serif;
+    font-family: 'Montserrat', 'Open Sans', Helvetica, Arial, Sans-serif;
     font-size: $base-font-size;
     color: $padraoTexto;
     -webkit-font-smoothing: subpixel-antialiased;
@@ -19,29 +19,33 @@ p {
     margin-bottom: em(20px);
     color: $padraoTexto;
     transition: all .3s;
+    font-weight: 400;
+
+    strong {
+        font-weight: 600;
+    }
 
     &:hover {
         a {
+            color: $padraoTextoLinkHover;
             text-decoration: underline;
             transition: all .3s;
         }
     }
 
     a {
-        text-decoration: none;
-        color: $padraoTextoLink;
+        text-decoration: underline;
         transition: all .3s;
         
         &:hover {
             text-decoration: underline;
-            color: $padraoTextoLinkHover;
             transition: all .3s;
         }
     }
 
     
     @media (min-width: 1025px) {
-        line-height: em(25px, 18px);
+        line-height: em(30px, 18px);
         font-size: em(18px);
     }
 
@@ -61,11 +65,13 @@ p {
     }
 }
 
+.align-center {
+    text-align: center;
+}
+
 h3 {
-    text-transform: uppercase;
-    font-family: 'roboto';
     font-size: em(36px);
-    font-weight: 700;
+    font-weight: 600;
     color: $preto2;
     
     @media (min-width: 1px) and (max-width: 480px) {
@@ -85,10 +91,9 @@ h3 {
 
 h4 {
     text-transform: uppercase;
-    font-family: 'roboto';
     font-size: em(28px);
     margin-bottom: 30px;
-    font-weight: 700;
+    font-weight: 600;
     color: $preto2;
 
     @media (max-width: 1024px) {

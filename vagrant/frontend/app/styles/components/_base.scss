@@ -1,21 +1,16 @@
-// variaveis e mixins
-@import "images";
-@import "color";
 @import 'breakpoints';
 @import "mixins";
-
-// resets normalize e frameworks
+@import "node_modules/animate-sass/animate.scss";
+@import "node_modules/susy/sass/susy";
+@import "icomoon";
+@import "color";
+@import "images";
 @import "reset";
 @import "normalize";
-@import "node_modules/susy/sass/susy";
-@import "sprite";
-
-// componentes de tipografia
+@import "loading";
 @import "tipografia";
-
-// componentes de estrutura
 @import "estrutura";
+@import "componentes";
+@import "navbar";
 @import "header";
 @import "footer";
-@import "navbar";
-@import "componentes";

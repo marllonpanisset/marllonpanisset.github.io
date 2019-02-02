@@ -1,7 +1,7 @@
 {
   "private": true,
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "devDependencies": {
     "babel-core": "^6.4.0",
@@ -56,6 +56,11 @@
     }
   },
   "dependencies": {
+    "aos": "https://github.com/michalsnik/aos.git",
+    "modernizr": "*",
+    "animate-sass": "^0.8.2",
+    "animate.css": "^3.7.0",
+    "jquery": "~2.1.4",
     "susy": "^2.2.12"
   }
 }

@@ -55,6 +55,7 @@ debug: (image: hide),
 #portfolio,
 #about,
 #contact {
+    overflow: hidden;
     position: relative;
     float: left;
     width: 100%;
@@ -98,92 +99,253 @@ debug: (image: hide),
             margin-top: 20px;
         }
 
-        .social-network {
-            display: table;
-            width: 100%;
-            list-style: none;
-            text-align: center;
-            padding-left: 0px;
-            margin: {
-                top: 50px;
-                left: auto;
-                right: auto;
-            }
+        // .social-network {
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+        //     width: 100%;
+        //     margin: {
+        //         left: auto;
+        //         right: auto;
+        //     }
 
-            a {
-                text-indent: -999999em;
-                display: inline-block;
-                
-                &:hover {
-                    &:before {
-                        border-radius: 50px;
-                        transition: ease-in 1s;
-                    }
-                }
+        //     @media (min-width:769px) {
+        //         margin-top: 50px;
+        //     }
 
-                &:before {
-                    content:'';
-                    display: block;
-                    position: absolute;
-                    width: 60px;
-                    height: 60px;
-                    border: 1px solid $preto;
-                    margin: {
-                        top: -12px;
-                        left: -14px;
-                    }
-                    transition: ease-out 1s;
+        //     @media (max-width:768px) {
+        //         margin-top: 20px;
+        //     }
 
-                    @media (max-width: 768px) {
-                        width: 48px;
-                        height: 48px;
-                        margin-left: -8px;
-                        margin-top: -8px;
-                    }
+        //     @media (max-width: 767px) {
+        //         justify-content: space-evenly;
+        //     }
+
+        //     a {
+        //         position: relative;
+        //         float: left;
+        //         display: block;
+        //         padding: 15px;
+        //         border: 1px solid $preto;
+        //         transition: ease-out .4s;
+
+        //         &:before {
+        //             transition: ease-out .4s;
+        //         }
+
+        //         &.icon.icon-medium {
+
+        //             @media (max-width: 767px) {
+        //                 padding: 12px;
+        //             }
+
+        //             &:hover {
+        //                 border: 1px solid #00ab6c;
+        //             }
+
+        //             .path1 {
+        //                 &:before {
+        //                     font-size: 25px;
+        //                     transition: all .4s ease-in-out;
+
+        //                     @media (max-width: 767px) {
+        //                         font-size: 22px;
+        //                     }
+        //                 }
+        //             }
+
+        //             &:hover {
+        //                 .path1 {
+        //                     &:before {
+        //                         color: #00ab6c;
+        //                     }
+        //                 }
+        //             }
                     
-                }
+        //             .path2 {
+        //                 &:before {
+        //                     font-size: 25px;
 
-                &:not(:last-child) {
-                    margin-right: 60px;
+        //                     @media (max-width: 767px) {
+        //                         font-size: 22px;
+        //                     }
+        //                 }
+        //             }
+        //         }
 
-                    @media (max-width: 768px) {
-                        margin-right: 40px;
-                    }
-                }
+        //         &.icon.icon-github {
+        //             padding: 10px;
 
-                &.github {
-                    @include sprite($github-preto);
-                }
+        //             @media (max-width: 767px) {
+        //                 padding: 8px;
+        //             }
 
-                &.facebook {
-                    @include sprite($facebook-preto);
-                }
+        //             &:before {
+        //                 font-size: 35px;
+        //                 transition: all .4s ease-in-out;
 
-                &.twitter {
-                    @include sprite($twitter-preto);
-                }
+        //                 @media (max-width: 767px) {
+        //                     font-size: 30px;
+        //                 }
+        //             }
 
-                &.instagram {
-                    @include sprite($instagram-preto);
-                }
+        //             &:hover {
+        //                 border: 1px solid #333;
 
-                &.medium {
-                    @include sprite($medium-preto);
-                }
-
-                &.google-plus {
-                    @include sprite($google-plus-preto);
-                }
+        //                 &:before {
+        //                     color: #333;
+        //                 }
+        //             }
+        //         }
                 
-                &.linkedin {
-                    @include sprite($linkedin-preto);
-                }
+        //         &.icon.icon-twitter {
+
+        //             @media (max-width: 767px) {
+        //                 padding: 11px;
+        //             }
+
+        //             &:before {
+        //                 font-size: 25px;
+        //                 transition: all .4s ease-in-out;
+
+        //                 @media (max-width: 767px) {
+        //                     font-size: 24px;
+        //                 }
+        //             }
+
+        //             &:hover {
+        //                 border: 1px solid #55acee;
+
+        //                 &:before {
+        //                     color: #55acee;
+        //                 }
+        //             }
+        //         }
+
+        //         &.icon.icon-linkedin {
+        //             padding: 10px;
+
+        //             @media (max-width: 767px) {
+        //                 padding: 6px;
+        //             }
+
+        //             &:before {
+        //                 font-size: 35px;
+        //                 transition: all .4s ease-in-out;
+
+        //                 @media (max-width: 767px) {
+        //                     font-size: 34px;
+        //                 }
+        //             }
+
+        //             &:hover {
+        //                 border: 1px solid #0077B5;
+
+        //                 &:before {
+        //                     color: #0077B5;
+        //                 }
+        //             }
+        //         }
+
+        //         &.icon.icon-facebook {
+        //             padding: 15px;
+
+        //             @media (max-width: 767px) {
+        //                 padding: 11px;
+        //             }
+
+        //             &:before {
+        //                 font-size: 25px;
+        //                 transition: all .4s ease-in-out;
+
+        //                 @media (max-width: 767px) {
+        //                     font-size: 24px;
+        //                 }
+        //             }
+
+        //             &:hover {
+        //                 border: 1px solid #3b5999;
+
+        //                 &:before {
+        //                     color: #3b5999;
+        //                 }
+        //             }
+        //         }
                 
-                &.email {
-                    @include sprite($email-preto);
-                }
-            }   
-        }
+        //         &.icon.icon-google-plus {
+
+        //             @media (max-width: 767px) {
+        //                 padding: 10px;
+        //             }
+
+        //             &:before {
+        //                 font-size: 25px;
+        //                 transition: all .4s ease-in-out;
+
+        //                 @media (max-width: 767px) {
+        //                     font-size: 26px;
+        //                 }
+        //             }
+
+        //             &:hover {
+        //                 border: 1px solid #dd4b39;
+
+        //                 &:before {
+        //                     color: #dd4b39;
+        //                 }
+        //             }
+        //         }
+
+        //         &.icon.icon-instagram {
+        //             @media (max-width: 767px) {
+        //                 padding: 11px;
+        //             }
+
+        //             &:before {
+        //                 font-size: 25px;
+        //                 transition: all .4s ease-in-out;
+
+        //                 @media (max-width: 767px) {
+        //                     font-size: 24px;
+        //                 }
+        //             }
+
+        //             &:hover {
+        //                 border: 1px solid #e4405f;
+
+        //                 &:before {
+        //                     color: #e4405f;
+        //                 }
+        //             }
+        //         }
+
+        //         &:hover {
+        //             border-radius: 50px;
+        //             transition: ease-in .4s;
+
+        //             &:before {
+        //                 transition: ease-in .4s;
+        //             }
+        //         }
+        //         @media (min-width: 768px) {
+        //             &:not(:last-child) {
+        //                 margin-right: 60px;
+    
+        //                 @media (max-width: 768px) {
+        //                     margin-right: 40px;
+        //                 }
+        //             }
+        //         }
+
+        //         @media (max-width: 480px) {
+        //             border: none;
+
+        //             &:hover {
+        //                 border: none;
+        //             }
+        //         }
+        //     }   
+        // }
     }
 }
 
@@ -194,61 +356,66 @@ debug: (image: hide),
         margin-bottom: 100px;
     }
 
+    h3 {
+        margin-bottom: 20px;
+    }
+
     .profile-thumb {
-        margin-left: 0;
-        margin-right: 0;
-        transition: all .3s;
+        float: right;
+        display: block;
+        margin: {
+            left: 50px;
+            right: 0;
+        }
         
         @media (min-width: 1px) and (max-width: 479px) {
             border-radius: 192px;
             width: 192px;
             height: 192px;
-            background: url($profile-mobile) no-repeat;            
-            transition: all .3s;
+            background: url($profile-mobile) no-repeat;
         }
 
         @media (min-width:480px) and (max-width: 1179px) {
             border-radius: 256px;
-            width: 256px;
-            height: 256px;
+            min-width: 256px;
+            min-height: 256px;
             background: url($profile-tablet) no-repeat;
-            transition: all .3s;
         }
 
         @media (min-width: 1180px) {
-            float: left;
             border-radius: 256px;
-            width: 256px;
-            height: 256px;
+            min-width: 256px;
+            min-height: 256px;
             background: url($profile-tablet) no-repeat;
-            transition: all .3s;
         }
 
         @media (min-width: 1600px) {
-            width: 360px;
-            height: 360px;
+            min-width: 360px;
+            min-height: 360px;
             border-radius: 360px;
             background: url($profile-desktop) no-repeat;
-            transition: all .3s;
         }
 
         @media (max-width: 1179px) {
-            transition: all .3s;
+            display: table;
+            float: none;
+            width: auto;
             margin: {
                 left: auto;
                 right: auto;
                 bottom: 40px;
-            }            
-            
+            }
         }
     }
 
     .biography {
-        width: 71%;
-        margin-left: 0;
-        margin-right: 0;
-        float: right;
-        transition: all .3s;
+        position: relative;
+        width: 100%;
+        float: left;
+        margin: {
+            left: 0;
+            right: 0;
+        }
 
         p {
             letter-spacing: .015em;
@@ -256,7 +423,6 @@ debug: (image: hide),
 
         @media (max-width: 1179px) {
             width: 100%;
-            transition: all .3s;
         }
     }
 }
@@ -271,40 +437,5 @@ debug: (image: hide),
         margin-top: 20px;
         margin-bottom: 0;
     }
-}
-
-.skills-bar {   
-    position: relative;
-    float: left;
-    width: 100%;
-    margin-top: 70px;
-
-    @media (max-width:1169px) {
-        margin-top: 50px;
-        transition: all .3s;
-    }
-
-    .col-left {
-        position: relative;
-        float: left;
-        width: 46%;
-        margin-right: 8%;
-        transition: all .3s;
-
-        @media (max-width: 767px) {
-            transition: all .3s;
-            width: 100%;
-        }
-    }
-
-    .col-right {
-        position: relative;
-        float: left;
-        width: 46%;
-        transition: all .3s;
-
-        @media (max-width: 767px) {
-            width: 100%;
-        }
-    }
+    
 }
