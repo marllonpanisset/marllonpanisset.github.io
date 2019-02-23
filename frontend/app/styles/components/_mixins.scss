@@ -1,0 +1,90 @@
+// background-rgba
+@mixin transparent($color, $alpha) {
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  background-color: transparent;
+  background-color: $rgba;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+  zoom: 1;
+}
+
+//media query
+@mixin break-min($breakpoint) {
+
+	@media only screen and ( min-width: #{$breakpoint}){
+		@content;
+	}
+}
+
+@mixin break-max($breakpoint) {
+
+	@media only screen and ( max-width: #{$breakpoint}){
+		@content;
+	}
+}
+
+@mixin break-and($breakpoint-min,$breakpoint-max) {
+
+	@media only screen and ( min-width: #{$breakpoint-min} ) and ( max-width: #{$breakpoint-max}) {
+		@content;
+	}
+}
+
+//text-indent
+@mixin text-indent($width, $height) {
+	text-indent: -99999em;
+	display: block;
+	height: $height;
+	width: $width;
+	@content;
+}
+
+//after and before
+@mixin before-icon($width,$height:$width) {
+
+	&:before {
+		text-indent: -99999em;
+		height: $height;
+		display: block;
+		width: $width;
+		content: "";
+		@content;
+	}
+}
+
+@mixin after-icon($width,$height) {
+
+	&:after {
+		text-indent: -99999em;
+		height: $height;
+		display: block;
+		width: $width;
+		content: "";
+		@content;
+	}
+}
+
+@mixin before-after($width, $height) {
+	
+	&:before,
+	&:after {
+		display: block;
+		text-indent: -99999em;
+		content: "";
+		width: $width;
+		height: $height;
+		@content;
+	}
+}
+
+@mixin box-sizing($box-model) {
+	-webkit-box-sizing: $box-model;
+	-moz-box-sizing: $box-model;
+	box-sizing: $box-model;
+}
+
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}

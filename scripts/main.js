@@ -1,50 +1,62 @@
 "use strict";
-
-!function (t, e) {
-  "use strict";
-  var s = t.getElementById("navbar"),
-      a = t.getElementById("menu-bar"),
-      i = t.getElementsByClassName("main-menu")[0],
-      n = t.getElementsByClassName("hamburger")[0];e.onscroll = function () {
-    e.scrollY > 150 ? s.classList.add("scrolled") : s.classList.remove("scrolled");
-  }, a.onclick = function (t) {
-    t.preventDefault(), setTimeout(function () {
-      n.classList.add("is-active"), i.classList.add("open"), i.classList.add("animated"), i.classList.add("fadeInDown");
-    }, 100), i.classList.contains("open") && (setTimeout(function () {
-      i.classList.add("fadeOutUp"), n.classList.remove("is-active");
+var $img = $("img"),
+    navbar = document.getElementById("navbar"),
+    menuBar = document.getElementById("menu-bar"),
+    mainMenu = document.getElementsByClassName("main-menu")[0],
+    hamburguer = document.getElementsByClassName("hamburger")[0],
+    sections = $(".page-section"),
+    nav = $("#navbar .main-menu"),
+    nav_height = nav.outerHeight();$(document).ready(function () {
+  var e = {};$img.each(function (t, a) {
+    if ("none" != getComputedStyle($(this).get(0)).display) {
+      var n = $(this).attr("id") ? $(this).attr("id") : "image-" + t;$(this).data("load_id", n), e[n] = !1, $(this).on("load", function () {
+        var t = $(this).data("load_id");e[t] = !0;
+      });
+    }
+  }), $(window).on("scroll", function () {
+    window.scrollY > 150 ? navbar.classList.add("scrolled") : navbar.classList.remove("scrolled");
+  }), menuBar.onclick = function (e) {
+    e.preventDefault(), setTimeout(function () {
+      hamburguer.classList.add("is-active"), mainMenu.classList.add("open"), mainMenu.classList.add("animated"), mainMenu.classList.add("fadeInDown");
+    }, 100), mainMenu.classList.contains("open") && (setTimeout(function () {
+      mainMenu.classList.add("fadeOutUp"), hamburguer.classList.remove("is-active");
     }, 100), setTimeout(function () {
-      i.classList.remove("open"), i.classList.remove("fadeInDown"), i.classList.remove("fadeOutUp"), i.classList.remove("animated");
+      mainMenu.classList.remove("open"), mainMenu.classList.remove("fadeInDown"), mainMenu.classList.remove("fadeOutUp"), mainMenu.classList.remove("animated");
     }, 500));
-  }, [].forEach.call(t.querySelectorAll("ul.main-menu li a, h1.site-name a"), function (t) {
-    t.addEventListener("click", function () {
-      i.classList.contains("open") && i.classList.remove("open"), a.classList.contains("is-active") && a.classList.remove("is-active");
+  }, [].forEach.call(document.querySelectorAll("ul.main-menu li a, h1.site-name a"), function (e) {
+    e.addEventListener("click touchstart", function () {
+      mainMenu.classList.contains("open") && mainMenu.classList.remove("open"), menuBar.classList.contains("is-active") && menuBar.classList.remove("is-active");
     });
-  }), $("[data-scroll]").click(function (t) {
-    t.preventDefault();var e = $(this),
-        s = e.data("scroll");if ($(s).length > 0) {
-      var a = $(s).offset().top;$("html,body").animate({ scrollTop: a }, 1e3);
+  }), $("[data-scroll]").click(function (e) {
+    e.preventDefault();var t = $(this),
+        a = t.data("scroll");if ($(a).length > 0) {
+      var n = $(a).offset().top;$("html,body").animate({ scrollTop: n }, 1e3);
     }
-  });var o = $(".page-section"),
-      c = $("#navbar .main-menu"),
-      l = c.outerHeight();$(e).on("scroll", function () {
-    var t = $(this).scrollTop();o.each(function () {
-      var e = $(this).offset().top - l,
-          s = e + $(this).outerHeight();t >= e && t <= s && (c.find("a").removeClass("active"), o.removeClass("active"), $(this).addClass("active"), c.find('a[href="#' + $(this).attr("id") + '"]').addClass("active"));
+  }), $(window).on("scroll", function () {
+    var e = $(this).scrollTop();sections.each(function () {
+      var t = $(this).offset().top - nav_height,
+          a = t + $(this).outerHeight();e >= t && e <= a && (nav.find("a").removeClass("active"), sections.removeClass("active"), $(this).addClass("active"), nav.find('a[href="#' + $(this).attr("id") + '"]').addClass("active"));
     });
-  }), c.find("a").on("click", function () {
-    var t = $(this),
-        e = t.attr("href");return $("html, body").animate({ scrollTop: $(e).offset().top }, 1e3), !1;
-  }), jQuery(t).ready(function () {
-    jQuery(".skillbar").each(function () {
-      jQuery(this).find(".skillbar-bar").animate({ width: jQuery(this).attr("data-percent") }, 6e3);
-    });
+  }), nav.find("a").on("click", function () {
+    var e = $(this),
+        t = e.attr("href");return $("html, body").animate({ scrollTop: $(t).offset().top }, 1e3), !1;
   }), function () {
-    for (var e = t.getElementsByClassName("match-height"), s = e.length, a = [], i = 0; i < s; i++) {
-      a.push(e[i].offsetHeight);
-    }for (var n = function () {
+    for (var e = document.getElementsByClassName("match-height"), t = e.length, a = [], n = 0; n < t; n++) {
+      a.push(e[n].offsetHeight);
+    }for (var i = function () {
       return Math.max(a);
-    }(), i = 0; i < e.length; i++) {
-      e[i].style.height = n + "px";
+    }(), n = 0; n < e.length; n++) {
+      e[n].style.height = i + "px";
     }
-  }();
-}(document, window);
+  }(), window.addEventListener("load", function () {
+    AOS.init();
+  });var t = function t(a) {
+    var n = !0;for (var i in e) {
+      e[i] || (n = !1);
+    }n || a >= 20 ? ($("body").addClass("init-site"), setTimeout(function () {
+      $("body").addClass("hide-loading");
+    }, 700)) : setTimeout(function () {
+      t(a + 1);
+    }, 100);
+  };t(1);
+});
