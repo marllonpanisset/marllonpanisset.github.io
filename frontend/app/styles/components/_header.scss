@@ -6,51 +6,51 @@
     height: 100vh;
     
     @media (min-width: 1921px) {
-        background: url('../images/pedra-da-gavea-2048_1365.jpg') no-repeat;
+        background: url($pedra-da-gavea-2048_1365) no-repeat;
     }
     
     @media (max-width: 1920px) {
-        background: url('../images/pedra-da-gavea-1920_1280.jpg') no-repeat;
+        background: url($pedra-da-gavea-1920_1280) no-repeat;
     }
     
     @media (max-width: 1600px) {
-        background: url('../images/pedra-da-gavea-1600_1066.jpg') no-repeat;
+        background: url($pedra-da-gavea-1600_1066) no-repeat;
     }
     
     @media (max-width: 1400px) {
-        background: url('../images/pedra-da-gavea-1400_933.jpg') no-repeat;
+        background: url($pedra-da-gavea-1400_933) no-repeat;
     }
     
     @media (max-width: 1366px) {
-        background: url('../images/pedra-da-gavea-1366_910.jpg') no-repeat;
+        background: url($pedra-da-gavea-1366_910) no-repeat;
     }
     
     @media (max-width: 1024px) {
-        background: url('../images/pedra-da-gavea-1024_1365.jpg') no-repeat;
+        background: url($pedra-da-gavea-1024_1365) no-repeat;
     }
     
     @media (max-width: 1024px) and (max-height: 768px) {
-        background: url('../images/pedra-da-gavea-1024_768.jpg') no-repeat;
+        background: url($pedra-da-gavea-1024_768) no-repeat;
     }
     
     @media (max-width: 768px) {
-        background: url('../images/pedra-da-gavea-768_1024.jpg') no-repeat;
+        background: url($pedra-da-gavea-768_1024) no-repeat;
     }
     
     @media (max-width: 640px) {
-        background: url('../images/pedra-da-gavea-640_427.jpg') no-repeat;
+        background: url($pedra-da-gavea-640_427) no-repeat;
     }
     
     @media (max-width: 480px) {
-        background: url('../images/pedra-da-gavea-480_320.jpg') no-repeat;
+        background: url($pedra-da-gavea-480_320) no-repeat;
     }
     
     @media (max-width: 375px) {
-        background: url('../images/pedra-da-gavea-375_812.jpg') no-repeat;
+        background: url($pedra-da-gavea-375_812) no-repeat;
     }
     
     @media (max-width: 812px) and (max-height:375px) {
-        background: url('../images/pedra-da-gavea-812_375.jpg') no-repeat;
+        background: url($pedra-da-gavea-812_375) no-repeat;
     }
 
     .wrap {
