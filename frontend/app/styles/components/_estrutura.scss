@@ -148,28 +148,28 @@ debug: (image: hide),
             border-radius: 192px;
             width: 192px;
             height: 192px;
-            background: url($profile-mobile) no-repeat;
+            // background: url($profile-mobile) no-repeat;
         }
 
         @media (min-width:480px) and (max-width: 1179px) {
             border-radius: 256px;
             min-width: 256px;
             min-height: 256px;
-            background: url($profile-tablet) no-repeat;
+            // background: url($profile-tablet) no-repeat;
         }
 
         @media (min-width: 1180px) {
             border-radius: 256px;
             min-width: 256px;
             min-height: 256px;
-            background: url($profile-tablet) no-repeat;
+            // background: url($profile-tablet) no-repeat;
         }
 
         @media (min-width: 1600px) {
             min-width: 360px;
             min-height: 360px;
             border-radius: 360px;
-            background: url($profile-desktop) no-repeat;
+            // background: url($profile-desktop) no-repeat;
         }
 
         @media (max-width: 1179px) {
