@@ -234,6 +234,6 @@ gulp.task('deploy:fonts', () => {
 gulp.task('default', () => {
   return new Promise(resolve => {
 	dev = false;
-	runSequence(['clean'], ['build'], ['deploy:images'],['deploy:styles'],['deploy:scripts'],['deploy:fonts'], resolve);
+	runSequence(['clean'], ['build'], resolve);
   });
 });
