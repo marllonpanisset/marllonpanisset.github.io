@@ -20,6 +20,7 @@
     "background_color": "#fff",
     "theme_color": "#000",
     "main.css": "styles/main.css",
-    "main.js": "scripts/main.js",
+    "vendor.min.css": "styles/vendor.min.css",
+    "main.min.js": "scripts/main.min.js",
     "manifest.js": "manifest.json"
 }
