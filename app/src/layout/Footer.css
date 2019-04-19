@@ -1,0 +1,13 @@
+.App-footer {
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    background: #222;
+    color: #fff;
+}
+
+.App-footer span {
+    font-size: 14px;
+    display: block;
+    text-align: center;
+}

@@ -1,0 +1,75 @@
+.App-logo {
+  animation: App-logo-spin infinite 1s linear;
+  height: 50px;
+
+}
+.App-logo-loading {
+  animation: App-logo-spin infinite 1s linear;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1110px;
+}
+
+@media (max-width: 1110px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+}
+
+.App .content {
+  min-height: calc(100vh - 70px);
+}
+
+.news {
+  position: relative;
+  width: 100%;
+  float: left;
+  border-bottom: 1px solid #d1ccc0;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.news:last-child {
+  border-bottom: 0;
+  margin-bottom: 0px;
+}
+
+.news .date {
+  font-size: 12px;
+}
+
+.news h3 {
+  margin-top: 5px;
+}
+
+.news p {
+  
+}
+
+.news .more {
+  margin-top: 10px;
+  color: #74b9ff;
+  transition: color .3s ease-in-out;
+}
+
+.news .more:hover {
+  color:#0984e3;
+  transition: color .3s ease-in-out;
+}

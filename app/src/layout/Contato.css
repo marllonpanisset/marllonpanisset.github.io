@@ -1,0 +1,23 @@
+.form-contato {
+    
+}
+
+.form-contato form {
+    width: 250px;
+    float: left;
+}
+
+.form-contato fieldset {
+    border: none;
+    padding: 0;
+}
+
+.form-contato fieldset label {
+    display: block;
+    margin: 5px 0;
+}
+
+.form-contato fieldset input[type="submit"] {
+    margin-top: 10px;
+    cursor: pointer;
+}
