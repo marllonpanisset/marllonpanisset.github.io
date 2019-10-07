@@ -115,7 +115,7 @@ $(document).ready(function () {
 	}
 	
 	function equalHeight(resize) {
-		var elements = document.getElementsByClassName("equalHeight"),
+		var elements = document.getElementsByClassName('equalHeight'),
 			allHeights = [],
 			i = 0;
 		if(resize === true){
@@ -131,7 +131,7 @@ $(document).ready(function () {
 			elements[i].style.height = Math.max.apply( Math, allHeights) + 'px';
 			// Optional: Add show class to prevent FOUC
 			if(resize === false){
-				elements[i].className = elements[i].className + " show";
+				elements[i].className = elements[i].className + ' show';
 			}
 		}
 	}

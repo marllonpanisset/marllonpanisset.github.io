@@ -25,6 +25,6 @@
   
 	//Iterate through getDivs and set all their height style equal to the tallest variable
 	for (var i = 0; i < getDivs.length; i++) {
-		getDivs[i].style.height = tallest + "px";
+		getDivs[i].style.height = tallest + 'px';
 	}
 })();
