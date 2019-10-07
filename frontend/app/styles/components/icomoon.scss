@@ -2,15 +2,21 @@ $icomoon-font-family: "icomoon" !default;
 $icomoon-font-path: "fonts" !default;
 
 $icon-angle-down-solid: "\e900";
-$icon-facebook: "\e901";
-$icon-github: "\e902";
-$icon-gmail: "\e903";
-$icon-google-plus: "\e904";
-$icon-instagram: "\e905";
-$icon-linkedin: "\e906";
-$icon-medium-path1: "\e907";
-$icon-medium-path2: "\e908";
-$icon-twitter: "\e909";
+$icon-bar-chart: "\e901";
+$icon-code-computer: "\e902";
+$icon-computer: "\e903";
+$icon-drag-mobile-design: "\e904";
+$icon-facebook: "\e905";
+$icon-front-end: "\e906";
+$icon-github: "\e907";
+$icon-gmail: "\e908";
+$icon-google-plus: "\e909";
+$icon-instagram: "\e90a";
+$icon-linkedin: "\e90b";
+$icon-medium-path1: "\e90c";
+$icon-medium-path2: "\e90d";
+$icon-responsive-design: "\e90e";
+$icon-twitter: "\e90f";
 
 @font-face {
   font-family: "icomoon";
@@ -41,9 +47,34 @@ $icon-twitter: "\e909";
     content: $icon-angle-down-solid; 
   }
 }
+.icon-bar-chart {
+  &:before {
+    content: $icon-bar-chart; 
+  }
+}
+.icon-code-computer {
+  &:before {
+    content: $icon-code-computer; 
+  }
+}
+.icon-computer {
+  &:before {
+    content: $icon-computer; 
+  }
+}
+.icon-drag-mobile-design {
+  &:before {
+    content: $icon-drag-mobile-design; 
+  }
+}
 .icon-facebook {
   &:before {
     content: $icon-facebook; 
+  }
+}
+.icon-front-end {
+  &:before {
+    content: $icon-front-end; 
   }
 }
 .icon-github {
@@ -82,6 +113,11 @@ $icon-twitter: "\e909";
     content: $icon-medium-path2;  
     margin-left: -1em;  
     color: rgb(255, 255, 255);
+  }
+}
+.icon-responsive-design {
+  &:before {
+    content: $icon-responsive-design; 
   }
 }
 .icon-twitter {

@@ -51,6 +51,10 @@ debug: (image: hide),
     }
 }
 
+#main {
+    position: relative;
+}
+
 #services,
 #portfolio,
 #about,
@@ -59,8 +63,12 @@ debug: (image: hide),
     position: relative;
     float: left;
     width: 100%;
-    padding-top: 60px;
     min-height: 100vh;
+    margin-bottom: 50px;
+}
+
+#portfolio {
+    padding-top: 40px;
 }
 
 #contact {
@@ -97,6 +105,8 @@ debug: (image: hide),
             margin-bottom: 20px;
             float: left;
             margin-top: 20px;
+            text-align: center;
+            width: 100%;
         }
     }
 
@@ -104,19 +114,9 @@ debug: (image: hide),
         a {
             
             &:not(:hover) {
-                color: $preto;
-                border: 1px solid $preto;
                 
                 &:before {
-                    color: inherit;
-                }
-            }
-
-            &:hover {
-                border: 1px solid inherit;
-
-                &:before {
-                    color: inherit;
+                    color: $preto;
                 }
             }
 
@@ -125,16 +125,6 @@ debug: (image: hide),
 }
 
 #about {
-    
-    @media (min-width: 1025px) {
-        margin-top: 60px;
-        padding-top: 60px;
-    }
-    
-    @media (max-width: 1024px) {
-        margin-top: 30px;
-        padding-top: 100px;
-    }
 
     .parallax {
         margin-bottom: 100px;
@@ -209,17 +199,17 @@ debug: (image: hide),
             width: 100%;
         }
     }
-}
-
-#about .skills {
-    position: relative;
-    float: left;
-    width: 100%;
     
-    h4 {
+    .skills {
+        position: relative;
         float: left;
-        margin-top: 20px;
-        margin-bottom: 0;
+        width: 100%;
+        
+        h4 {
+            float: left;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+        
     }
-    
 }

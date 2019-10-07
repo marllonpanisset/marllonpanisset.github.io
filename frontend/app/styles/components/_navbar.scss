@@ -4,6 +4,8 @@
     height: 60px;
     line-height: 60px;
     z-index: 200;
+    background-color: transparent;
+    transition: background .45s ease-in-out;
 
     @media (max-width: 959px) {
         background-color: $preto;
@@ -15,47 +17,6 @@
             padding-right: 15px;
         }
     }
-    
-    &.scrolled {
-        background-color: $preto;
-
-        .main-menu li a {
-            color: $branco;
-            position: relative;
-            transition: all .5s cubic-bezier(.4,0,.2,1);
-
-            &:before {
-                content: "";
-                display: block;
-                height: 3px;
-                width: 0;
-                bottom: 0px;
-                position: absolute;
-                left: 50%;
-                background-color: $branco;
-                transition: all .30s cubic-bezier(.4,0,.2,1);
-            }
-
-            &:hover,
-            &.active {
-                @media (min-width: 960px) {
-                    color: $laranja;
-                }
-
-                &:before {
-                    width: 100%;
-                    left: 0;
-                    @media (min-width: 960px) {
-                        background-color: $laranja;
-                    }
-                }
-            }
-        }
-
-        .site-name a {
-            color: $branco;
-        }
-    }
 
     .main-menu {
         position: relative;
@@ -63,11 +24,15 @@
 
         &.open {
             display: block;
-            margin-top: 60px;
+            margin-top: 50px;
             position: absolute;
             right: 0;
             width: 380px;
             z-index: -1;
+
+            @media (min-width: 960px) {
+                display: none;
+            }
 
             @media (max-width: 380px) {
                 width: 100%;
@@ -76,44 +41,50 @@
             li {
                 float: left;
                 height: 60px;
+                line-height: 60px;
                 width: 100%;
                 background: $preto;
                 text-align: center;
                 position: relative;
 
-                @media (max-width: 959px) {
-                    &:before {
-                        content:'';
-                        display: block;
-                        position: absolute;
-                        bottom:0;
-                        width: 90%;
-                        left: 5%;
-                        padding-left: 15px;
-                        padding-right: 15px;
-                        height: 1px;
-                        border-top: 1px dotted $branco;
-                        box-sizing: border-box;
-                    }
-
-                    &:last-child {
+                &:not(:nth-of-type(4)):not(:last-child) {
+                    @media (max-width: 959px) {
                         &:before {
-                            display: none;
+                            content:'';
+                            display: block;
+                            position: absolute;
+                            bottom:0;
+                            width: 90%;
+                            left: 5%;
+                            padding-left: 15px;
+                            padding-right: 15px;
+                            height: 1px;
+                            border-top: 1px dotted $branco;
+                            box-sizing: border-box;
+                        }
+    
+                        &:first-child{
+                            border: none;
                         }
                     }
 
-                    &:first-child{
-                        border: none;
-                    }
                 }
 
-                @media (min-width: 381px) {
+
+                @media (min-width: 320px) {
                     &:last-child {
                         border-bottom-left-radius: 10px;
                     }
                 }
 
-                a {
+                @media (max-width: 380px) {
+                    &:last-child {
+                        border-bottom-right-radius: 10px;
+                        border-bottom-left-radius: 10px;
+                    }
+                }
+
+                a:not(.icon) {
                     display: initial;
                     padding: 0;
 
@@ -148,11 +119,17 @@
             float: left;
             height: 60px;
 
+            &:last-child {
+                @media (min-width: 960px) {
+                    display: none;
+                }
+            }
+
             &:not(:last-child) {
                 margin-right: 3px;
             }
 
-            a {
+            a:not(.icon) {
                 position: relative;
                 text-transform: uppercase;
                 letter-spacing: 0.5px;
@@ -194,107 +171,131 @@
                     }
                 }
             }
+
+            .social-network {
+                margin-top: 0px;
+                flex-wrap: initial;
+
+
+                .icon {
+                    margin-right: 0;
+
+                    &.icon-medium  {
+                        margin-right: 10px;
+                    }
+
+                    &.icon-twitter {
+                        margin-left: 5px;
+                    }
+
+                    &.icon-facebook {
+                        padding-left: 0;
+                        padding-right: 10px;
+                    }
+
+                    &.icon-linkedin {
+                        padding-right: 0;
+                    }
+
+                    &.icon-google-plus {
+                        margin-right: 15px;
+                    }
+                }
+            }
         }
     }
 
     .site-name {
         position: relative;
-        float: left;        
+        float: left;
 
         a {
-            color: $branco;
-            text-decoration: none;
             outline: none;
-            display: block;
+            display: inline-block;
+            text-decoration: none;
 
             &:before {
-                content: '< > Marllon Panisset';
+                content: '</> Marllon Panisset';
                 display: inline-block;
                 font-family: 'Ubuntu';
-                font-weight: 500;
-                letter-spacing: 0;
-                transition: all .3s ease-out;
-
-                @media (max-width: 1024px) {
-                    letter-spacing: .05em;
-                }
-
-                @media (min-width: 961px) {
-                    font-size: 1.6rem;
-                }
-                
-                @media (min-width: 801px) and (max-width:960px) {
-                    font-size: 1.5rem;
-                }
-                
-                @media (max-width: 800px) {
-                    font-size: 1.4rem;
-                }
-
-                @media (max-width: 360px) {
-                    font-size: 1.30rem;
-                }
+                margin-left: 10px;
+                font-weight: 100;
+                letter-spacing: .09em;
+                color: $branco;
 
                 @media (max-width: 359px) {
-                    content: '< > MP';
+                    content: '</MP>';
+                    transition: all .4s ease-in;
                 }
             }
 
-            &:after {
-                content: '/';
-                position: absolute;
-                top: -6px;
-                left: 14px;
-                display: inline-block;
-                font-family: 'Ubuntu';
-                font-weight: 100;
-                font-size: 1.6rem;
+            @media (max-width: 1024px) {
                 letter-spacing: .05em;
-                opacity: 0;
-                transition: all .4s ease-out;
+            }
 
-                @media (max-width: 1024px) {
-                    opacity: 1;
-                    top: 0;
-                    transition: all .3s ease-in;
-                    left: 14px;
-                }
+            @media (min-width: 961px) {
+                font-size: 1.6rem;
             }
             
-            &:hover {
+            @media (min-width: 801px) and (max-width:960px) {
+                font-size: 1.5rem;
+            }
+            
+            @media (max-width: 800px) {
+                font-size: 1.4rem;
+            }
 
-                &:before {
-                    content: '< > Marllon Panisset';
-                    letter-spacing: .05em;
-                    transition: all .4s ease-in;
+            @media (max-width: 360px) {
+                font-size: 1.30rem;
+            }
+        }
+    }
 
-                    @media (max-width: 359px) {
-                        content: '< > MP';
-                        transition: all .4s ease-in;
-                    }
+    &.scrolled {
+        background-color: $preto;
+        height: 50px;
+        line-height: 50px;
+
+        .main-menu li a:not(.icon) {
+            transition: all .5s cubic-bezier(.4,0,.2,1);
+            font-size: em(15px);
+            position: relative;
+            color: $branco;
+
+            &:before {
+                content: "";
+                display: block;
+                height: 3px;
+                width: 0;
+                bottom: 0px;
+                position: absolute;
+                left: 50%;
+                background-color: $branco;
+                transition: all .30s cubic-bezier(.4,0,.2,1);
+            }
+
+            &:hover,
+            &.active {
+                @media (min-width: 960px) {
+                    color: $laranja;
                 }
 
-                &:after {
-                    top: 0;
-                    opacity: 1;
-                    font-weight: 500;
-                    transition: all .3s ease-in;
+                &:before {
+                    width: 100%;
+                    left: 0;
+                    @media (min-width: 960px) {
+                        background-color: $laranja;
+                    }
+                }
+            }
+        }
 
-                    @media (max-width: 1024px) {
-                        font-size: 1.6rem;
-                    }
-                    
-                    @media (min-width: 801px) and (max-width:960px) {
-                        font-size: 1.3rem;
-                        left: 13px;
-                        font-weight: 500;
-                    }
-                    
-                    @media (max-width: 800px) {
-                        font-size: 1.3rem;
-                        left: 11px;
-                        font-weight: 500;
-                    }
+        .site-name a {
+            color: $branco;
+
+            &:before {
+                @media (min-width: 961px) {
+                    font-size: 1.4rem;
                 }
             }
         }
@@ -308,7 +309,7 @@
     padding: 0px 4px 0 8px;
     box-sizing: border-box;
     height: 45px;
-    margin-top: 7px;
+    margin-top: 9px;
     outline: none;
 
     @media (min-width: 960px) {

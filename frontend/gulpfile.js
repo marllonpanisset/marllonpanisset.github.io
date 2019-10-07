@@ -177,7 +177,7 @@ gulp.task('serve', () => {
 	]).on('change', reload);
 	gulp.watch('app/views/**/*.pug', ['views', reload]);
 	gulp.watch(['app/styles/**/*.scss'], ['styles']);
-	gulp.watch('app/scripts/**/*.js', ['scripts']);
+	gulp.watch('app/scripts/**/*.js', ['scripts:main']);
   });
 });
 
@@ -191,7 +191,7 @@ gulp.task('serve:dist', ['default'], () => {
   });
 });
 
-gulp.task('serve:test', ['scripts'], () => {
+gulp.task('serve:test', ['scripts:main'], () => {
   browserSync.init({
 	notify: false,
 	port: 9000,
@@ -205,7 +205,7 @@ gulp.task('serve:test', ['scripts'], () => {
 	}
   });
 
-  gulp.watch('app/scripts/**/*.js', ['scripts']);
+  gulp.watch('app/scripts/**/*.js', ['scripts:main']);
   gulp.watch(['test/spec/**/*.js', 'test/index.html']).on('change', reload);
   gulp.watch('test/spec/**/*.js', ['lint:test']);
 });
