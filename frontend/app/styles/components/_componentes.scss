@@ -2,17 +2,18 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
 	margin: {
 		left: auto;
 		right: auto;
 	}
-
+	
 	@media (min-width:769px) {
+		width: 40%;
 		margin-top: 50px;
 	}
 
 	@media (max-width:768px) {
+		width: 100%;
 		margin-top: 20px;
 	}
 
@@ -24,12 +25,14 @@
 	}
 
 	a {
+		width: calc(100%/7);
 		position: relative;
 		float: left;
 		display: block;
 		transition: ease-out .4s;
 
 		@media (max-width: 479px) {
+			line-height: 50px;
 			width: 21%;
 		}
 
@@ -39,50 +42,33 @@
 		}
 
 		&.icon.icon-medium {
+			.path1 {
+				color: transparent;
+			}
 
-			@media (max-width: 767px) {
-				padding: 12px;
+			.path2 {
+				&:before {
+					font-size: 36px;
+                    color: $branco;
+                    transition: all .3s ease-out;
+				}
+
+				&:hover {
+					&:before {
+						transition: all .3s ease-in;
+						color: $verde;
+					}
+				}
 			}
 
 			.path1 {
 				&:before {
-					font-size: 25px;
-					color: $branco;
-					transition: all .4s ease-in-out;
-					
-
-					@media (max-width: 767px) {
-						font-size: 22px;
-					}
-				}
-			}
-
-			&:hover {
-				.path1 {
-					&:before {
-						color: #00ab6c;
-					}
-				}
-			}
-			
-			.path2 {
-				&:before {
-					font-size: 25px;
-					color: $preto;
-
-					@media (max-width: 767px) {
-						font-size: 22px;
-					}
+					color: transparent;
 				}
 			}
 		}
 
 		&.icon.icon-github {
-			padding: 10px;
-
-			@media (max-width: 767px) {
-				padding: 8px;
-			}
 
 			&:before {
 				font-size: 35px;
@@ -103,10 +89,6 @@
 		
 		&.icon.icon-twitter {
 
-			@media (max-width: 767px) {
-				padding: 11px;
-			}
-
 			&:before {
 				font-size: 25px;
 				transition: all .4s ease-in-out;
@@ -125,11 +107,6 @@
 		}
 
 		&.icon.icon-linkedin {
-			padding: 10px;
-
-			@media (max-width: 767px) {
-				padding: 6px;
-			}
 
 			&:before {
 				font-size: 35px;
@@ -149,11 +126,6 @@
 		}
 
 		&.icon.icon-facebook {
-			padding: 15px;
-
-			@media (max-width: 767px) {
-				padding: 11px;
-			}
 
 			&:before {
 				font-size: 25px;
@@ -174,10 +146,6 @@
 		
 		&.icon.icon-google-plus {
 
-			@media (max-width: 767px) {
-				padding: 10px;
-			}
-
 			&:before {
 				font-size: 25px;
 				transition: all .4s ease-in-out;
@@ -196,9 +164,6 @@
 		}
 
 		&.icon.icon-instagram {
-			@media (max-width: 767px) {
-				padding: 11px;
-			}
 
 			&:before {
 				font-size: 25px;
@@ -221,20 +186,6 @@
 
 			&:before {
 				transition: ease-in .4s;
-			}
-		}
-
-		&:not(:last-child) {
-			@media (min-width: 768px) {
-				margin-right: 50px;
-			}
-
-			@media (min-width: 650px) and (max-width: 768px) {
-				margin-right: 40px;
-			}
-
-			@media (max-width: 649px) {
-				margin-right: 20px;
 			}
 		}
 
@@ -455,38 +406,38 @@
 .card-services {
 	position: relative;
 	width: 100%;
-	margin-top: 30px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	
+	@media (min-width: 769px) {
+		margin-top: 30px;
+	}
+
+	@media (max-width: 768px) {
+		margin-top: 50px;
+	}
+	
 	.item {
 		position: relative;
-		margin-bottom: 40px;
 		text-align: center;
 		background: $branco;
-		padding: 45px;
 		display: flex;
 		flex-wrap: wrap;
-		box-shadow: 0px 15px 60px 0px rgba(0,0,0,0.1);
 		
 		@media (min-width: 769px) {
-			width: 30.333%;
+			width: 50%;
+			padding: 45px;
 		}
 
 		@media (max-width: 768px) {
 			width: 100%;
+			margin-bottom: 20px;
 		}
 
 		.icon {
 			display: block;
 			width: 100%;
-		}
-
-		&:not(:nth-of-type(3n)) {
-			@media (min-width: 769px) {
-				margin-right: 3.333%;
-			}
 		}
 
 		h4 {
@@ -495,7 +446,7 @@
 			width: 100%;
 		}
 
-		span {
+		div {
 			&:before {
 				font-size: 70px;
 			}

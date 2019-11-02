@@ -98,6 +98,30 @@ debug: (image: hide),
         margin-top: 20px;
         width: 100%;
         text-align: center;
+
+        .icon.icon-medium {
+			.path2 {
+				&:before {
+                    color: $preto;
+                    transition: all .3s ease-out;
+				}
+            }
+
+            &:hover {
+                .path2 {
+                    &:before {
+                        transition: all .3s ease-in;
+                        color: $verde;
+                    }
+                }
+                
+                .path1 {
+                    &:before {
+                        color: transparent;
+                    }
+                }
+            }
+        }
     
         
         h4 {

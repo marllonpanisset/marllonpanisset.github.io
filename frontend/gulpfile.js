@@ -25,13 +25,13 @@ gulp.task('views', () => {
 
 gulp.task('fonts', () => {
 	return gulp.src('app/fonts/*')
-	.pipe($.if(dev, gulp.dest('.tmp/'), gulp.dest('dist/')))
+	.pipe($.if(dev, gulp.dest('.tmp/'), gulp.dest('dist/fonts')))
 });
 
 gulp.task('images', () => {
   return gulp.src('app/images/*')
 	.pipe($.cache($.imagemin()))
-	.pipe($.if(dev, gulp.dest('.tmp/'), gulp.dest('dist/')))
+	.pipe($.if(dev, gulp.dest('.tmp/'), gulp.dest('dist/images')))
 });
 
 gulp.task('styles', () => {
@@ -88,13 +88,22 @@ gulp.task('scripts:jquery', () => {
 	.pipe(reload({stream: true}));
 });
 
-gulp.task('scripts:aos', () => {
-  return gulp.src('app/scripts/aos.js')
+gulp.task('scripts:vanilla-match-heights', () => {
+  return gulp.src('app/scripts/vanilla-match-heights.js')
 	.pipe($.plumber())
 	// .pipe($.uglify())
 	// .pipe($.babel())
 	.pipe($.if(dev, gulp.dest('.tmp/scripts'), gulp.dest('dist/scripts')))
 	.pipe(reload({stream: true}));
+});
+
+gulp.task('scripts:aos', () => {
+	return gulp.src('app/scripts/aos.js')
+	  .pipe($.plumber())
+	  // .pipe($.uglify())
+	  // .pipe($.babel())
+	  .pipe($.if(dev, gulp.dest('.tmp/scripts'), gulp.dest('dist/scripts')))
+	  .pipe(reload({stream: true}));
 });
 
 gulp.task('scripts:modernizr', () => {
@@ -140,7 +149,7 @@ gulp.task('lint:test', () => {
 	.pipe(gulp.dest('test/spec'));
 });
 
-gulp.task('html', ['styles', 'styles:vendor', 'scripts:jquery', 'scripts:main', 'scripts:modernizr', 'scripts:aos', 'manifest.json', 'service-workers.js', 'views'], () => {
+gulp.task('html', ['styles', 'styles:vendor', 'scripts:jquery', 'scripts:main', 'scripts:modernizr', 'scripts:aos', 'scripts:vanilla-match-heights', 'manifest.json', 'service-workers.js', 'views'], () => {
   return gulp.src('.tmp/*.html')
 	.pipe($.useref({searchPath: ['.tmp', '.']}))
 	.pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
@@ -160,7 +169,7 @@ gulp.task('extras', () => {
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', () => {
-	runSequence(['clean'], ['views'], ['styles', 'fonts', 'styles:vendor', 'scripts:main', 'scripts:jquery', 'scripts:modernizr', 'manifest.json', 'service-workers.js','scripts:aos'], () => {
+	runSequence(['clean'], ['views'], ['styles', 'fonts', 'styles:vendor', 'scripts:main', 'scripts:jquery', 'scripts:modernizr', 'manifest.json', 'service-workers.js','scripts:aos','scripts:vanilla-match-heights'], () => {
 		browserSync.init({
 			notify: false,
 			port: 9000,
@@ -228,7 +237,7 @@ gulp.task('deploy:scripts', () => {
 });
 gulp.task('deploy:fonts', () => {
 	return gulp.src('dist/fonts/**/*')
-		.pipe(gulp.dest('../fonts'));
+		.pipe(gulp.dest('../styles/fonts'));
 });
 
 gulp.task('default', () => {
