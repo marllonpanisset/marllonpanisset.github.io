@@ -441,22 +441,22 @@
 		}
 
 		h4 {
-			font-size: em(20px);
+			font-family: 'Open Sans', Helvetica, Arial, Sans-serif;
+			font-size: em(18px);
 			text-align: center;
 			width: 100%;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		p {
+			font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 		}
 
 		div {
 			&:before {
 				font-size: 70px;
 			}
-		}
-
-		h4 {
-			margin-top: 20px;
-			margin-bottom: 20px;
-			text-align: center;
-			font-size: em(16px);
 		}
 
 		p {
