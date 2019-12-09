@@ -381,7 +381,22 @@
 		padding-top: 180px;
 		z-index: 0;
 
-		@extend %sombraParalax;
+		//@extend %sombraParalax;
+
+		&:before {
+			content:'';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			bottom: 0;
+			z-index: -1;
+			background: linear-gradient(
+				to bottom,
+				#000,
+				rgba(#000, 0)
+			);
+		}
 
 		h3 {
 			margin-bottom: 20px;

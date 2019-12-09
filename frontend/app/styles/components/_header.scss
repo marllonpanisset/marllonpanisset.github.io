@@ -1,3 +1,11 @@
+body:not(.init-site) {
+    #header .read-more,
+    #header .read-more svg {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
 #header {
     -webkit-backface-visibility: hidden;
     background-attachment: fixed !important;
@@ -119,6 +127,7 @@
         left: 50%;
         margin-left: -40px;
         display: block;
+        opacity: 1;
         width: 60px;
         height: 60px;
         text-decoration: none;

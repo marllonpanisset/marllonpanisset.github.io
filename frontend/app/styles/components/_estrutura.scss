@@ -65,6 +65,42 @@ debug: (image: hide),
     width: 100%;
     min-height: 100vh;
     margin-bottom: 50px;
+
+    p {
+        a {
+            transition: all .40s;
+            position: relative;
+            text-decoration: none;
+
+            &:before {
+                content: "";
+                display: block;
+                height: 2px;
+                width: 0;
+                bottom: 0px;
+                position: absolute;
+                left: 50%;
+                background-color: $branco;
+                transition: all .30s cubic-bezier(.4,0,.2,1);
+            }
+
+        }
+
+        &:hover {
+            background-color: transparent;
+            text-decoration: none;
+
+            @media (max-width: 800px) {
+                background-color: transparent;
+            }
+
+            a:before {
+                width: 100%;
+                left: 0;
+                background-color: $laranja;
+            }
+        }
+    }
 }
 
 #portfolio {
