@@ -4,6 +4,16 @@ body:not(.init-site) {
         opacity: 0;
         z-index: -1;
     }
+
+    #header {
+        background-color: #fea201;
+        opacity: .95;
+        //z-index: 0;
+    }
+    
+    body {
+        background: #fea201;
+    }
 }
 
 #header {
@@ -53,7 +63,7 @@ body:not(.init-site) {
     }
     
     @media (max-width: 480px) {
-        background: #000 url($pedra-da-gavea-480_320) no-repeat;
+        background: url($pedra-da-gavea-480_320) no-repeat;
     }
     
     @media (max-width: 375px) {
@@ -67,7 +77,7 @@ body:not(.init-site) {
     .wrap {
         position: absolute;
         width: 100%;
-        top: 50%;
+        top: 68%;
         transform: translateY(-50%);
 
         .site-description {
@@ -77,7 +87,7 @@ body:not(.init-site) {
 
             h2 {
                 font-weight: 100;
-                font-size: 4rem;
+                font-size: 3rem;
                 margin-bottom: 20px;
 
                 @media (min-width: 587px) and (max-width: 768px) {
@@ -126,7 +136,6 @@ body:not(.init-site) {
         bottom: 60px;
         left: 50%;
         margin-left: -40px;
-        display: block;
         opacity: 1;
         width: 60px;
         height: 60px;
@@ -134,6 +143,14 @@ body:not(.init-site) {
         z-index: 100;
         text-indent: -999999em;
         animation: pulse 1.5s 4s ease-out infinite;
+        
+        @media (min-width: 801px) {
+            display: none;
+        }
+        
+        @media (max-width: 800px) {
+            display: block;
+        }
 
         @media (max-width: 812px) and (max-height: 375px) {
             bottom: 40px;
