@@ -1,22 +1,19 @@
 $icomoon-font-family: "icomoon" !default;
 $icomoon-font-path: "fonts" !default;
 
-$icon-angle-down-solid: "\e900";
-$icon-bar-chart: "\e901";
-$icon-code-computer: "\e902";
-$icon-computer: "\e903";
-$icon-drag-mobile-design: "\e904";
+$icon-responsive-design: "\e900";
+$icon-linkedin: "\e901";
+$icon-gmail: "\e902";
+$icon-github: "\e903";
+$icon-front-end: "\e904";
 $icon-facebook: "\e905";
-$icon-front-end: "\e906";
-$icon-github: "\e907";
-$icon-gmail: "\e908";
-$icon-google-plus: "\e909";
-$icon-instagram: "\e90a";
-$icon-linkedin: "\e90b";
-$icon-medium-path1: "\e90c";
-$icon-medium-path2: "\e90d";
-$icon-responsive-design: "\e90e";
-$icon-twitter: "\e90f";
+$icon-drag-mobile-design: "\e906";
+$icon-domain-www: "\e907";
+$icon-computer: "\e908";
+$icon-code-computer: "\e909";
+$icon-bar-chart: "\e90a";
+$icon-angle-down-solid: "\e90b";
+$icon-analytics: "\e90c";
 
 @font-face {
   font-family: "icomoon";
@@ -42,59 +39,9 @@ $icon-twitter: "\e90f";
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-angle-down-solid {
+.icon-responsive-design {
   &:before {
-    content: $icon-angle-down-solid; 
-  }
-}
-.icon-bar-chart {
-  &:before {
-    content: $icon-bar-chart; 
-  }
-}
-.icon-code-computer {
-  &:before {
-    content: $icon-code-computer; 
-  }
-}
-.icon-computer {
-  &:before {
-    content: $icon-computer; 
-  }
-}
-.icon-drag-mobile-design {
-  &:before {
-    content: $icon-drag-mobile-design; 
-  }
-}
-.icon-facebook {
-  &:before {
-    content: $icon-facebook; 
-  }
-}
-.icon-front-end {
-  &:before {
-    content: $icon-front-end; 
-  }
-}
-.icon-github {
-  &:before {
-    content: $icon-github; 
-  }
-}
-.icon-gmail {
-  &:before {
-    content: $icon-gmail; 
-  }
-}
-.icon-google-plus {
-  &:before {
-    content: $icon-google-plus; 
-  }
-}
-.icon-instagram {
-  &:before {
-    content: $icon-instagram; 
+    content: $icon-responsive-design; 
   }
 }
 .icon-linkedin {
@@ -102,27 +49,59 @@ $icon-twitter: "\e90f";
     content: $icon-linkedin; 
   }
 }
-.icon-medium .path1 {
+.icon-gmail {
   &:before {
-    content: $icon-medium-path1;  
-    color: rgb(0, 0, 0);
+    content: $icon-gmail; 
   }
 }
-.icon-medium .path2 {
+.icon-github {
   &:before {
-    content: $icon-medium-path2;  
-    margin-left: -1em;  
-    color: rgb(255, 255, 255);
+    content: $icon-github; 
   }
 }
-.icon-responsive-design {
+.icon-front-end {
   &:before {
-    content: $icon-responsive-design; 
+    content: $icon-front-end; 
   }
 }
-.icon-twitter {
+.icon-facebook {
   &:before {
-    content: $icon-twitter; 
+    content: $icon-facebook; 
+  }
+}
+.icon-drag-mobile-design {
+  &:before {
+    content: $icon-drag-mobile-design; 
+  }
+}
+.icon-domain-www {
+  &:before {
+    content: $icon-domain-www; 
+  }
+}
+.icon-computer {
+  &:before {
+    content: $icon-computer; 
+  }
+}
+.icon-code-computer {
+  &:before {
+    content: $icon-code-computer; 
+  }
+}
+.icon-bar-chart {
+  &:before {
+    content: $icon-bar-chart; 
+  }
+}
+.icon-angle-down-solid {
+  &:before {
+    content: $icon-angle-down-solid; 
+  }
+}
+.icon-analytics {
+  &:before {
+    content: $icon-analytics; 
   }
 }
 

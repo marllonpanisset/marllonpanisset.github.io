@@ -6,6 +6,24 @@ body {
     }
 }
 
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(360deg);
+    }
+}
+
 .loading {
     position: fixed;
     top: 0;
@@ -16,30 +34,68 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #faa200;
+    transition: all .6s ease-out;
+    -webkit-transition: all .6s ease-out;
     z-index: 300;
-    //opacity: .6;
-    transition: all .4s ease-out;
-    -webkit-transition: all .4s ease-out;
-
+    
     &:before {
-        content: '</> Marllon Panisset';
-        display: inline-block;
-        font-family: 'Ubuntu';
-        font-size: 3em;
-        font-weight: 100;
-        letter-spacing: .09em;
-        color: $branco;
-
-        @media (max-width: 767px) {
-            font-size: 2.5em;
-        }
-
-        @media (max-width: 359px) {
-            content: '</MP>';
-            transition: all .4s ease-in;
-        }
+        position: absolute;
+        content:"";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #faa200;
     }
+    
+    div {
+        z-index: 300;
+        
+        position: relative;
+        &:before {
+            content: '/';
+            display: inline-block;
+            position: absolute;
+            font-family: 'Ubuntu';
+            font-size: 3em;
+            left: 29px;
+            font-weight: 100;
+            letter-spacing: .09em;
+            animation: rotation 1.5s infinite linear;
+            -webkit-animation: rotation 1.5s infinite linear;
+            color: $branco;
+            
+            @media (max-width: 767px) {
+                font-size: 2.5em;
+            }
+            
+        }
+        
+        &:after {
+            content: '< > Marllon Panisset';
+            display: inline-block;
+            font-family: 'Ubuntu';
+            font-size: 3em;
+            font-weight: 100;
+            letter-spacing: .09em;
+            color: $branco;
+    
+            @media (max-width: 767px) {
+                font-size: 2.5em;
+            }
+    
+            @media (max-width: 359px) {
+                content: '</MP>';
+                transition: all .4s ease-in;
+            }
+        }
+
+    }
+
 
     .hide-loading & {
         display: none;

@@ -195,7 +195,7 @@ $(document).ready(function () {
             }
 		}
 
-        if (done || time >= 20) {
+        if (done === true || time >= 20) {
             $('body').addClass('init-site');
             setTimeout(function () {
                 $('body').addClass('hide-loading');
