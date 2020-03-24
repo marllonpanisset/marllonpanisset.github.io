@@ -8,7 +8,7 @@ var filesToCache = [
     "scripts/aos.js",
     "scripts/jquery.min.js",
     "scripts/modernizr.min.js",
-    "https://i.imgur.com/uVs1VQW.jpg",
+    "https://i.imgur.com/6RJ51cs.jpg",
     "https://i.imgur.com/fvd2PUa.jpg",
     "https://i.imgur.com/CVAAxTW.jpg",
     "https://i.imgur.com/kfv36iG.jpg",
