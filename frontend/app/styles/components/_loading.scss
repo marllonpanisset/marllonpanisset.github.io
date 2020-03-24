@@ -61,12 +61,12 @@ body {
             display: inline-block;
             position: absolute;
             font-family: 'Ubuntu';
-            font-size: 3em;
-            left: 29px;
+            font-size: 3.35em;
+            left: 28px;
             font-weight: 100;
             letter-spacing: .09em;
-            animation: rotation 1.5s infinite linear;
-            -webkit-animation: rotation 1.5s infinite linear;
+            animation: rotation 1.3s infinite linear;
+            -webkit-animation: rotation 1.3s infinite linear;
             color: $branco;
             
             @media (max-width: 767px) {

@@ -125,15 +125,11 @@
                 }
             }
 
-            &:not(:last-child) {
-                margin-right: 3px;
-            }
-
             a:not(.icon) {
                 position: relative;
                 text-transform: uppercase;
                 letter-spacing: 0.5px;
-                font-size: em(18px);
+                font-size: em(16px);
                 font-weight: 400;
                 padding: 0 15px;
                 display: block;
@@ -142,7 +138,7 @@
                 transition: all .40s;
 
                 @media (min-width: 801px) {
-                    font-size: em(18px);
+                    font-size: em(16px);
                 }
 
                 &:before {

@@ -79,14 +79,24 @@ gulp.task('scripts:main', () => {
 });
 
 gulp.task('scripts:jquery', () => {
-  return gulp.src('node_modules/jquery/dist/jquery.js')
-	.pipe($.concat('jquery.min.js'))
+  return gulp.src('node_modules/jquery/dist/picturefill.js')
+	.pipe($.concat('picturefill.min.js'))
 	.pipe($.plumber())
 	.pipe($.uglify())
 	.pipe($.babel())
 	.pipe($.if(dev, gulp.dest('.tmp/scripts'), gulp.dest('dist/scripts')))
 	.pipe(reload({stream: true}));
 });
+
+gulp.task('scripts:jquery', () => {
+	return gulp.src('node_modules/jquery/dist/jquery.js')
+	  .pipe($.concat('jquery.min.js'))
+	  .pipe($.plumber())
+	  .pipe($.uglify())
+	  .pipe($.babel())
+	  .pipe($.if(dev, gulp.dest('.tmp/scripts'), gulp.dest('dist/scripts')))
+	  .pipe(reload({stream: true}));
+  });
 
 gulp.task('scripts:vanilla-match-heights', () => {
   return gulp.src('app/scripts/vanilla-match-heights.js')

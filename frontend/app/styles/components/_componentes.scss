@@ -386,7 +386,7 @@
 
 		@media (max-width: 768px) {
 			width: 100%;
-			margin-bottom: 20px;
+			margin-bottom: 60px;
 		}
 
 		.icon {
@@ -447,23 +447,52 @@
 
 .skills {
 	margin-top: 30px;
-	column-count: 2;
-	column-gap: 20%;
 	width: 100%;
 	background: #fff;
+	
+	@media (min-width: 801px) {
+		column-gap: 20%;
+		column-count: 2;
+	}
+
+	@media (min-with: 768px) and (max-width: 800px) {
+		column-gap: 10%;
+		column-count: 2;
+	}
+	
+	@media (max-width: 767px) {
+		column-count: 1;
+	}
 
 	li {
 		line-height: 30px;
 		margin-bottom: 10px;
 		position: relative;
 		padding-left: 15px;
+		
+		@media (min-width: 960px) and (max-width: 1024px) {
+			font-size: .85em;
+		}
+
+		@media (max-width: 959px) {
+			font-size: .72em;
+		}
 
 		&:before {
 			position: absolute;
-			right: 10px;
 			top: 0;
-			color: #ffffff;
+			color: $preto;
 			display: block;
+			font-size: .7em;
+			
+			@media (min-width: 769px) {
+				right: 10px;
+			}
+
+			@media (max-width: 768px) {
+				right: 5px;
+				font-size: .68em;
+			}
 		}
 
 		
@@ -518,6 +547,214 @@
 
 			&:before {
 				content:'60%';
+			}
+		}
+	}
+}
+
+#articles {
+    article {
+        float: left;
+        
+        @media (min-width: 1024px) {
+            width: 32%;
+
+            &:not(:nth-of-type(3n)) {
+                margin-right: 2%;
+            }   
+		}
+		
+		@media (min-width: 640px) and (max-width: 1023px) {
+			width: 48%;
+			margin-bottom: 50px;
+
+            &:not(:nth-of-type(2n)) {
+                margin-right: 2%;
+            }
+		}
+		
+		@media (max-width: 639px) {
+			width: 100%;
+			margin-bottom: 50px;
+		}
+        
+        img {
+			float: left;
+			width: 100%;
+        }
+
+        h3 {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			float: left;
+			
+			@media (min-width: 1025px) {
+				font-size: em(20px);
+			}
+
+			@media (min-width: 500px) and (max-width: 1024px) {
+				font-size: em(18px);
+			}
+
+			@media (max-width: 499px) {
+				font-size: em(16px);
+			}
+        }
+
+        p {
+			float: left;
+		}
+    }
+}
+
+.btn-blog {
+	font-size: em(18px);
+	display: inline-block;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding: 30px 0;
+	margin-top: 30px;
+	font-weight: 900;
+
+	&:before {
+		content: "";
+		display: block;
+		height: 3px;
+		width: 0;
+		bottom: 0px;
+		position: absolute;
+		left: 50%;
+		bottom: 20px;
+		background-color: $laranja;
+		transition: all .30s cubic-bezier(.4,0,.2,1);
+	}
+
+	&:hover {
+
+		&:before {
+			width: 150px;
+			left: 50%;
+			margin-left: -75px;
+		}
+	}
+}
+
+.plans {
+	margin-top: 50px;
+	
+	.plan {
+		position: relative;
+		float: left;
+		height: 400px;
+		padding-top: 30px;
+		padding-left: 20px;
+		padding-right: 20px;
+
+		h3 {
+			font-size: em(20px);
+			text-align: center;
+		}
+
+		p {
+			font-size: em(16px);
+		}
+
+		> span {
+			position: absolute;
+			bottom: 65px;
+			left: 50%;
+			margin-left: -75px;
+
+			+ span {
+				text-align: center;
+				bottom: 20px;
+				width: 252px;
+				left: 50%;
+				margin-left: -126px;
+				font-style: italic;
+				font-size: em(12px);
+			}
+		}
+
+		ul {
+
+			li {
+				font-size: em(16px);
+				margin-bottom: 10px;
+				position: relative;
+
+				&:before {
+					content: "";
+					width: 5px;
+					height: 5px;
+					display: block;
+					line-height: 5px;
+					border-radius: 5px;
+					background: #000000;
+					position: absolute;
+					left: -10px;
+					top: 6px;
+				}
+
+				ul {
+					padding-left: 30px;
+					padding-top: 10px;
+					padding-bottom: 10px;
+
+					li {
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+		
+		@media (min-width: 1024px) {
+            width: 32%;
+
+            &:not(:nth-of-type(3n)) {
+                margin-right: 2%;
+            }
+		}
+		
+		@media (min-width: 640px) and (max-width: 1023px) {
+			width: 48%;
+			margin-bottom: 50px;
+
+            &:not(:nth-of-type(2n)) {
+                margin-right: 2%;
+            }   
+		}
+
+		@media (max-width: 639px) {
+			width: 100%;
+
+			&:not(:last-child) {
+				margin-bottom: 50px;
+			}
+		}
+
+		&.basico {
+			background: $azul;
+		}
+
+		&.microempreededor {
+			background: $verde;
+
+			@media (max-width: 360px) {
+				height: 440px;
+			}
+
+			@media (max-width: 320px) {
+				height: 460px;
+			}
+		}
+
+		&.grandes-empresas {
+			background: $laranja;
+
+			@media (max-width: 360px) {
+				height: 440px;
 			}
 		}
 	}

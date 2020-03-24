@@ -55,8 +55,13 @@ debug: (image: hide),
     position: relative;
 }
 
-#services,
+#plans,
+#articles {
+    padding-top: 50px;
+}
+
 #portfolio,
+#plans,
 #about,
 #contact {
     overflow: hidden;

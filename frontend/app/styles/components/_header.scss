@@ -58,19 +58,19 @@ body:not(.init-site) {
     }
     
     @media (max-width: 640px) {
-        background: url($pedra-da-gavea-640_427) no-repeat;
+        background: $preto url($pedra-da-gavea-640_427) no-repeat;
     }
     
     @media (max-width: 480px) {
-        background: url($pedra-da-gavea-480_320) no-repeat;
+        background: $preto url($pedra-da-gavea-480_320) no-repeat;
     }
     
     @media (max-width: 375px) {
-        background: url($pedra-da-gavea-375_812) no-repeat;
+        background: $preto url($pedra-da-gavea-375_812) no-repeat;
     }
     
     @media (max-width: 812px) and (max-height:375px) {
-        background: url($pedra-da-gavea-812_375) no-repeat;
+        background: $preto url($pedra-da-gavea-812_375) no-repeat;
     }
 
     .wrap {

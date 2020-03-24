@@ -6,15 +6,50 @@ html(lang="pt-br" class="no-js")
 		include ./includes/navbar.pug
 		include ./includes/header.pug
 		main(id="main" role="main")
-			section(id="portfolio" class="page-section")
+			//-section(id="portfolio" class="page-section")
 				div(class="wrapper")
 					h3 Portfólio
 					p Confira abaixo alguns dos trabalhos nos quais atuei como desenvolvedor front-end em agências e como freelancer.
+						section(id="services" class="page-section")
+			section(id="articles" class="page-section")
+				div(class="wrapper")
+					h3 Artigos
+					p Confira os ultimos artigos do meu blog.
+
+					article(data-aos="fade-in" data-aos-duration="1500" data-aos-delay="400")
+						picture
+							source(srcset="https://picsum.photos/327/200" media="(min-width: 1024px)")
+							source(srcset="https://picsum.photos/768/350" media="(max-width: 768px)")
+							source(srcset="https://picsum.photos/480/350" media="(max-width: 480px)")
+							source(srcset="https://picsum.photos/320/150" media="(max-width: 320px)")
+							img(src="https://picsum.photos/327/200" class="thumb-article" title="Titulo do Artigo" alt="Titulo do Artigo")
+						h3 Titulo do artigo 1
+						p Pequena descrição sobre o artigo. Lorem Ipsum Bla Bla Bla Cacildis.
+					article(data-aos="fade-in" data-aos-duration="1500" data-aos-delay="600")
+						picture
+							source(srcset="https://picsum.photos/327/200" media="(min-width: 1024px)")
+							source(srcset="https://picsum.photos/768/350" media="(max-width: 768px)")
+							source(srcset="https://picsum.photos/480/350" media="(max-width: 480px)")
+							source(srcset="https://picsum.photos/320/150" media="(max-width: 320px)")
+							img(src="https://picsum.photos/327/200" class="thumb-article" title="Titulo do Artigo" alt="Titulo do Artigo")
+						h3 Titulo do artigo 2
+						p Pequena descrição sobre o artigo. Lorem Ipsum Bla Bla Bla Cacildis.
+					article(data-aos="fade-in" data-aos-duration="1500" data-aos-delay="800")
+						picture
+							source(srcset="https://picsum.photos/327/200" media="(min-width: 1024px)")
+							source(srcset="https://picsum.photos/768/350" media="(max-width: 768px)")
+							source(srcset="https://picsum.photos/480/350" media="(max-width: 480px)")
+							source(srcset="https://picsum.photos/320/150" media="(max-width: 320px)")
+							img(src="https://picsum.photos/327/200" class="thumb-article" title="Titulo do Artigo" alt="Titulo do Artigo")
+						h3 Titulo do artigo 3
+						p Pequena descrição sobre o artigo. Lorem Ipsum Bla Bla Bla Cacildis.
+					
+					a(href="/blog" class="btn-blog") Ler Mais
 			section(id="services" class="page-section")
 				div(class="parallax services")
 					div(class="wrapper")
 						h3 Serviços
-						p Criação de sites, hotsites, landing pages, blogs, otimização para mecanismos de busca (SEO).<br />São muitas possibilidades. Confira alguns dos serviços que ofereço.
+						p Criação de sites, hotsites, landing pages, blogs, apps, lojas virtuais, otimização para mecanismos de busca (SEO).<br />São muitas possibilidades. Confira alguns dos serviços que ofereço.
 				div(class="wrapper")
 					p Antes de estipular custos e prazos sempre analiso o projeto como um todo, trabalhando com um código customizado e adequado a cada necessidade utilizando novas tecnologias como HTML5 e CSS3.
 					p Trabalho com as principais linguagens e ferramentas do mercado como: PHP, HTML5, CSS3, Sass, Javascript, jQuery, Design Responsivo, Wordpress, entre outras.
@@ -44,13 +79,58 @@ html(lang="pt-br" class="no-js")
 							div(class="icon icon-domain-www" alt="Consulta de dominio" title="Consulta de dominio")
 								h4 Consulta de dominio
 								p Seu dominio expirou ou você não tem um dominio? Entre em contato que eu te ajudo ter seu www.suaempresa.com.br, quem fizer o site comigo ganha 1 ano gratis de dominio.
-			
+
+			section(id="plans" class="page-section")
+				div(class="wrapper")
+					h3 Planos
+					p Trabalho com Desenvolvimento Web  emgeral e tenho todas as soluções para seu site, blog, empresa. Tem alguma ideia e precisa de ajuda? Tenho diversos serviços e planos para ajudar você e seus negócios.
+
+					section.plans
+						.plan.basico
+							h3 Basico
+							p Para pequenos negócios e sites pessoais com interesse em criar sua marca da web.
+
+							ul
+								li Atendimento especializado
+								li Desenvolvimento de site(ou hotsite) com até 3 páginas
+								li Dominio e hospedagem incluso
+							
+							span A partir de R$ 29,90
+							span os planos são de assinatura mensal com todos os serviços incluidos.
+							
+						.plan.microempreededor
+							h3 Microempreendedor
+							p Ideal para criar um site profissional para seu negócio ou empresa na web.
+
+							ul
+								li Desenvolvimento de sites ou blog (até 6 Páginas)
+								li Dominio e hospedagem incluso
+								li 3 Emails Corporativos
+								li Um Mes Gratis de Google Analytics
+
+							span A partir de R$ 59,90
+							span os planos são de assinatura mensal com todos os serviços incluidos.
+
+						.plan.grandes-empresas
+							h3 Grandes Empresas
+							p Ideal para grandes empresas e portais.
+
+							ul
+								li Sites, Portais, Blogs (até 10 Páginas)
+								li Dominio e hospedagem incluso
+								li 6 Emails Corporativos
+								li Um Mes Gratis de Google Analytics
+								li Cartão de Visita Gratis (Só paga impressão da gráfica)
+
+							span A partir de R$ 99,90
+							span os planos são de assinatura mensal com todos os serviços incluidos.
+
+
 			section(id="about" class="page-section")
 				div(class="parallax about-me")
-						div(class="wrapper")
-							h3 Sobre Mim
-							p 27 anos, Casado, Cristão, Carioca, Pai de Pets, Skatista e Tibiano (rs).
-
+					div(class="wrapper")
+						h3 Sobre Mim
+						p 27 anos, Casado, Cristão, Carioca, Pai de Pets, Skatista e Tibiano (rs).
 				div(class="wrapper")
 					<br /><br /><br />
 					div(class="biography")
