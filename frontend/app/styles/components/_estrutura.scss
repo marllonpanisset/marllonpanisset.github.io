@@ -266,9 +266,7 @@ debug: (image: hide),
     }
     
     .skills {
-        position: relative;
-        float: left;
-        width: 100%;
+        
         
         h4 {
             float: left;
@@ -276,5 +274,30 @@ debug: (image: hide),
             margin-bottom: 0;
         }
         
+    }
+}
+
+#contact .info {
+    margin-top: 20px;
+
+    a {
+        display: block;
+        margin-bottom: 10px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &.email {
+
+        }
+
+        &.celular {
+
+        }
+
+        &.residencial {
+
+        }
     }
 }

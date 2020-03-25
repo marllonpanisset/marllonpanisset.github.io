@@ -186,7 +186,7 @@
     .site-name {
         position: relative;
         float: left;
-
+        
         a {
             outline: none;
             display: inline-block;
@@ -268,12 +268,15 @@
             }
         }
 
-        .site-name a {
-            color: $branco;
-
-            &:before {
-                @media (min-width: 961px) {
-                    font-size: 1.4rem;
+        .site-name {
+            
+            a {
+                color: $branco;
+                
+                &:before {
+                    @media (min-width: 961px) {
+                        font-size: 1.4rem;
+                    }
                 }
             }
         }

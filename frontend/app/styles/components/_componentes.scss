@@ -440,35 +440,38 @@
 	}
 }
 
-.skillbar {
-   color: #ffffff;
-   background-color: $laranja;
-}
-
 .skills {
 	margin-top: 30px;
-	width: 100%;
-	background: #fff;
+	position: relative;
+	float: left;
 	
-	@media (min-width: 801px) {
-		column-gap: 20%;
-		column-count: 2;
+	+ .skills {
+		float: right;
+
+		@media (max-width: 767px) {
+			margin-top: 0;
+			
+			li:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+	
+	
+	@media (min-width: 768px) {
+		width: 45%;	
 	}
 
-	@media (min-with: 768px) and (max-width: 800px) {
-		column-gap: 10%;
-		column-count: 2;
-	}
-	
 	@media (max-width: 767px) {
-		column-count: 1;
+		width: 100%
 	}
 
 	li {
-		line-height: 30px;
-		margin-bottom: 10px;
 		position: relative;
-		padding-left: 15px;
+		margin: 30px 0;
+		color: #ffffff;
+		text-transform: uppercase;
+		color: $preto;
 		
 		@media (min-width: 960px) and (max-width: 1024px) {
 			font-size: .85em;
@@ -479,76 +482,108 @@
 		}
 
 		&:before {
+			content: '';
 			position: absolute;
-			top: 0;
-			color: $preto;
-			display: block;
-			font-size: .7em;
-			
-			@media (min-width: 769px) {
-				right: 10px;
-			}
-
-			@media (max-width: 768px) {
-				right: 5px;
-				font-size: .68em;
-			}
-		}
-
-		
-		&._100 {
+			left: 0;
 			width: 100%;
-			@extend .skillbar;
+			height: 15px;
+			color: $preto;
+			font-size: .7em;
+			background-color: rgba(254, 162, 23, 0.5);
+			border-radius: 1000px;
+			top: calc(100% + 7px);
+		}
 
-			&:before {
-				content:'100%';
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 0;
+			height: 15px;
+			color: $preto;
+			font-size: .7em;
+			border-radius: 1000px;
+			top: calc(100% + 7px);
+			background-color: rgba(254, 162, 23, 1);
+			animation-duration: 2s;
+			animation-timing-function: ease;
+			animation-fill-mode: forwards;
+		}
+
+		
+		&.cem {
+			
+			&:after {
+				animation-name: cem;
 			}
 		}
 		
-		&._40 {
-			width: 40%;
-			@extend .skillbar;
-
-			&:before {
-				content:'40%';
+		&.quarenta {
+			&:after {
+				animation-name: quarenta;
 			}
 		}
 
-		&._50 {
-			width: 50%;
-			@extend .skillbar;
-
-			&:before {
-				content:'50%';
+		&.cinquenta {
+			&:after {
+				animation-name: cinquenta;
 			}
 		}
 
-		&._80 {
-			width: 80%;
-			@extend .skillbar;
-
-			&:before {
-				content:'80%';
+		&.oitenta {
+			&:after {
+				animation-name: oitenta;
 			}
 		}
 
-		&._70 {
-			width: 70%;
-			@extend .skillbar;
-
-			&:before {
-				content:'70%';
+		&.setenta {
+			&:after {
+				animation-name: setenta;
 			}
 		}
 
-		&._60 {
-			width: 60%;
-			@extend .skillbar;
-
-			&:before {
-				content:'60%';
+		&.sesenta {
+			&:after {
+				animation-name: sesenta;
 			}
 		}
+	}
+}
+
+@keyframes cem {
+	to {
+		width: 100%;
+	}
+}
+
+
+@keyframes oitenta {
+	to {
+		width: 80%;
+	}
+}
+
+@keyframes setenta {
+	to {
+		width: 70%;
+	}
+}
+
+@keyframes sesenta {
+	to {
+		width: 60%;
+	}
+}
+
+@keyframes cinquenta {
+	to {
+		width: 50%;
+	}
+}
+
+@keyframes quarenta {
+	to {
+		width: 40%;
 	}
 }
 

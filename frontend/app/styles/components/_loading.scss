@@ -54,23 +54,32 @@ body {
     
     div {
         z-index: 300;
-        
         position: relative;
+        
         &:before {
             content: '/';
             display: inline-block;
             position: absolute;
             font-family: 'Ubuntu';
             font-size: 3.35em;
-            left: 28px;
             font-weight: 100;
             letter-spacing: .09em;
             animation: rotation 1.3s infinite linear;
             -webkit-animation: rotation 1.3s infinite linear;
             color: $branco;
             
-            @media (max-width: 767px) {
-                font-size: 2.5em;
+            @media (min-width: 768px) {
+                left: 28px;
+            }
+
+            @media (min-width: 480px) and (max-width: 767px) {
+                font-size: 2em;
+                left: 20px;
+            }
+
+            @media (max-width: 479px) {
+                font-size: 1.5em;
+                left: 15px;
             }
             
         }
@@ -84,13 +93,12 @@ body {
             letter-spacing: .09em;
             color: $branco;
     
-            @media (max-width: 767px) {
-                font-size: 2.5em;
+            @media (min-width: 480px) and (max-width: 767px) {
+                font-size: 2em;
             }
-    
-            @media (max-width: 359px) {
-                content: '</MP>';
-                transition: all .4s ease-in;
+
+            @media (max-width: 479px) {
+                font-size: 1.5em;
             }
         }
 
