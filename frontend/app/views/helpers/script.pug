@@ -1,29 +1,42 @@
 script.
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-            // Registration was successful
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }, function(err) {
-            // registration failed :(
-            console.log('ServiceWorker registration failed: ', err);
-            }).catch(function(err) {
-            console.log(err)
-            });
-        });
-    } else {
-        console.log('service worker is not supported');
-    }
+	var giftofspeed = document.createElement('link');
+	giftofspeed.rel = 'stylesheet';
+	giftofspeed.href = 'styles/vendor.min.css';
+	giftofspeed.type = 'text/css';
+	var godefer = document.getElementsByTagName('link')[0];
+	godefer.parentNode.insertBefore(giftofspeed, godefer);
 
-script(defer src="scripts/jquery.min.js")
-script(defer src="scripts/picturefill.min.js")
-script(defer src="scripts/aos.js")
-script(defer src="scripts/vanilla-match-heights.js")
+	var giftofspeed2 = document.createElement('link');
+	giftofspeed2.rel = 'stylesheet';
+	giftofspeed2.href = 'styles/main.css';
+	giftofspeed2.type = 'text/css';
+	var godefer2 = document.getElementsByTagName('link')[0];
+	godefer2.parentNode.insertBefore(giftofspeed2, godefer2);
+
+script.
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', function() {
+			navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+			// Registration was successful
+			console.log('ServiceWorker registration successful with scope: ', registration.scope);
+			}, function(err) {
+			// registration failed :(
+			console.log('ServiceWorker registration failed: ', err);
+			}).catch(function(err) {
+			console.log(err)
+			});
+		});
+	} else {
+		console.log('service worker is not supported');
+	}
+
+script(async src="scripts/picturefill.min.js")
+script(async src="scripts/vanilla-match-heights.js")
 script(defer src="scripts/main.min.js")
 script(async src="https://www.googletagmanager.com/gtag/js?id=UA-122703349-1")
 script.
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
 
-    gtag('config', 'UA-122703349-1');
+	gtag('config', 'UA-122703349-1');

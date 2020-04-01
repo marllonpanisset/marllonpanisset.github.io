@@ -1,19 +1,21 @@
 $icomoon-font-family: "icomoon" !default;
 $icomoon-font-path: "fonts" !default;
 
-$icon-responsive-design: "\e900";
-$icon-linkedin: "\e901";
-$icon-gmail: "\e902";
-$icon-github: "\e903";
-$icon-front-end: "\e904";
-$icon-facebook: "\e905";
-$icon-drag-mobile-design: "\e906";
-$icon-domain-www: "\e907";
-$icon-computer: "\e908";
-$icon-code-computer: "\e909";
-$icon-bar-chart: "\e90a";
-$icon-angle-down-solid: "\e90b";
-$icon-analytics: "\e90c";
+$icon-texto: "\e900";
+$icon-responsive-design: "\e901";
+$icon-network: "\e902";
+$icon-logo: "\e903";
+$icon-linkedin: "\e904";
+$icon-imagem: "\e905";
+$icon-gmail: "\e906";
+$icon-github: "\e907";
+$icon-front-end: "\e908";
+$icon-facebook: "\e909";
+$icon-domain-www: "\e90a";
+$icon-computer: "\e90b";
+$icon-bar-chart: "\e90c";
+$icon-angle-down-solid: "\e90d";
+$icon-analytics: "\e90e";
 
 @font-face {
   font-family: "icomoon";
@@ -39,14 +41,34 @@ $icon-analytics: "\e90c";
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-texto {
+  &:before {
+    content: $icon-texto; 
+  }
+}
 .icon-responsive-design {
   &:before {
     content: $icon-responsive-design; 
   }
 }
+.icon-network {
+  &:before {
+    content: $icon-network; 
+  }
+}
+.icon-logo {
+  &:before {
+    content: $icon-logo; 
+  }
+}
 .icon-linkedin {
   &:before {
     content: $icon-linkedin; 
+  }
+}
+.icon-imagem {
+  &:before {
+    content: $icon-imagem; 
   }
 }
 .icon-gmail {
@@ -69,11 +91,6 @@ $icon-analytics: "\e90c";
     content: $icon-facebook; 
   }
 }
-.icon-drag-mobile-design {
-  &:before {
-    content: $icon-drag-mobile-design; 
-  }
-}
 .icon-domain-www {
   &:before {
     content: $icon-domain-www; 
@@ -82,11 +99,6 @@ $icon-analytics: "\e90c";
 .icon-computer {
   &:before {
     content: $icon-computer; 
-  }
-}
-.icon-code-computer {
-  &:before {
-    content: $icon-code-computer; 
   }
 }
 .icon-bar-chart {

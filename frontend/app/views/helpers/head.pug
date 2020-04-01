@@ -29,13 +29,25 @@ head
     meta(property="og:type" content="website")
     meta(property="og:locale" content="pt_BR")
     meta(name="theme-color" content="#faa200")
+    style.
+        body:not(.init-site.hide-loading) {
+            background: #fea217;
+        }
+
+        body:not(.init-site.hide-loading) #header h2,
+        body:not(.init-site.hide-loading) #header span,
+        body:not(.init-site.hide-loading) #navbar h1 a {
+           display: none !important;
+        }
     link(rel="shortcut icon" href="favicon.ico")
+    script(defer src="scripts/jquery.min.js")
+    script(defer src="scripts/aos.js")
     link(rel="author" href="https://plus.google.com/+MarllonPanisset/")
     link(rel="publisher" href="https://plus.google.com/+MarllonPanisset/")
     style.
         @import url('https://fonts.googleapis.com/css?family=Open+Sans:600,400,400i|Roboto:300,400,700|Ubuntu:500');
         @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-    link(rel='stylesheet', href='styles/vendor.min.css')
-    link(rel="stylesheet", href="styles/main.css")
-    script(defer src="scripts/modernizr.min.js")
+    //- link(rel='stylesheet', href='styles/vendor.min.css')
+    //- link(rel="stylesheet", href="styles/main.css")
+    script(async src="scripts/modernizr.min.js")
     link(rel="manifest" href="manifest.json")
