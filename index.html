@@ -31,16 +31,27 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
     <meta name="theme-color" content="#faa200">
+    <style>
+      body:not(.init-site.hide-loading) {
+          background: #fea217;
+      }
+      
+      body:not(.init-site.hide-loading) #header h2,
+      body:not(.init-site.hide-loading) #header span,
+      body:not(.init-site.hide-loading) #navbar h1 a {
+         display: none !important;
+      }
+    </style>
     <link rel="shortcut icon" href="favicon.ico">
+    <script defer src="scripts/jquery.min.js"></script>
+    <script defer src="scripts/aos.js"></script>
     <link rel="author" href="https://plus.google.com/+MarllonPanisset/">
     <link rel="publisher" href="https://plus.google.com/+MarllonPanisset/">
     <style>
       @import url('https://fonts.googleapis.com/css?family=Open+Sans:600,400,400i|Roboto:300,400,700|Ubuntu:500');
       @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
     </style>
-    <link rel="stylesheet" href="styles/vendor.min.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <script defer src="scripts/modernizr.min.js"></script>
+    <script async src="scripts/modernizr.min.js"></script>
     <link rel="manifest" href="manifest.json">
   </head>
   <body>
@@ -144,7 +155,7 @@
                 <p>Em português: Otimização para mecanismos de busca, é um conjunto de técnicas de otimizações para sites, blogs e páginas na web, que visam alcançar bons resultados em pesquisas em sites como o Google.</p>
               </div>
             </div>
-            <div class="item equalHeight" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="600">
+            <div class="item equalHeight" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="400">
               <div class="icon icon-analytics" alt="Analytics" title="Analytics">
                 <h4>Analytics</h4>
                 <p>Que tal saber quem acessou seu site? De que pais e quais paginas ele navegou? Quem fizer o site comigo ganha um mes gratis.</p>
@@ -154,6 +165,30 @@
               <div class="icon icon-domain-www" alt="Consulta de dominio" title="Consulta de dominio">
                 <h4>Consulta de dominio</h4>
                 <p>Seu dominio expirou ou você não tem um dominio? Entre em contato que eu te ajudo ter seu www.suaempresa.com.br, quem fizer o site comigo ganha 1 ano gratis de dominio.</p>
+              </div>
+            </div>
+            <div class="item equalHeight" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="400">
+              <div class="icon icon-logo" alt="Logotipo" title="Logotipo">
+                <h4>Logotipo</h4>
+                <p>Ainda não tem um logotipo para seu site ou cartão de visita? podemos resolver isso.</p>
+              </div>
+            </div>
+            <div class="item equalHeight" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="600">
+              <div class="icon icon-imagem" alt="Imagens" title="Imagens">
+                <h4>Imagens</h4>
+                <p>Quando vamos criar um site, precisamos de imagens em boa qualidade, se você não tem, podemos conseguir as imagens adequadas.</p>
+              </div>
+            </div>
+            <div class="item equalHeight" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="400">
+              <div class="icon icon-texto" alt="Textos Corporativos" title="Textos Corporativos">
+                <h4>Textos corporativos</h4>
+                <p>É essencial para seu site bons textos para cada página, se você não tem esses textos, eu posso criar para você.</p>
+              </div>
+            </div>
+            <div class="item equalHeight" data-aos="fade-in" data-aos-duration="1500" data-aos-delay="600">
+              <div class="icon icon-network" alt="Redes Sociais" title="Redes Sociais">
+                <h4>Criação de redes sociais</h4>
+                <p>Hoje em dia é obrigatório que sua empresa esteja presente nas redes sociais como Facebook e Instagram, onde você vai divulgar sua empresa para que o maximo de pessoas conheça seu negócio.</p>
               </div>
             </div>
           </div>
@@ -212,22 +247,22 @@
             <h3>Habilidades:</h3>
             <p>Conheça algumas das minhas habilidades, para mais informações, acesse meu linkedin: <a class="icon icon-linkedin" href="https://www.linkedin.com/in/marllonpanisset" target="_blank" rel="noopener" title="Linkedin">Linkedin</a>.</p>
             <ul class="skills">
-              <li class="_80">PWA - Progressive Web App</li>
-              <li class="_80">RWD - Responsive Web Design</li>
-              <li class="_80">Cross-Browser</li>
-              <li class="_100">HTML4 / HTML5 / Pug</li>
-              <li class="_80">CSS2 / CSS3/ Scss</li>
-              <li class="_60">Javascript / jQuery</li>
-              <li class="_40">PHP</li>
-              <li class="_40">PHPMyAdmin</li>
-              <li class="_70">Vagrant</li>
-              <li class="_70">Yarn / Npm</li>
-              <li class="_70">Gulp</li>
-              <li class="_70">Git</li>
-              <li class="_50">Drupal</li>
-              <li class="_50">Wordpress</li>
-              <li class="_50">Yii</li>
-              <li class="_50">MVC</li>
+              <li class="cem">HTML4 / HTML5 / Pug</li>
+              <li class="oitenta">CSS2 / CSS3/ Scss</li>
+              <li class="sesenta">Javascript / jQuery</li>
+              <li class="quarenta">PHP / PHPMyAdmin</li>
+              <li class="cinquenta">Drupal / Wordpress / Yii</li>
+              <li class="setenta">Git</li>
+              <li class="cinquenta">MVC</li>
+            </ul>
+            <ul class="skills">
+              <li class="oitenta">PWA - Progressive Web App</li>
+              <li class="oitenta">RWD - Responsive Web Design</li>
+              <li class="oitenta">Cross-Browser</li>
+              <li class="setenta">Vagrant</li>
+              <li class="cinquenta">Docker</li>
+              <li class="setenta">Yarn / Npm</li>
+              <li class="setenta">Gulp</li>
             </ul>
           </div>
         </div>
@@ -248,6 +283,7 @@
           <address>
             <h4>Contate-me!</h4>
             <div class="social-network"><a class="icon icon-github" href="https://github.com/marllonpanisset" target="_blank" rel="noopener" title="Github"></a><a class="icon icon-linkedin" href="https://www.linkedin.com/in/marllonpanisset" target="_blank" rel="noopener" title="Linkedin"></a><a class="icon icon-facebook" href="http://fb.com/marllonpanisset.github.io" target="_blank" rel="noopener" title="Facebook"></a><a class="icon icon-gmail" href="mailto:marllonop@gmail.com" target="_blank" rel="noopener" title="E-mail"></a></div>
+            <div class="info"><a class="email" href="mailto:marllonop@gmail.com" title="E-mail">marllonop@gmail.com</a><a class="celular" href="tel:+5521984659039" title="Celular">+55 (21) 98465-9039</a><a class="residencial" href="tel:+5521984659039" title="Residencial">+55 (21) 2456-4766</a></div>
           </address>
         </div>
       </section>
@@ -262,27 +298,41 @@
       <div></div>
     </div>
     <script>
+      var giftofspeed = document.createElement('link');
+      giftofspeed.rel = 'stylesheet';
+      giftofspeed.href = 'styles/vendor.min.css';
+      giftofspeed.type = 'text/css';
+      var godefer = document.getElementsByTagName('link')[0];
+      godefer.parentNode.insertBefore(giftofspeed, godefer);
+      
+      var giftofspeed2 = document.createElement('link');
+      giftofspeed2.rel = 'stylesheet';
+      giftofspeed2.href = 'styles/main.css';
+      giftofspeed2.type = 'text/css';
+      var godefer2 = document.getElementsByTagName('link')[0];
+      godefer2.parentNode.insertBefore(giftofspeed2, godefer2);
+      
+    </script>
+    <script>
       if ('serviceWorker' in navigator) {
-          window.addEventListener('load', function() {
-              navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-              // Registration was successful
-              console.log('ServiceWorker registration successful with scope: ', registration.scope);
-              }, function(err) {
-              // registration failed :(
-              console.log('ServiceWorker registration failed: ', err);
-              }).catch(function(err) {
-              console.log(err)
-              });
-          });
+      	window.addEventListener('load', function() {
+      		navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      		// Registration was successful
+      		console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      		}, function(err) {
+      		// registration failed :(
+      		console.log('ServiceWorker registration failed: ', err);
+      		}).catch(function(err) {
+      		console.log(err)
+      		});
+      	});
       } else {
-          console.log('service worker is not supported');
+      	console.log('service worker is not supported');
       }
       
     </script>
-    <script defer src="scripts/jquery.min.js"></script>
-    <script defer src="scripts/picturefill.min.js"></script>
-    <script defer src="scripts/aos.js"></script>
-    <script defer src="scripts/vanilla-match-heights.js"></script>
+    <script async src="scripts/picturefill.min.js"></script>
+    <script async src="scripts/vanilla-match-heights.js"></script>
     <script defer src="scripts/main.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122703349-1"></script>
     <script>
