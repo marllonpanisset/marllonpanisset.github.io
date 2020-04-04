@@ -159,7 +159,7 @@ gulp.task('lint:test', () => {
 	.pipe(gulp.dest('test/spec'));
 });
 
-gulp.task('html', ['styles', 'styles:vendor', 'scripts:jquery', 'scripts:main', 'scripts:modernizr', 'scripts:aos', 'scripts:vanilla-match-heights', 'manifest.json', 'service-workers.js', 'views'], () => {
+gulp.task('html', ['styles', 'styles:vendor', 'scripts:jquery', 'scripts:main','scripts:picturefill', 'scripts:modernizr', 'scripts:aos', 'scripts:vanilla-match-heights', 'manifest.json', 'service-workers.js', 'views'], () => {
   return gulp.src('.tmp/*.html')
 	.pipe($.useref({searchPath: ['.tmp', '.']}))
 	.pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
