@@ -6,24 +6,6 @@ body {
     }
 }
 
-@-webkit-keyframes rotation {
-    from {
-            -webkit-transform: rotate(0deg);
-    }
-    to {
-            -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes rotation {
-    from {
-            -webkit-transform: rotate(0deg);
-    }
-    to {
-            -webkit-transform: rotate(360deg);
-    }
-}
-
 .loading {
     position: fixed;
     top: 0;
@@ -39,8 +21,8 @@ body {
     z-index: 300;
     
     &:before {
-        position: absolute;
         content:"";
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
@@ -53,8 +35,15 @@ body {
     }
     
     div {
+        background: #faa200;
         z-index: 300;
         position: relative;
+        -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+        -o-animation: fadein 3s; /* Opera < 12.1 */
+        animation: fadein 3s;
+        
         
         &:before {
             content: '/';
@@ -64,8 +53,6 @@ body {
             font-size: 3.35em;
             font-weight: 100;
             letter-spacing: .09em;
-            animation: rotation 1.3s infinite linear;
-            -webkit-animation: rotation 1.3s infinite linear;
             color: $branco;
             
             @media (min-width: 768px) {
@@ -81,7 +68,6 @@ body {
                 font-size: 1.5em;
                 left: 15px;
             }
-            
         }
         
         &:after {
@@ -101,9 +87,7 @@ body {
                 font-size: 1.5em;
             }
         }
-
     }
-
 
     .hide-loading & {
         display: none;
@@ -112,104 +96,6 @@ body {
     .init-site & {
         opacity: 0;
     }
-
-   .lds-roller {
-        display: inline-block;
-        position: relative;
-        width: 64px;
-        height: 64px;
-        top: 50%;
-        left: 50%;
-        margin: -32px 0 0 -32px;
-
-        div {
-            animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-            transform-origin: 32px 32px;
-            
-            &:after {
-                content: " ";
-                display: block;
-                position: absolute;
-                width: 6px;
-                height: 6px;
-                border-radius: 50%;
-                background: #fff;
-                margin: -3px 0 0 -3px;
-            }
-            
-            &:nth-child(1) {
-                animation-delay: -0.036s;
-                &:after {
-                    top: 50px;
-                    left: 50px;
-                }
-            }
-            
-            &:nth-child(2) {
-                animation-delay: -0.072s;
-                &:after {
-                    top: 54px;
-                    left: 45px;
-                }
-            }
-            
-            &:nth-child(3) {
-                animation-delay: -0.108s;
-                &:after {
-                    top: 57px;
-                    left: 39px;
-                }
-            }
-            
-            &:nth-child(4) {
-                animation-delay: -0.144s;
-                &:after {
-                    top: 58px;
-                    left: 32px;
-                }
-            }
-            
-            &:nth-child(5) {
-                animation-delay: -0.18s;
-                &:after {
-                    top: 57px;
-                    left: 25px;
-                }
-            }
-            
-            &:nth-child(6) {
-                animation-delay: -0.216s;
-                &:after {
-                    top: 54px;
-                    left: 19px;
-                }
-            }
-            
-            &:nth-child(7) {
-                animation-delay: -0.252s;
-                &:after {
-                    top: 50px;
-                    left: 14px;
-                }
-            }
-            
-            &:nth-child(8) {
-                animation-delay: -0.288s;
-                &:after {
-                    top: 45px;
-                    left: 10px;
-                }
-            }
-        }
-    }
 }
 
-@keyframes lds-roller {
-  0% {
-    transform: rotate(0deg);
-  }
 
-  100% {
-    transform: rotate(360deg);
-  }
-}

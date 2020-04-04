@@ -10,9 +10,16 @@ var sections = $('.page-section');
 var nav = $('#navbar .main-menu');
 var nav_height = nav.outerHeight();
 
+
+
 $(document).ready(function () {
 	var willLoad = {};
 
+	$("#webdoor").on("load resize", function() {
+		var vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+		$("#header").css("height", vh);
+	});	
+	
 	$img.each(function(index, item){
 		var style = getComputedStyle($(this).get(0));
 		if (style.display != 'none') {
@@ -33,19 +40,19 @@ $(document).ready(function () {
 			hamburguer.classList.add('is-active');
 			mainMenu.classList.add('open');
 			mainMenu.classList.add('animated');
-			mainMenu.classList.add('fadeInDown');
+			mainMenu.classList.add('fadeInLeft');
 		}, 100);
 
 		if(mainMenu.classList.contains('open')) {
 			setTimeout(function(){
-				mainMenu.classList.add('fadeOutUp');
+				mainMenu.classList.add('fadeOutRight');
 				hamburguer.classList.remove('is-active');
 			}, 100);
 
 			setTimeout(function(){
 				mainMenu.classList.remove('open');
-				mainMenu.classList.remove('fadeInDown');
-				mainMenu.classList.remove('fadeOutUp');
+				mainMenu.classList.remove('fadeInLeft');
+				mainMenu.classList.remove('fadeOutRight');
 				mainMenu.classList.remove('animated');
 			}, 500);
 		}

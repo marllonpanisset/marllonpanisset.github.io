@@ -78,8 +78,8 @@ gulp.task('scripts:main', () => {
 	.pipe(reload({stream: true}));
 });
 
-gulp.task('scripts:jquery', () => {
-  return gulp.src('node_modules/jquery/dist/picturefill.js')
+gulp.task('scripts:picturefill', () => {
+  return gulp.src('node_modules/picturefill/dist/picturefill.js')
 	.pipe($.concat('picturefill.min.js'))
 	.pipe($.plumber())
 	.pipe($.uglify())
@@ -179,7 +179,7 @@ gulp.task('extras', () => {
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', () => {
-	runSequence(['clean'], ['views'], ['styles', 'fonts', 'styles:vendor', 'scripts:main', 'scripts:jquery', 'scripts:modernizr', 'manifest.json', 'service-workers.js','scripts:aos','scripts:vanilla-match-heights'], () => {
+	runSequence(['clean'], ['views'], ['styles', 'fonts', 'styles:vendor', 'scripts:main', 'scripts:jquery', 'scripts:modernizr', 'manifest.json', 'service-workers.js','scripts:aos', 'scripts:picturefill', 'scripts:vanilla-match-heights'], () => {
 		browserSync.init({
 			notify: false,
 			port: 9000,
