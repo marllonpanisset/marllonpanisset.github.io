@@ -26,12 +26,10 @@ $(document).ready(function () {
 			var id = $(this).attr('id') ? $(this).attr('id'): 'image-'+index;
 			$(this).data('load_id', id);
 			willLoad[id] = false;
-			console.log('baixando imagens')
 
 			$(this).on('load',function(){
 				var id = $(this).data('load_id');
 				willLoad[id] = true;
-				console.log('ok')
 			});
 		}
 	});
