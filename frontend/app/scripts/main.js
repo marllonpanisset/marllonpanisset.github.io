@@ -10,11 +10,9 @@ var sections = $('.page-section');
 var nav = $('#navbar .main-menu');
 var nav_height = nav.outerHeight();
 
-
-
 $(document).ready(function () {
 	var willLoad = {};
-
+	
 	$("#webdoor").on("load resize", function() {
 		var vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 		$("#header").css("height", vh);
@@ -22,13 +20,18 @@ $(document).ready(function () {
 	
 	$img.each(function(index, item){
 		var style = getComputedStyle($(this).get(0));
-		if (style.display != 'none') {
+		var webDoor = $("#webdoor");
+		
+		if (style.display != 'none' && !webDoor.complete || style.display != 'none' && webDoor.naturalWidth === 0) {
 			var id = $(this).attr('id') ? $(this).attr('id'): 'image-'+index;
 			$(this).data('load_id', id);
 			willLoad[id] = false;
+			console.log("baixando imagens")
+
 			$(this).on('load',function(){
 				var id = $(this).data('load_id');
 				willLoad[id] = true;
+				console.log("ok")
 			});
 		}
 	});
