@@ -1,21 +1,22 @@
 $icomoon-font-family: "icomoon" !default;
 $icomoon-font-path: "fonts" !default;
 
-$icon-texto: "\e900";
-$icon-responsive-design: "\e901";
-$icon-network: "\e902";
-$icon-logo: "\e903";
-$icon-linkedin: "\e904";
-$icon-imagem: "\e905";
-$icon-gmail: "\e906";
-$icon-github: "\e907";
-$icon-front-end: "\e908";
-$icon-facebook: "\e909";
-$icon-domain-www: "\e90a";
-$icon-computer: "\e90b";
-$icon-bar-chart: "\e90c";
-$icon-angle-down-solid: "\e90d";
-$icon-analytics: "\e90e";
+$icon-whatsapp: "\e900";
+$icon-texto: "\e901";
+$icon-responsive-design: "\e902";
+$icon-network: "\e903";
+$icon-logo: "\e904";
+$icon-linkedin: "\e905";
+$icon-imagem: "\e906";
+$icon-gmail: "\e907";
+$icon-github: "\e908";
+$icon-front-end: "\e909";
+$icon-facebook: "\e90a";
+$icon-domain-www: "\e90b";
+$icon-computer: "\e90c";
+$icon-bar-chart: "\e90d";
+$icon-angle-down-solid: "\e90e";
+$icon-analytics: "\e90f";
 
 @font-face {
   font-family: "icomoon";
@@ -41,6 +42,11 @@ $icon-analytics: "\e90e";
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-whatsapp {
+  &:before {
+    content: $icon-whatsapp; 
+  }
+}
 .icon-texto {
   &:before {
     content: $icon-texto; 

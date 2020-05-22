@@ -14,10 +14,10 @@ gulp.task('views', () => {
 	  pretty: true
 	}))
 	.pipe($.plumber())
-	// .pipe($.htmlmin({
-	//   collapseWhitespace: true,
-	//   removeComments: true
-	// }))
+	.pipe($.htmlmin({
+	  collapseWhitespace: true,
+	  removeComments: true
+	}))
 	.pipe($.if(dev, gulp.dest('.tmp/'), gulp.dest('dist/')))
 	.pipe($.size({title: 'pug'}))
 	.pipe(reload({stream: true}));

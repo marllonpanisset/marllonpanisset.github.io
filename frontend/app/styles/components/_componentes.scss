@@ -1,4 +1,4 @@
-.social-network {
+#header .social-network {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -157,56 +157,21 @@
 
 .parallax {
 	position: relative;
+	min-height: 250px;
+	padding-top: 40px;
+	text-align: center;
 	float: left;
 	width: 100%;
-	height: 414px;
-	padding: 67px 0;
-	margin-bottom: 40px;
-	text-align: center;
 	-webkit-backface-visibility: hidden;
 	transition: all .3s;
-
-	@media (max-width: 360px) {
-		height: 360px;
-	}
-
-	@media (max-width: 375px) {
-		height: 375px;
-	}
-
-	@media (max-width: 414px) {
-		height: 414px;
-	}
-
-	@media (max-width: 640px) {
-		padding: {
-			top: 46px;
-			bottom: 46px;
-		}
-	}
-
+	
 	@media (max-width: 479px) {
-		padding-top: 200px;
+		padding: 50px 0;
 	}
 	
-	@media (max-width: 413px) {
-		padding-top: 120px;
-	}
-
-	@media (max-width: 320px) {
-		padding-top: 70px;
-	}
-	
-	@media (max-height: 320px) and (max-width: 480px) {
-		padding-top: 70px;
-		height: 260px;
-	}
-
-	@media (max-width: 360px) {
-		padding: {
-			top: 26px;
-			bottom: 26px;
-		}
+	@media (min-width: 480px) {
+		padding-bottom: 20px;
+		margin-bottom: 40px;
 	}
 
 	h3 {
@@ -241,36 +206,18 @@
 	}
 
 	&.services {
-		background: url($office);
+		background: url($office-1920);
 		background-attachment: fixed;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		margin-bottom: 50px;
-		padding-top: 200px;
 		z-index: 0;
 
 		@extend %sombraParalax;
-
-		@media (max-width: 479px) {
-			padding-top: 200px;
-		}
-		
-		@media (max-width: 413px) {
-			padding-top: 120px;
-		}
-
-		@media (max-width: 320px) {
-			padding-top: 70px;
-		}
 		
 		@media (max-height: 320px) and (max-width: 480px) {
 			padding-top: 70px;
-			height: 260px;
-		}
-
-		@media (max-width: 320px) and (max-height: 480px) {
-			padding-top: 170px;
 		}
 	}
 
@@ -280,16 +227,7 @@
 		background-position: left;
 		background-repeat: no-repeat;
 		background-size: cover;
-		height: 480px;
 		z-index: 0;
-		
-		@media (min-width: 481px) {
-			padding-top: 200px;
-		}
-
-		@media (max-width: 480px) {
-			padding-top: 300px;	
-		}
 
 		@extend %sombraParalax;
 
@@ -316,33 +254,12 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		margin-bottom: 60px;
-		height: 540px;
-		padding-top: 180px;
 		z-index: 0;
 
-		//@extend %sombraParalax;
-
-		&:before {
-			content:'';
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			left: 0;
-			bottom: 0;
-			z-index: -1;
-			background: linear-gradient(
-				to bottom,
-				#000,
-				rgba(#000, 0)
-			);
-		}
+		@extend %sombraParalax;
 
 		h3 {
 			margin-bottom: 20px;
-		}
-
-		@media (max-width: 360px) {
-			padding-top: 260px;
 		}
 
 		@media (max-width: 320px) {
@@ -506,7 +423,6 @@
 			border-radius: 1000px;
 			top: calc(100% + 7px);
 			background-color: rgba(254, 162, 23, 1);
-			// animation-duration: 2s;
 			animation-timing-function: ease;
 			animation-fill-mode: forwards;
 		}
@@ -682,10 +598,9 @@
 	.plan {
 		position: relative;
 		float: left;
-		height: 400px;
-		padding-top: 30px;
-		padding-left: 20px;
-		padding-right: 20px;
+		min-height: 400px;
+		padding: 30px 3.5%;
+		border: 1px solid #000000;
 
 		h3 {
 			font-size: em(20px);
@@ -697,18 +612,17 @@
 		}
 
 		> span {
-			position: absolute;
-			bottom: 65px;
-			left: 50%;
-			margin-left: -75px;
+			width: 100%;
+			position: relative;
+			float: left;
+			text-align: center;
 
 			+ span {
-				text-align: center;
-				bottom: 20px;
-				width: 252px;
-				left: 50%;
-				margin-left: -126px;
+				margin-top: 20px;
+				position: relative;
 				font-style: italic;
+				float: left;
+				width: 100%;
 				font-size: em(12px);
 			}
 		}
@@ -770,13 +684,10 @@
 			}
 		}
 
-		&.basico {
-			background: $azul;
-		}
+		
 
 		&.microempreededor {
-			background: $verde;
-
+			
 			@media (max-width: 360px) {
 				height: 440px;
 			}
@@ -787,7 +698,6 @@
 		}
 
 		&.grandes-empresas {
-			background: $laranja;
 
 			@media (max-width: 360px) {
 				height: 440px;

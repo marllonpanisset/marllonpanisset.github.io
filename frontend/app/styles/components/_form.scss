@@ -1,0 +1,88 @@
+#form {
+    float: left;
+    margin-top: 10px;
+    
+    @media (min-width: 1024px) {
+        width: 70%;
+    }
+
+    @media (min-width: 860px) and (max-width: 1023px) {
+        width: 65%;
+    }
+
+    @media (min-width: 768px) and (max-width: 859px) {
+        width: 55%;
+    }
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+
+    label {
+        width: 100%;
+        float: left;
+        margin-bottom: 10px;
+
+        sup {
+            color: $vermelho;
+        }
+    }
+
+    input[type="text"] + div,
+    input[type="email"] + div,
+    input[type="tel"] + div,
+    textarea + div {
+        margin-top: 5px;
+        padding-left: 5px;
+        color: $vermelho;
+        font-size: 12px;
+        transition: all .4s;        
+    }
+
+    input[type="text"] + div:not(.error),
+    input[type="email"] + div:not(.error),
+    input[type="tel"] + div:not(.error),
+    textarea + div:not(.error) {
+        display: none;
+    }
+
+    input[type="text"] div + .error,
+    input[type="email"] div + .error,
+    input[type="tel"] div + .error,
+    textarea div + .error {
+        display: block;
+    }
+    
+    input[type="submit"] {
+        width: auto;
+        padding: 10px 15px;
+        background: $preto;
+        color: $branco;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        width: 100%;
+        border-radius: 0;
+        border: 1px solid #000;
+        padding-left: 20px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        height: 50px;
+    }
+
+    textarea {
+        height: 150px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    fieldset {
+        margin-bottom: 20px;
+    }
+}

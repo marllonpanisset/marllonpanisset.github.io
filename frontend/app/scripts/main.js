@@ -10,7 +10,101 @@ var sections = $('.page-section');
 var nav = $('#navbar .main-menu');
 var nav_height = nav.outerHeight();
 
+//formspree
+window.addEventListener("DOMContentLoaded", function() {
+	// get the form elements defined in your form HTML above
+	var form = document.getElementById("form");
+	var formName = document.getElementById("form-name");
+	var formEmail = document.getElementById("form-email");
+	var formWhatsapp = document.getElementById("form-whatsapp");
+	var formMessage = document.getElementById("form-message");
+	var formButton = document.getElementById("form-submit");
+	var formStatus = document.getElementById("form-status");
+
+	// Success and Error functions for after the form is submitted
+	
+	function success() {
+		form.reset();
+		formButton.style = "display: none ";
+		formStatus.innerHTML = "Obrigado, vou analisar seu e-mail e responder.";
+	}
+
+	//JS Validate
+	$('#form-name').blur(function() {
+		if( !$(this).val() ) {
+			$(this).next().addClass('error');
+		} else {
+			$(this).next().removeClass('error');
+		}
+	});
+
+	$('#form-whatsapp').blur(function() {
+		if( !$(this).val() ) {
+			$(this).next().addClass('error');
+		} else {
+			$(this).next().removeClass('error');
+		}
+	});
+
+	$('#form-email').blur(function() {
+		if( !$(this).val() ) {
+			$(this).next().addClass('error');
+		} else {
+			$(this).next().removeClass('error');
+		}
+	});
+
+	$('#form-message').blur(function() {
+		if( !$(this).val() ) {
+			$(this).next().addClass('error');
+		} else {
+			$(this).next().removeClass('error');
+		}
+	});
+
+	function error() {
+		formStatus.innerHTML = "Atenção!, todos os dados são obrigatórios.";
+	}
+
+	// handle the form submission event
+
+	form.addEventListener("submit", function(ev) {
+		ev.preventDefault();
+		var data = new FormData(form);
+		ajax(form.method, form.action, data, success, error);
+	});
+});
+
+// helper function for sending an AJAX request
+
+function ajax(method, url, data, success, error) {
+	var xhr = new XMLHttpRequest();
+	xhr.open(method, url);
+	xhr.setRequestHeader("Accept", "application/json");
+	xhr.onreadystatechange = function() {
+	if (xhr.readyState !== XMLHttpRequest.DONE) return;
+		if (xhr.status === 200) {
+			success(xhr.response, xhr.responseType);
+		} else {
+			error(xhr.status, xhr.response, xhr.responseType);
+		}
+	};
+	xhr.send(data);
+}
+
 $(document).ready(function () {
+	//InputMask SP CEL
+	var SPMaskBehavior = function (val) {
+		return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+	  },
+	  spOptions = {
+		onKeyPress: function(val, e, field, options) {
+			field.mask(SPMaskBehavior.apply({}, arguments), options);
+		  }
+	  };
+  
+	  $('#form-whatsapp').mask(SPMaskBehavior, spOptions);
+
 	var willLoad = {};
 	
 	$('#webdoor').on('load resize', function() {

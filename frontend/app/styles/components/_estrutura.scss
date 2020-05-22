@@ -115,6 +115,56 @@ debug: (image: hide),
 #contact {
     margin-bottom: 50px;
 
+    .social-network {
+        float: right;
+        clear: both;
+        margin-top: 15px;
+
+        a {
+            position: relative;
+            display: block;
+            margin-bottom: 20px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &.icon-facebook {
+                padding-left: 30px;
+
+                &:before {
+                    position: absolute;
+                    padding-left: 25px;       
+                    font-size: 25px;
+                    left: -26px;
+                    top: -6px;
+                }
+            }
+
+            &.icon-github {
+                padding-left: 30px;
+
+                &:before {
+                    font-size: 30px;    
+                    position: absolute;
+                    left: -3px;
+                    top: -7px;
+                }
+            }
+
+            &.icon-linkedin {
+                padding-left: 30px;
+                
+                &:before{
+                    position: absolute;
+                    font-size: 35px;
+                    top: -10px;
+                    left: -5px;
+                }
+            }
+        }
+    }
+
     ul {
         list-style: initial;
         padding-left: 18px;
@@ -129,16 +179,25 @@ debug: (image: hide),
         float: left;
         width: 100%;
         margin-top: 20px;
-        padding-right: 30px;
         box-sizing: border-box;
     }
 
     address {
         position: relative;
-        float: left;
+        float: right;
         margin-top: 20px;
-        width: 100%;
-        text-align: center;
+
+        @media (min-width: 1024px) {
+            width: 30%;
+        }
+    
+        @media (min-width: 860px) and (max-width: 1023px) {
+            width: 35%;
+        }
+
+        @media (min-width: 768px) and (max-width: 859px) {
+            width: 35%;
+        }
 
         .icon.icon-medium {
 			.path2 {
@@ -172,19 +231,6 @@ debug: (image: hide),
             margin-top: 20px;
             text-align: center;
             width: 100%;
-        }
-    }
-
-    .social-network {
-        a {
-            
-            &:not(:hover) {
-                
-                &:before {
-                    color: $preto;
-                }
-            }
-
         }
     }
 }
@@ -278,26 +324,33 @@ debug: (image: hide),
 }
 
 #contact .info {
-    margin-top: 20px;
+    clear: both;
+    float: right;
+    width: 208px;
 
     a {
+        position: relative;
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+
+        &:before{
+            position: absolute;
+        }
+
+        &.icon-gmail:before {
+            font-size: 21px;
+            left: -28px;
+            top: 0;
+        }
+
+        &.icon-whatsapp:before {
+            font-size: 21px;
+            left: -28px;
+            top: -1px;
+        }
 
         &:hover {
             text-decoration: underline;
-        }
-
-        &.email {
-
-        }
-
-        &.celular {
-
-        }
-
-        &.residencial {
-
         }
     }
 }

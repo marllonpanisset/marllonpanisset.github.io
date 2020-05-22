@@ -11,7 +11,7 @@ html(lang="pt-br" class="no-js")
 					h3 Portfólio
 					p Confira abaixo alguns dos trabalhos nos quais atuei como desenvolvedor front-end em agências e como freelancer.
 						section(id="services" class="page-section")
-			section(id="articles" class="page-section")
+			//- section(id="articles" class="page-section")
 				div(class="wrapper")
 					h3 Artigos
 					p Confira os ultimos artigos do meu blog.
@@ -49,7 +49,7 @@ html(lang="pt-br" class="no-js")
 				div(class="parallax services")
 					div(class="wrapper")
 						h3 Serviços
-						p Criação de sites, hotsites, landing pages, blogs, apps, lojas virtuais, otimização para mecanismos de busca (SEO).<br />São muitas possibilidades. Confira alguns dos serviços que ofereço.
+						p Criação de sites, hotsites, landing pages, blogs, lojas virtuais, otimização para mecanismos de busca (SEO).<br />São muitas possibilidades. Confira alguns dos serviços que ofereço.
 				div(class="wrapper")
 					p Antes de estipular custos e prazos sempre analiso o projeto como um todo, trabalhando com um código customizado e adequado a cada necessidade utilizando novas tecnologias como HTML5 e CSS3.
 					p Trabalho com as principais linguagens e ferramentas do mercado como: PHP, HTML5, CSS3, Sass, Javascript, jQuery, Design Responsivo, Wordpress, entre outras.
@@ -102,7 +102,7 @@ html(lang="pt-br" class="no-js")
 					p Trabalho com Desenvolvimento Web  emgeral e tenho todas as soluções para seu site, blog, empresa. Tem alguma ideia e precisa de ajuda? Tenho diversos serviços e planos para ajudar você e seus negócios.
 
 					section.plans
-						.plan.basico
+						.plan.basico.equalHeight
 							h3 Basico
 							p Para pequenos negócios e sites pessoais com interesse em criar sua marca da web.
 
@@ -114,7 +114,7 @@ html(lang="pt-br" class="no-js")
 							span A partir de R$ 29,90
 							span os planos são de assinatura mensal com todos os serviços incluidos.
 							
-						.plan.microempreededor
+						.plan.microempreededor.equalHeight
 							h3 Microempreendedor
 							p Ideal para criar um site profissional para seu negócio ou empresa na web.
 
@@ -127,7 +127,7 @@ html(lang="pt-br" class="no-js")
 							span A partir de R$ 59,90
 							span os planos são de assinatura mensal com todos os serviços incluidos.
 
-						.plan.grandes-empresas
+						.plan.grandes-empresas.equalHeight
 							h3 Grandes Empresas
 							p Ideal para grandes empresas e portais.
 
@@ -186,21 +186,41 @@ html(lang="pt-br" class="no-js")
 						h3 Contato
 						p Precisando de um novo site institucional, hotsite ou um blog?<br />Tem um projeto em mente mas precisa de um desenvolvedor front-end rápido,<br /> de qualidade e com um bom preço? Contate-me!
 				div(class="wrapper")
-					p Só disponibilizo meu telefone para clientes. Caso  você esteja conhecendo meu trabalho agora, <a href="mailto:marllonop@gmail.com" title="mande um e-mail">mande um e-mail</a> explicando o seu projeto com detalhes, que eu ficarei feliz em responder com uma estimativa de valores e prazo.
+					P Caso  você esteja conhecendo meu trabalho agora, estou disponibilizando meus contatos como <a href="mailto:marllonop@gmail.com" title="mande um e-mail">e-mail</a>, redes sociais e telefones, ou se preferir, preencha o formulário abaixo e entre em contato explicando o seu projeto com detalhes, que eu entro em contato para conversarmos melhor e chegar em uma estimativa de valores e prazo.
+					
 					div(class="description")
-						p Hoje em dia, com o avanço da técnologia, tudo está na nuvem, posso realizar um trabalho para uma pessoa/empresa de qualquer lugar do mundo e fazer reuniões via chamada de video no Hangouts.
-						P Estou disponibilizando meu e-mail e redes sociais, caso queira entrar em contato ou me conhecer melhor.
-					address
 						h4 Contate-me!
+						form(action="https://formspree.io/xdowajlj" method="POST" id="form")
+							fieldset
+								label Nome
+									sup *
+								input(type="text" name="name" placeholder="ex: Marcos Souza" id="form-name" required)
+								div O campo nome é obrigatório!
+							fieldset
+								label WhatsApp
+									sup *
+								input(type="tel" name="whatsapp" placeholder="ex: 21984659039" id="form-whatsapp" required)
+								div O campo WhatsApp é obrigatório!
+							fieldset
+								label E-mail
+									sup *
+								input(type="email" name="_replyto" placeholder="ex: marcos.souza@gmail.com" id="form-email" required)
+								div O campo e-mail é obrigatório!
+							fieldset
+								label Mensagem
+									sup *
+								textarea(name="message" placeholder="Olá, quero fazer uma loja virtual, gostaria de saber preços e prazos, aguardo resposta." id="form-message" required)
+								div O campo mensagem-mail é obrigatório!
+							input(type="submit" value="Enviar" id="form-submit")
 
-						.social-network
-							a(class="icon icon-github" href="https://github.com/marllonpanisset" target="_blank" rel="noopener" title="Github")
-							a(class="icon icon-linkedin" href="https://www.linkedin.com/in/marllonpanisset" target="_blank" rel="noopener" title="Linkedin")
-							a(class="icon icon-facebook" href="http://fb.com/marllonpanisset.github.io" target="_blank" rel="noopener" title="Facebook")
-							a(class="icon icon-gmail" href="mailto:marllonop@gmail.com" target="_blank" rel="noopener" title="E-mail")
+							p(id="form-status")
+						address
+							.social-network
+								a(class="icon icon-facebook" href="http://fb.com/marllonpanisset.github.io" target="_blank" rel="noopener" title="Facebook") marllonpanisset.github.io
+								a(class="icon icon-github" href="https://github.com/marllonpanisset" target="_blank" rel="noopener" title="Github") marllonpanisset
+								a(class="icon icon-linkedin" href="https://www.linkedin.com/in/marllonpanisset" target="_blank" rel="noopener" title="Linkedin") marllonpanisset
+							.info
+								a(class="icon icon-gmail" href="mailto:marllonop@gmail.com" target="_blank" rel="noopener" title="E-mail") marllonop@gmail.com
+								a(class="icon icon-whatsapp" href="tel:+5521984659039" title="Celular (WhatsApp)") +55 (21) 98465-9039
 
-						.info
-							a(class="email" href="mailto:marllonop@gmail.com" title="E-mail") marllonop@gmail.com
-							a(class="celular" href="tel:+5521984659039" title="Celular") +55 (21) 98465-9039
-							a(class="residencial" href="tel:+5521984659039" title="Residencial") +55 (21) 2456-4766
 		include ./includes/footer.pug
