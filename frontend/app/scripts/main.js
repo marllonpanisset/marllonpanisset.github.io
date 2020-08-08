@@ -11,22 +11,22 @@ var nav = $('#navbar .main-menu');
 var nav_height = nav.outerHeight();
 
 //formspree
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener('DOMContentLoaded', function() {
 	// get the form elements defined in your form HTML above
-	var form = document.getElementById("form");
-	var formName = document.getElementById("form-name");
-	var formEmail = document.getElementById("form-email");
-	var formWhatsapp = document.getElementById("form-whatsapp");
-	var formMessage = document.getElementById("form-message");
-	var formButton = document.getElementById("form-submit");
-	var formStatus = document.getElementById("form-status");
+	var form = document.getElementById('form');
+	var formName = document.getElementById('form-name');
+	var formEmail = document.getElementById('form-email');
+	var formWhatsapp = document.getElementById('form-whatsapp');
+	var formMessage = document.getElementById('form-message');
+	var formButton = document.getElementById('form-submit');
+	var formStatus = document.getElementById('form-status');
 
 	// Success and Error functions for after the form is submitted
 	
 	function success() {
 		form.reset();
-		formButton.style = "display: none ";
-		formStatus.innerHTML = "Obrigado, vou analisar seu e-mail e responder.";
+		formButton.style = 'display: none ';
+		formStatus.innerHTML = 'Obrigado, vou analisar seu e-mail e responder.';
 	}
 
 	//JS Validate
@@ -63,12 +63,12 @@ window.addEventListener("DOMContentLoaded", function() {
 	});
 
 	function error() {
-		formStatus.innerHTML = "Atenção!, todos os dados são obrigatórios.";
+		formStatus.innerHTML = 'Atenção!, todos os dados são obrigatórios.';
 	}
 
 	// handle the form submission event
 
-	form.addEventListener("submit", function(ev) {
+	form.addEventListener('submit', function(ev) {
 		ev.preventDefault();
 		var data = new FormData(form);
 		ajax(form.method, form.action, data, success, error);
@@ -80,7 +80,7 @@ window.addEventListener("DOMContentLoaded", function() {
 function ajax(method, url, data, success, error) {
 	var xhr = new XMLHttpRequest();
 	xhr.open(method, url);
-	xhr.setRequestHeader("Accept", "application/json");
+	xhr.setRequestHeader('Accept', 'application/json');
 	xhr.onreadystatechange = function() {
 	if (xhr.readyState !== XMLHttpRequest.DONE) return;
 		if (xhr.status === 200) {
