@@ -129,17 +129,13 @@
                 position: relative;
                 text-transform: uppercase;
                 letter-spacing: 0.5px;
-                font-size: em(16px);
                 font-weight: 400;
+                font-size: .9em;
                 padding: 0 15px;
                 display: block;
                 color: $branco;
                 outline: none;
                 transition: all .40s;
-
-                @media (min-width: 801px) {
-                    font-size: em(16px);
-                }
 
                 &:before {
                     content: "";
@@ -193,7 +189,7 @@
             text-decoration: none;
 
             &:before {
-                content: '</> Marllon Panisset';
+                content: '</> MARLLON PANISSET';
                 display: inline-block;
                 font-family: 'Ubuntu';
                 margin-left: 10px;
@@ -212,31 +208,31 @@
             }
 
             @media (min-width: 961px) {
-                font-size: 1.6rem;
+                font-size: 1.3rem;
             }
             
             @media (min-width: 801px) and (max-width:960px) {
-                font-size: 1.5rem;
+                font-size: 1.1rem;
             }
             
             @media (max-width: 800px) {
-                font-size: 1.4rem;
+                font-size: 1rem;
             }
 
             @media (max-width: 360px) {
-                font-size: 1.30rem;
+                // font-size: 1.30rem;
             }
         }
     }
 
     &.scrolled {
         background-color: $preto;
-        height: 50px;
-        line-height: 50px;
+        height: 60px;
+        line-height: 60px;
 
         .main-menu li a:not(.icon) {
             transition: all .5s cubic-bezier(.4,0,.2,1);
-            font-size: em(16px);
+            font-size: .8em;
             position: relative;
             color: $branco;
 
@@ -274,8 +270,9 @@
                 color: $branco;
                 
                 &:before {
+                    transition: .4s ease-in-out;
                     @media (min-width: 961px) {
-                        font-size: 1.4rem;
+                        font-size: 1.2rem;
                     }
                 }
             }

@@ -122,8 +122,7 @@ debug: (image: hide),
 
         a {
             position: relative;
-            display: block;
-            margin-bottom: 20px;
+            display: inline-block;
 
             &:hover {
                 text-decoration: underline;
@@ -166,11 +165,15 @@ debug: (image: hide),
     }
 
     ul {
-        list-style: initial;
         padding-left: 18px;
+        height: 70px;
 
         li {
             line-height: 1.5em;
+
+            img {
+                display:inline-block
+            }
         }
     }
 
@@ -253,35 +256,21 @@ debug: (image: hide),
             right: 0;
         }
         
-        @media (min-width: 1px) and (max-width: 479px) {
-            border-radius: 192px;
-            width: 192px;
-            height: 192px;
-            // background: url($profile-mobile) no-repeat;
-        }
-
-        @media (min-width:480px) and (max-width: 1179px) {
-            border-radius: 256px;
-            min-width: 256px;
-            min-height: 256px;
-            // background: url($profile-tablet) no-repeat;
-        }
-
+        
         @media (min-width: 1180px) {
             border-radius: 256px;
             min-width: 256px;
             min-height: 256px;
-            // background: url($profile-tablet) no-repeat;
+            width: 100%;
+            max-width: 400px;
         }
-
-        @media (min-width: 1600px) {
-            min-width: 360px;
-            min-height: 360px;
-            border-radius: 360px;
-            // background: url($profile-desktop) no-repeat;
-        }
-
+            
         @media (max-width: 1179px) {
+            border-radius: 182px;
+            min-width: 182px;
+            min-height: 182px;
+            width: 256px;
+            max-width: 256px;
             display: table;
             float: none;
             width: auto;
@@ -332,6 +321,7 @@ debug: (image: hide),
         position: relative;
         display: block;
         margin-bottom: 20px;
+        float: right;
 
         &:before{
             position: absolute;
@@ -352,5 +342,39 @@ debug: (image: hide),
         &:hover {
             text-decoration: underline;
         }
+    }
+}
+
+#contact {
+    //Linkedin
+    //Botão Perfil
+    .LI-view-profile {
+        float: left;
+    }
+
+    //Logo Linkedin
+    .LI-badge-container.horizontal.dark .LI-logo {
+        bottom: 6px;
+    }
+    
+    .LI-badge-container.horizontal.dark .LI-more-info {
+        padding: 20px 15px 20px 15px
+    }
+
+    .LI-badge-container.horizontal.dark {
+        border-left: 1px solid #ffffff;
+        padding-left: 10px;
+        float: right;
+        margin-bottom: 15px;
+    }
+
+    .LI-simple-link {
+        font-size: 0;
+    }
+
+    div.github-button {
+        margin-bottom: 20px;
+        float: right;
+        margin-top: 31px;
     }
 }

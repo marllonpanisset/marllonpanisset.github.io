@@ -3,7 +3,7 @@
     margin-top: 10px;
     
     @media (min-width: 1024px) {
-        width: 70%;
+        width: 66%;
     }
 
     @media (min-width: 860px) and (max-width: 1023px) {
@@ -55,9 +55,15 @@
     
     input[type="submit"] {
         width: auto;
-        padding: 10px 15px;
+        padding: 16px 35px;
         background: $preto;
         color: $branco;
+        transition: all .4s ease-in-out;
+
+        &:hover {
+            background: $laranja;
+            color: $preto;
+        }
     }
 
     input[type="text"],
