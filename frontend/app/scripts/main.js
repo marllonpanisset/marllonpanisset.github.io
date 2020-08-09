@@ -168,13 +168,12 @@ $(document).ready(function () {
 	});
 
 	$('ul.main-menu li a').click(function(e) {
-		console.log($(e.target).parent().parent());
 		if ($(e.target).parent().parent().hasClass('open')) {
 			$('ul.main-menu').removeClass('open');
 			$('#menu-bar').removeClass('is-active');
 		}	
 	});
-	
+
 	$('a[href*="#"]').click(function(event) {
 		var href = $(this.hash);
 	
