@@ -167,15 +167,22 @@ $(document).ready(function () {
 		});
 	});
 
+	$('ul.main-menu li a').click(function(e) {
+		console.log($(e.target).parent().parent());
+		if ($(e.target).parent().parent().hasClass('open')) {
+			$('ul.main-menu').removeClass('open');
+			$('#menu-bar').removeClass('is-active');
+		}	
+	});
+	
 	$('a[href*="#"]').click(function(event) {
-
 		var href = $(this.hash);
 	
 		if (href.length) {
 			event.preventDefault();
 			$('html, body').animate({
 				scrollTop: href.offset().top - 49
-			}, 1250, function() {
+			}, 800, function() {
 				if (history.pushState) {
 					history.pushState(null, null, 'index.html#' + href.attr('id'));
 				} else {

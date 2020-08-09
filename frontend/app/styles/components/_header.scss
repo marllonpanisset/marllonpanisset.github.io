@@ -13,8 +13,20 @@ body:not(.init-site) {
 #header {
     text-align: center;
     overflow: hidden;
+    height: 100vh;
     width: 100%;
-    background-color: #000000;
+    background-image: url(https://imgur.com/LwBwcHp.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center 0px;
+    z-index: -1;
+
+    .bg-mask {
+        height: 100%;
+        width: 100%;
+        background: radial-gradient(circle, rgba(0,0,0,0.3) 50%, rgba(0,0,0,1) 100%, rgba(0,0,0,0.6685049019607843) 0%);
+    }
 
     .wrap {
         position: absolute;
@@ -22,7 +34,7 @@ body:not(.init-site) {
         transform: translateY(-50%);
         
         @media (min-width: 769px) {
-            top: 68%;
+            top: 53%;
             font-size: 3rem;
         }
         
@@ -49,6 +61,7 @@ body:not(.init-site) {
             h2 {
                 font-weight: 100;
                 margin-bottom: 20px;
+                margin-top: 80px;
                 
                 br {
 
@@ -100,9 +113,9 @@ body:not(.init-site) {
 
     .read-more {
         position: absolute;
-        bottom: 60px;
+        bottom: 20px;
         left: 50%;
-        margin-left: -40px;
+        margin-left: -30px;
         opacity: 1;
         width: 60px;
         height: 60px;
