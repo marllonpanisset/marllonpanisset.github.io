@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ddy2ak');
-  src:  url('fonts/icomoon.eot?ddy2ak#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ddy2ak') format('truetype'),
-    url('fonts/icomoon.woff?ddy2ak') format('woff'),
-    url('fonts/icomoon.svg?ddy2ak#icomoon') format('svg');
+  src:  url('https://marllonpanisset.github.io/css/fonts/icomoon.eot?ddy2ak');
+  src:  url('https://marllonpanisset.github.io/css/fonts/icomoon.eot?ddy2ak#iefix') format('embedded-opentype'),
+    url('https://marllonpanisset.github.io/css/fonts/icomoon.ttf?ddy2ak') format('truetype'),
+    url('https://marllonpanisset.github.io/css/fonts/icomoon.woff?ddy2ak') format('woff'),
+    url('https://marllonpanisset.github.io/css/fonts/icomoon.svg?ddy2ak#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
