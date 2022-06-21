@@ -1,0 +1,134 @@
+block setups
+doctype html
+html(lang="pt-br" class="no-js")
+	include ./helpers/head.pug
+	body
+		include ./includes/header.pug
+		main#main
+			section.home#home
+				.container
+					.row
+						.col-lg-6
+							h1 MARLLON PANISSET
+							h2 Front-end Developer
+
+						.col-lg-6
+							img(src="https://i.imgur.com/eND1bfx.jpg", alt="", srcset="")
+
+					a(href="#about-me" class="scrollAnchor page-scroll")
+						i(class="fa-solid fa-chevron-down")
+			section#about-me.about-me
+			
+				div.parallax.about-me.js-scroll.fade-in-bottom
+					.container
+						.row
+							.col-lg-12
+								h3 Sobre mim
+				.container
+					.row
+						.col-lg-4.js-scroll.fade-in-bottom
+							.text-container.first.fade-in-bottom
+								h2 Olá, Me chamo Marllon,
+								p
+									| Desenvolvimento Web Front-end Tem sido meu ganha pão há mais de 6 anos, ja trabalhei em algumas agências com focos bem diferentes, veja ao lado. Para mais detalhes acesse meu <a href="https://www.linkedin.com/in/marllonpanisset" target="_blank">Linkedin</a>.
+								// end of text-container
+							// end of col
+						.col-lg-4.js-scroll.fade-in-bottom
+							.text-container.second
+								.time 2020 - 2022
+								h6 ED3 Digital
+								p Desenvolvedor Front-end e VTEX
+								
+								.time 2019 - 2020 · 9 Meses
+								h6 AM4 (Home-office Remoto Temporário)
+								p Desenvolvedor Front-end
+								// end of text-container
+						// end of col
+						.col-lg-4.js-scroll.fade-in-bottom
+							.text-container.third
+								.time 2018 - 2019 · 1 ano 5 meses
+								h6 Sirius Interativa
+								p Desenvolvedor Front-end Jr
+
+								.time 2016 - 2017 · 1 anos e 7 meses
+								h6 Sirius Interativa
+								p Desenvolvedor Front-end Jr (Estágio)
+								// end of text-container
+						// end of col
+					.row
+						.col-lg-12.js-scroll.fade-in-bottom
+							h2 Currículo
+							a(href="")
+				.container
+					.row
+						.col-lg-12.skills.js-scroll.fade-in-bottom
+							h2 Habilidades 
+							ul.skills
+								li.skill
+									span Kanban
+								li.skill
+									span HTML5
+								li.skill
+									span CSS3
+								li.skill
+									span SASS
+								li.skill
+									span Javascript
+								li.skill
+									span jQuery
+								li.skill
+									span PUG
+								li.skill
+									span GULP
+								li.skill
+									span WordPress
+								li.skill
+									span VTEX
+								li.skill
+									span Responsive Webdesign
+								li.skill
+									span Adobe Photoshop
+								li.skill
+									span Figma
+								li.skill
+									span Vagrant
+								li.skill
+									span Docker
+								li.skill
+									span Git
+								li.skill
+									span Bootstrap
+								li.skill
+									span Linux
+								li.skill
+									span Windows
+								li.skill
+									span Jamstack
+								li.skill
+									span PSD para HTML
+								li.skill
+									span Template Newsletter
+								
+			section.contact#contact.js-scroll.fade-in-bottom
+				div.parallax.contact
+					.container
+						.row
+							.col-lg-12
+								h3 Contato
+				div.networking-container
+					.container
+						.row
+							.networking
+								.networking-item
+									a(class="github" href="https://github.com/marllonpanisset" target="_blank" rel="noopener" title="Github")
+										span.github
+								.networking-item
+									a(class="linkedin" href="https://www.linkedin.com/in/marllonpanisset" target="_blank" rel="noopener" title="Linkedin")
+										span.linkedin
+								.networking-item
+									a(class="gmail" href="mailto:marllonop@gmail.com" target="_blank" rel="noopener" title="E-mail")
+										span.mail4
+								.networking-item
+									a(class="whatsapp" href="https://wa.me/5521987881633" target="_blank" rel="noopener" title="WhatsApp")
+										span.icon-whatsapp
+		include ./includes/footer.pug
