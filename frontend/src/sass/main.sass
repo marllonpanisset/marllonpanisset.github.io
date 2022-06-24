@@ -37,7 +37,11 @@ body
   &.fixed-header
     background: #fff
     box-shadow: 0px 0px 17px 5px rgba(0,0,0,0.2)
-    padding: 4px 0
+    padding: 10px 0
+
+    #navbar #menu-mobile.open
+      @media (max-width: 991px)
+        top: 52px
 
 .home
   height: 100vh
@@ -66,13 +70,17 @@ i.fa-chevron-down:before
   color: #000
 
 #about-me
-  padding-top: 60px
   margin-top: 90px
   display: flex
   flex-wrap: wrap
   align-items: center
   height: 100%
   box-sizing: border-box
+  padding-top: 60px
+
+  .col-lg-4
+    @media (max-width:991px)
+      margin: 10px 0
   
   .text-container.first h2
     font-size: 28px
@@ -85,18 +93,34 @@ i.fa-chevron-down:before
 
 
 #home
+
+  img
+    @media (max-width:991px)
+      max-width: 250px
   h1
     font-size: 3.5rem
     color: #000
     text-align: left
+
+    @media (max-width: 991px)
+      text-align: center
+      font-size: 2rem
+      margin-top: 40px
   h2
     font-size: 2.5rem
     color: #246FA2
     text-align: left
-  
+    
+    @media (max-width: 991px)
+      text-align: center
+      font-size: 1.5rem
   .row
     align-items: center
     text-align: right
+
+    @media (max-width: 991px)
+      flex-direction:  column-reverse !important
+      text-align: center
 
 #main
   min-height: 500px
@@ -111,9 +135,12 @@ i.fa-chevron-down:before
   text-align: center
   
   .container
-    padding-top: 15px
     border-top: 1px solid #000
-  
+    padding-top: 15px
+    padding-bottom: 15px
+    background: #000
+    color: #fff
+
   .copyright
     font-size: 16px
 
@@ -127,69 +154,87 @@ i.fa-chevron-down:before
   justify-content: space-between
   align-items: center
 
-  ul
+  @media (min-width: 992px)
+    #icon-menu
+      display: none
+    .icon-cross
+      display: none
+  @media (max-width: 991px)
+    overflow: hidden
+
+  #icon-menu
+    border: none
+    font-size: 30px
+    background: none
+
+    &.active
+      &:before
+        content: "\ea0f"
+
+  #menu-mobile
+
+    @media (max-width: 991px)
+      position: absolute
+      right: 0
+      top: 60px
+      width: 0
+      height: 0
+      overflow: hidden
+      background: #fff
+      box-shadow: 0px 4px 10px -3px rgba(0, 0, 0, 20%)
+      transition: all 0.3s ease
+      opacity: 0
+      transform: translateX(50px)
+
+    &.open
+      @media (max-width: 991px)
+        opacity: 1
+        display: block
+        width: 100%
+        height: auto
+        overflow: visible
+        transform: translateX(0px)
+
+
+  .main-menu
     margin: 0
     padding: 0
     list-style: none
     display: flex
-
+    flex-wrap: wrap
     li
-      display: flex
-      align-items: center
-
-      &:not(.social)
-        margin-right: 30px
-        
-        a:hover
-          color:#246FA2 !important
-          text-decoration: underline
-        
-        &:hover a
-          text-decoration: underline
-
-      &.social
-        margin-right: 20px
-        a
-          text-decoration: none
-          
-          &:hover
-            text-decoration: none
-      
-      &:last-child
-        margin-right: 0
-      
-      .fa-brands, .fab
-        display: flex
-        font-size: 22px
-
-      .fa-whatsapp
-        font-size: 24px
-
+      @media (max-width: 991px)
+        width: 100%
+        border-bottom: 1px solid
+        text-align: center
       a
         font-size: 18px
-        color: #000 !important
-        padding: 0 !important
-        transition: all .2s ease-out
-        text-decoration: none
-        border: 0
-        display: block
+        text-transform: uppercase
+        font-weight: 400
+        color: #000
 
-        &.nav-link
-          text-transform: uppercase
-          font-weight: 400
-        
-        i
-          transition: all .2s ease-out
-        &.active
-          border-bottom: blue 2px solid
-        
+        &:hover
+          color: #246FA2
 
+    &.open
+      @media (max-width: 991px)
+        display: flex
+        height: 200px
+        background: blue
 
-    li a.github:hover .fa-github:before,
-    li a.linkedin:hover .fa-linkedin,
-    li a.gmail:hover .fa-paper-plane,
-    li a:hover .fa-whatsapp
-      color: #246FA2
+        li
+          display: flex
+          align-items: center
+
+          a:hover
+            color:#246FA2 !important
+            text-decoration: underline
+            
+          &:not(.social)
+            margin-right: 30px
+
+            &:hover a
+              text-decoration: underline
 
 .text-container
   .time
@@ -240,7 +285,6 @@ i.fa-chevron-down:before
 
 .parallax
   position: relative
-  min-height: 250px
   text-align: center
   display: flex
   align-items: center
@@ -248,27 +292,71 @@ i.fa-chevron-down:before
   -webkit-backface-visibility: hidden
   transition: all .3s
 
+  @media (min-width: 992px)
+    min-height: 250px
+  
+  @media (max-width: 991px)
+    min-height: 200px
+
   h3
     color: #fff !important
     font-size: 3rem
   
   &.contact
-    background: url(https://i.imgur.com/Jmfinns.jpg)
-    background-attachment: fixed
-    background-position-y: -70px
-    background-repeat: no-repeat
-    background-size: cover
-    margin-bottom: 60px
-    z-index: 0
+
+    @media (min-width: 992px)
+      margin-bottom: 60px
+      z-index: 0
+      background: url(https://i.imgur.com/Jmfinns.jpg)
+      background-attachment: fixed
+      background-position-y: -70px
+      background-repeat: no-repeat
+      background-size: cover
+
+    @media (max-width: 991px)
+      background: #007bff
+      margin-bottom: 40px
 
   &.about-me
-    background: url(https://i.imgur.com/XFwAUR3.jpg)
-    background-attachment: fixed
-    background-position-y: -140px
-    background-repeat: no-repeat
-    background-size: cover
-    margin-bottom: 60px
-    z-index: 0
+    
+    @media (min-width: 992px)
+      margin-bottom: 60px
+      z-index: 0
+      background: url(https://i.imgur.com/XFwAUR3.jpg)
+      background-attachment: fixed
+      background-position-y: -140px
+      background-repeat: no-repeat
+      background-size: cover
+
+    @media (max-width: 991px)
+      background: #007bff
+      margin-bottom: 40px
+  
+  &.about-me.js-scroll.fade-in-bottom
+    @media (min-width: 1025px)
+      opacity: 1
+      animation: none
+  
+  &.contact.js-scroll.fade-in-bottom
+    @media (min-width: 1025px)
+      opacity: 1
+      animation: none
+
+.logo
+  display: flex
+  align-items: center
+
+  &:hover
+      text-decoration: none
+
+  span
+    &.icon-embed2
+      font-size: 28px
+    &:not(.icon-embed2)
+      font-size: 20px
+      color: #000
+      padding-left: 10px
+      font-weight: 600
 
 .networking
   width: 100%
@@ -281,14 +369,29 @@ i.fa-chevron-down:before
     justify-content: center
     align-items: center
     display: flex
+    
+    span
+      @media (min-width: 992px)
+        font-size: 64px
+      @media (max-width: 991px)
+        font-size: 44px
+      
     a
+      color: #000
+
+      &:hover
+        color: #007bff
       i
-        font-size: 50px
         color: #000
+        font-size: 50px
+
 
 @media (min-width: 992px)
-  .hamburger
-    display: none !important
+  #icon-menu
+    display: none
+
+.text-container.second
+  margin-top: 20px
 
 // Animate on scroll
 

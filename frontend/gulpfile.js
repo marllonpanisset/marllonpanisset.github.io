@@ -10,7 +10,6 @@ const browserSync = require('browser-sync').create()
 
 function scripts() {
   return src('src/js/main.js')
-    .pipe(rename('main.min.js'))
     .pipe(uglify())
     .pipe(dest('dist/js'))
 }

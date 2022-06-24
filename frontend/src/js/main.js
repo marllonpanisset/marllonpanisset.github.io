@@ -1,13 +1,15 @@
+
+
 "use strict"; 
 
 // ## Global Vars
 var header = document.getElementById('header');
 var mainNavLink = document.querySelectorAll('.main-menu .nav-link');
+var navbar = document.getElementById('navbar');
 var sectionHome = document.querySelector('#home');
 var sectionAbout = document.getElementById('about-me');
 var sectionContact = document.getElementById('contact');
 var networking = document.getElementsByClassName('networking');
-
 
 // ## isInViewport
 var isInViewport = function (elem) {
@@ -22,7 +24,6 @@ var isInViewport = function (elem) {
 
 // animate on Scroll 
 const scrollElements = document.querySelectorAll(".js-scroll");
-
 
 const elementInView = (el, dividend = 1) => {
   const elementTop = el.getBoundingClientRect().top;
@@ -63,7 +64,7 @@ window.addEventListener("scroll", () => {
   handleScrollAnimation();
 });
 
-
+// NAVBAR 
 function onScroll(event) {
   if (isInViewport(sectionHome)) {
     header.classList.remove("fixed-header");
@@ -74,3 +75,13 @@ function onScroll(event) {
 }
 
 document.addEventListener('scroll', onScroll);
+
+document.getElementById('icon-menu').addEventListener('click', hamburguer)
+
+function hamburguer(e) {
+  const tgt = e.target;
+  if (tgt.matches("button#icon-menu") || tgt.closest("button#icon-menu")) {
+    document.getElementById('menu-mobile').classList.toggle('open')
+    document.getElementById('icon-menu').classList.toggle('active')
+  }
+}
