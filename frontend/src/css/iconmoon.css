@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('https://marllonpanisset.github.io/css/fonts/icomoon.eot?ddy2ak');
-  src:  url('https://marllonpanisset.github.io/css/fonts/icomoon.eot?ddy2ak#iefix') format('embedded-opentype'),
-    url('https://marllonpanisset.github.io/css/fonts/icomoon.ttf?ddy2ak') format('truetype'),
-    url('https://marllonpanisset.github.io/css/fonts/icomoon.woff?ddy2ak') format('woff'),
-    url('https://marllonpanisset.github.io/css/fonts/icomoon.svg?ddy2ak#icomoon') format('svg');
+  src:  url('https://marllonpanisset.github.io/css/fonts/icomoon.eot?durhds');
+  src:  url('https://marllonpanisset.github.io/css/fonts/icomoon.eot?durhds#iefix') format('embedded-opentype'),
+    url('https://marllonpanisset.github.io/css/fonts/icomoon.ttf?durhds') format('truetype'),
+    url('https://marllonpanisset.github.io/css/fonts/icomoon.woff?durhds') format('woff'),
+    url('https://marllonpanisset.github.io/css/fonts/icomoon.svg?durhds#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-chevron-down:before {
+  content: "\e900";
+}
 .icon-barcode:before {
   content: "\e937";
 }
@@ -57,9 +60,6 @@
 }
 .icon-checkmark2:before {
   content: "\ea11";
-}
-.icon-embed2:before {
-  content: "\ea80";
 }
 .icon-terminal:before {
   content: "\ea81";

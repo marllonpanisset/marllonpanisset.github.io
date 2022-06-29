@@ -1,7 +1,5 @@
 // Marllon Panisset - Front-end Developer
 // Icon Fonts
-
-
 html
   margin: 0
   padding: 0
@@ -93,10 +91,17 @@ i.fa-chevron-down:before
 
 
 #home
+  .col-lg-6.image
+    .image
+        background: url(https://i.imgur.com/i2dvomF.jpg) no-repeat right
+        width: 270px
+        height: 270px
+        border-radius: 270px
 
-  img
-    @media (max-width:991px)
-      max-width: 250px
+        @media (min-width:992px)
+          margin-left: auto
+        @media (max-width:991px)
+          margin: 0 auto
   h1
     font-size: 3.5rem
     color: #000
