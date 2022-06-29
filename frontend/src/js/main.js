@@ -1,15 +1,10 @@
-
+// Autor: Marllon Panisset
 
 "use strict"; 
 
 // ## Global Vars
 var header = document.getElementById('header');
-var mainNavLink = document.querySelectorAll('.main-menu .nav-link');
-var navbar = document.getElementById('navbar');
 var sectionHome = document.querySelector('#home');
-var sectionAbout = document.getElementById('about-me');
-var sectionContact = document.getElementById('contact');
-var networking = document.getElementsByClassName('networking');
 
 // ## isInViewport
 var isInViewport = function (elem) {
@@ -86,11 +81,19 @@ function hamburguer(e) {
   }
 }
 
-document.querySelector('a.nav-link').addEventListener('click', navLink)
 
-function navLink(e) {
-  const tgt = e.target;
-  if (tgt.matches("a.nav-link") || tgt.closest("a.nav-link")) {
-    document.getElementById('menu-mobile').classList.toggle('open')
+document.addEventListener(
+  'DOMContentLoaded',
+  function() {
+    const links = document.querySelectorAll('.nav-link');
+
+    for (const link of links) {
+      link.addEventListener('click', function(event) {
+        if (event.target.matches('a.nav-link') || event.target.matches('#navbar a.logo')) {
+          document.getElementById('icon-menu').classList.remove('active');
+          document.getElementById('menu-mobile').classList.remove('open');
+        }
+      })
+    }
   }
-}
+);
