@@ -85,3 +85,12 @@ function hamburguer(e) {
     document.getElementById('icon-menu').classList.toggle('active')
   }
 }
+
+document.querySelector('a.nav-link').addEventListener('click', navLink)
+
+function navLink(e) {
+  const tgt = e.target;
+  if (tgt.matches("a.nav-link") || tgt.closest("a.nav-link")) {
+    document.getElementById('menu-mobile').classList.toggle('open')
+  }
+}
