@@ -1,7 +1,7 @@
 {
     "short_name": "Marllon",
     "name": "Marllon Panisset",
-    "description": "Marllon Panisset- Portfólio Desenvolvedor Front-end",
+    "description": "Marllon Panisset- Desenvolvedor Front-end",
     "lang": "pt-BR",
     "icons": [
         {
@@ -18,8 +18,8 @@
     "start_url": "/?utm_source=homescreen",
     "display": "standalone",
     "background_color": "#fff",
-    "theme_color": "#000",
+    "theme_color": "#007bff",
     "main.css": "css/main.css",
-    "main.min.js": "js/main.min.js",
+    "main.js": "js/main.js",
     "manifest.js": "manifest.json"
 }
