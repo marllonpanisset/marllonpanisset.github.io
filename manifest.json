@@ -3,6 +3,13 @@
     "name": "Marllon Panisset",
     "description": "Marllon Panisset- Desenvolvedor Front-end",
     "lang": "pt-BR",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#007bff",
+    "main.css": "css/main.css",
+    "main.js": "js/main.js",
+    "manifest.js": "manifest.json",
     "icons": [
         {
             "src": "icon.png",
@@ -14,12 +21,5 @@
             "sizes": "512x512",
             "type": "image/png"
         }
-    ],
-    "start_url": "/?utm_source=homescreen",
-    "display": "standalone",
-    "background_color": "#fff",
-    "theme_color": "#007bff",
-    "main.css": "css/main.css",
-    "main.js": "js/main.js",
-    "manifest.js": "manifest.json"
+    ]
 }
