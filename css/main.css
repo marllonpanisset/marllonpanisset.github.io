@@ -117,7 +117,7 @@ padding-bottom: 30px;
 
 
 #home .col-lg-6.image .image {
-    background: url(https://i.imgur.com/oA9JUmD.png) no-repeat;
+    background: url(images/perfil-1080.webp) no-repeat;
     width: 270px;
     height: 270px;
     border-radius: 270px;
@@ -414,7 +414,7 @@ padding-bottom: 30px;
     .parallax.contact {
         margin-bottom: 60px;
         z-index: 0;
-        background: url(https://i.imgur.com/Jmfinns.jpg);
+        background: url(images/maquina-de-escrever.webp);
         background-attachment: fixed;
         background-position-y: -70px;
         background-repeat: no-repeat;
@@ -433,7 +433,7 @@ padding-bottom: 30px;
     .parallax.about-me {
         margin-bottom: 60px;
         z-index: 0;
-        background: url(https://i.imgur.com/XFwAUR3.jpg);
+        background: url(images/notebook.webp);
         background-attachment: fixed;
         background-position-y: -140px;
         background-repeat: no-repeat;
