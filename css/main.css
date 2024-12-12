@@ -117,8 +117,6 @@ padding-bottom: 30px;
 
 
 #home .col-lg-6.image .image {
-    width: 270px;
-    height: 270px;
     border-radius: 270px;
     background-size: cover;
 }
