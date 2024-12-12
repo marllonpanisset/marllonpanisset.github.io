@@ -98,7 +98,7 @@ body {
 }
 
 div.skills {
-    padding: 30px 0;
+    padding-bottom: 30px;
 }
 
 .curriculo {
@@ -115,10 +115,6 @@ padding-bottom: 30px;
     margin-bottom:20px;
 }
 
-#about-me .col-lg-12.skills h3 {
-    margin: 30px 0;
-    text-align: left
-}
 
 #home .col-lg-6.image .image {
     background: url(https://i.imgur.com/oA9JUmD.png) no-repeat;
