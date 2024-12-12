@@ -93,12 +93,29 @@ body {
     }
 }
 
-#about-me .text-container.first h2 {
-    font-size: 28px;
-    text-align: left
+#about-me .text-container {
+    padding-bottom: 30px;
 }
 
-#about-me .col-lg-12.skills h2 {
+div.skills {
+    padding: 30px 0;
+}
+
+.curriculo {
+    padding: 0;
+}
+
+div.skills h3 {
+padding-bottom: 30px;
+}
+
+#about-me .text-container > h3 {
+    font-size: 28px;
+    text-align: left;
+    margin-bottom:20px;
+}
+
+#about-me .col-lg-12.skills h3 {
     margin: 30px 0;
     text-align: left
 }
