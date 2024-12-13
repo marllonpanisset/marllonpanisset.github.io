@@ -1,25 +1,27 @@
 {
-    "short_name": "Marllon",
     "name": "Marllon Panisset",
-    "description": "Marllon Panisset- Desenvolvedor Front-end",
+    "short_name": "Marllon",
+    "description": "Portfólio de Marllon Panisset - Desenvolvedor Front-End",
     "lang": "pt-BR",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#fff",
-    "theme_color": "#007bff",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
     "main.css": "css/main.css",
     "main.js": "js/main.js",
     "manifest.js": "manifest.json",
     "icons": [
-        {
-            "src": "icon.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "icon512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
+      {
+        "src": "/web-app-manifest-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "/web-app-manifest-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      }
     ]
 }
