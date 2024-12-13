@@ -101,6 +101,10 @@ div.skills {
     padding-bottom: 30px;
 }
 
+div.grafico h3 {
+    padding-bottom: 30px;
+}
+
 
 div.skills h3 {
 padding-bottom: 30px;
@@ -385,6 +389,10 @@ ul.skills {
     margin-top: 80px
 }
 
+.curriculo h3 {
+    margin-top: 30px;
+}
+
 .curriculo .icon-file-pdf {
     font-size: 24px;
     color: #000;
@@ -403,6 +411,7 @@ ul.skills {
     display: flex;
     align-items: center;
     width: 100%;
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     transition: all .3s
 }
@@ -639,4 +648,143 @@ ul.skills {
     100% {
         transform: scale(1)
     }
+}
+
+.text-container.description p {
+    text-align: justify;
+}
+
+.graphic-bar {
+    width: 100%;
+    height: 30px;
+    background-color: #ddd;
+    margin-bottom: 20px;
+}
+
+.graphic-bar .skill-percent {
+    background-color: #007bff;
+    color: #fff;
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    width:0;
+    position: relative;
+}
+
+.percent-number {
+    position: absolute;
+    right: 10px;
+    color: #ffffff;
+}
+
+.graphic-bar .skill-percent.vtex {
+    width: 60%
+}
+
+.graphic-bar .skill-percent.wordpress {
+    width: 70%
+}
+
+.graphic-bar .skill-percent.html5 {
+    width: 100%
+}
+
+.graphic-bar .skill-percent.css3 {
+    width: 100%
+}
+
+.graphic-bar .skill-percent.javascript {   
+    width: 70%
+}
+
+.graphic-bar .skill-percent.jquery {   
+    width: 90%
+}
+
+.graphic-bar .skill-percent.react {
+    width: 50%
+}
+
+.graphic-bar .skill-percent.gulp { 
+    width: 100%
+}
+
+.graphic-bar .skill-percent.bootstrap {
+    width: 100%
+}
+
+.graphic-bar .skill-percent.tailwindcss {  
+    width: 60%
+}
+
+.graphic-bar .skill-percent.sass { 
+    width: 80%
+}
+
+.graphic-bar .skill-percent.scss { 
+    width: 80%
+}
+
+.graphic-bar .skill-percent.less { 
+    width: 80%
+}
+
+.graphic-bar .skill-percent.pug {  
+    width: 100%
+}
+
+.graphic-bar .skill-percent.hugo { 
+    width: 80%
+}
+
+.graphic-bar .skill-percent.docker {   
+    width: 70%
+}
+
+.graphic-bar .skill-percent.git {  
+    width: 90%
+}
+
+.graphic-bar .skill-percent.figma {
+    width: 80%
+}
+
+.graphic-bar .skill-percent.photoshop {
+    width: 80%
+}
+
+.graphic-bar .skill-percent.psdtohtml {
+    width: 100%
+}
+
+.graphic-bar .skill-percent.xdtohtml { 
+    width: 100%
+}
+
+.graphic-bar .skill-percent.scratchtohtml {
+    width: 100%
+}
+
+.graphic-bar .skill-percent.zeplintohtml { 
+    width: 100%
+}
+
+.graphic-bar .skill-percent.pdftohtml {
+    width: 100%
+}
+
+.graphic-bar .skill-percent.rwd {
+    width: 100%
+}
+
+.graphic-bar .skill-percent.linux {
+    width: 70%
+}
+
+.graphic-bar .skill-percent.windows {
+    width: 100%
+}
+
+.graphic-bar .skill-percent.macos {
+    width: 80%
 }
