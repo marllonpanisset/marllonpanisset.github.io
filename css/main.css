@@ -340,7 +340,6 @@ ul.skills {
     margin-right: 8px;
     margin-bottom: 12px;
     border-radius: 1.6rem;
-    height: 33px;
     align-items: center;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 167ms;
@@ -362,8 +361,9 @@ ul.skills {
     .skills .skill span {
         font-size: 16px;
     }
-
+    
     .skills .skill {
+        height: 33px;
         padding-left: 1.6rem;
         padding-right: 1.6rem;
     }
@@ -371,12 +371,13 @@ ul.skills {
 
 @media (max-width: 768px) {
     .skills .skill span {
-        font-size: 14px;
+        font-size: 12px;
     }
     
     .skills .skill {
-        padding-left: 1.2rem;
-        padding-right: 1.2rem;
+        height: 30px;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 
