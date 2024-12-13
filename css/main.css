@@ -343,8 +343,6 @@ ul.skills {
     margin-right: 8px;
     margin-bottom: 12px;
     border-radius: 1.6rem;
-    padding-left: 1.6rem !important;
-    padding-right: 1.6rem !important;
     height: 33px;
     align-items: center;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -360,8 +358,29 @@ ul.skills {
 }
 
 .skills .skill span {
-    font-size: 16px;
     font-weight: 600
+}
+
+@media (min-width: 769px) {
+    .skills .skill span {
+        font-size: 16px;
+    }
+
+    .skills .skill {
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills .skill span {
+        font-size: 14px;
+    }
+    
+    .skills .skill {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
 }
 
 #contact {
