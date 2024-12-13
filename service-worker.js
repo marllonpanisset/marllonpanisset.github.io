@@ -1,15 +1,22 @@
 var filesToCache = [
-    "/index.html",
+    "css/main.css",
+    "css/iconmoon.css",
+    "css/fonts/icomoon.eot",
+    "css/fonts/icomoon.svg",
+    "css/fonts/icomoon.ttf",
+    "css/fonts/icomoon.woff",
+    "css/bootstrap.min.css",
+    "js/main.js",
+    "js/bootstrap.bundle.min.js",
+    "js/jquery.slim.min.js",
+    "/images/maquina-de-escrever.webp",
+    "/images/perfil-1080.webp",
+    "/images/perfil-270.webp",
+    "/images/notebook.webp",
+    "marllon-panisset-cv-pt-br.pdf",
+    "index.html",
     "favicon.ico",
     "manifest.json",
-    "styles/main.css",
-    "bootstrap.min.css",
-    "bootstrap.bundle.min.js",
-    "jquery.slim.min.js",
-    "js/main.js",
-    "/images/maquina-de-escrever.webp",
-    "/images/notebook.webp",
-    "/images/perfil-1080.webp",
-    "/images/perfil-270.webp"
-
+    "icon.png",
+    "icon512.png"
 ];

@@ -254,48 +254,51 @@
                     </div>
                 </div>
     
-                <div class="networking-container">
-                    <div class="container">
-                        <div class="row">
-                            <div class="networking">
-                                <div class="networking-item">
-                                    <a href="https://github.com/marllonpanisset" class="github" target="_blank" rel="noopener noreferrer" title="Github">
-                                        <span class="icon-github"></span>
-                                    </a>
-                                </div>
-                                <div class="networking-item">
-                                    <a href="https://www.linkedin.com/in/marllon-panisset" class="linkedin" target="_blank" rel="noopener noreferrer" title="Linkedin">
-                                        <span class="icon-linkedin"></span>
-                                    </a>
-                                </div>
-                                <div class="networking-item">
-                                    <a href="mailto:marllonop@gmail.com" class="gmail" target="_blank" rel="noopener noreferrer" title="E-mail">
-                                        <span class="icon-mail4"></span>
-                                    </a>
-                                </div>
-                                <div class="networking-item">
-                                    <a href="https://wa.me/5521987881633" class="whatsapp" target="_blank" rel="noopener noreferrer" title="WhatsApp">
-                                        <span class="icon-whatsapp"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="container">
+                    <div class="row">
+                        <ul class="networking">
+                            <li class="networking-item">
+                                <a href="https://github.com/marllonpanisset" class="github" target="_blank" rel="noopener noreferrer" title="Github">
+                                    <span class="icon-github"></span>
+                                </a>
+                            </li>
+                            <li class="networking-item">
+                                <a href="https://www.linkedin.com/in/marllon-panisset" class="linkedin" target="_blank" rel="noopener noreferrer" title="Linkedin">
+                                    <span class="icon-linkedin"></span>
+                                </a>
+                            </li>
+                            <li class="networking-item">
+                                <a href="mailto:marllonop@gmail.com" class="gmail" target="_blank" rel="noopener noreferrer" title="E-mail">
+                                    <span class="icon-mail4"></span>
+                                </a>
+                            </li>
+                            <li class="networking-item">
+                                <a href="https://wa.me/5521987881633" class="whatsapp" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+                                    <span class="icon-whatsapp"></span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+                
             </section>
         </main>
         
         <footer id="footer">
-            <div class="container"><span class="copyright">© 2024 Marllon Panisset, Todos direitos Reservados.</span></div>
+            <div class="container">
+                <span class="copyright">© 2024 Marllon Panisset, Todos direitos Reservados.</span>
+            </div>
         </footer>
         
         <div class="loading">
             <div></div>
         </div>
-    
+        
+        <!-- Footer Scripts -->
         <script src="js/jquery.slim.min.js" defer></script>
         <script src="js/bootstrap.bundle.min.js" defer></script>
         <script src="js/main.js" defer></script>
+        
         <script>
             "serviceWorker" in navigator ? window.addEventListener("load", function () {
                 navigator.serviceWorker.register("/service-worker.js").then(function (e) {
@@ -307,6 +310,7 @@
                 })
             }) : console.log("service worker is not supported")
         </script>
+
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
